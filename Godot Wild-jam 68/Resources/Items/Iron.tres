@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bjtwtxjx2i3ea"]
+
+[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="1_fgces"]
+
+[resource]
+script = ExtResource("1_fgces")
+ID = 0
+Name = "Iron"

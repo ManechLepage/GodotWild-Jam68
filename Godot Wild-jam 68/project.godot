@@ -11,8 +11,19 @@ config_version=5
 [application]
 
 config/name="Godot Wild-jam 68"
+run/main_scene="res://Scenes/node_2d.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Graphics/icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Graphics/": "pink",
+"res://Resources/": "purple",
+"res://Scenes/": "red",
+"res://Scenes/Spaceship/": "orange",
+"res://Scripts/": "green"
+}
 
 [rendering]
 
