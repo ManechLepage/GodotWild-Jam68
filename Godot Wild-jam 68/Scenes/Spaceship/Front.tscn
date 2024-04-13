@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4fe8jqbvfpqh"]
+[gd_scene load_steps=5 format=3 uid="uid://d4fe8jqbvfpqh"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_btyyg"]
+[ext_resource type="SpriteFrames" uid="uid://b205vr22emloi" path="res://Graphics/sections/Front/front.tres" id="2_htlqq"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/FrontComponent.gd" id="3_5qadi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3fhv0"]
 size = Vector2(32, 32.2)
 
 [node name="FrontSection" instance=ExtResource("1_btyyg")]
+sprite_frames = ExtResource("2_htlqq")
+frame = 2
+frame_progress = 0.610271
 
 [node name="FrontComponent" type="Node2D" parent="." index="0"]
 script = ExtResource("3_5qadi")
@@ -41,6 +45,7 @@ offset_bottom = 72.0
 [node name="Area2D" type="Area2D" parent="." index="3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+visible = false
 position = Vector2(0, 0.1)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3fhv0")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxcp0q8b7thf6"
-path="res://.godot/imported/smelter7.png-1d447b1e25603853c1a7bb850561d07f.ctex"
+uid="uid://du6006bobjgyl"
+path="res://.godot/imported/front6.png-55e2d6b408f2aa8fb509a54759e69390.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/sections/Smelter/Tier3/smelter7.png"
-dest_files=["res://.godot/imported/smelter7.png-1d447b1e25603853c1a7bb850561d07f.ctex"]
+source_file="res://Graphics/sections/Front/front6.png"
+dest_files=["res://.godot/imported/front6.png-55e2d6b408f2aa8fb509a54759e69390.ctex"]
 
 [params]
 
