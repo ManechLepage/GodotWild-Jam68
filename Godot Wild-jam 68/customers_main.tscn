@@ -1,17 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckjqs3swohew5"]
+[gd_scene load_steps=5 format=3 uid="uid://ckjqs3swohew5"]
 
-[ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="1_24x0k"]
+[ext_resource type="Script" path="res://customers_main.gd" id="1_ckx4r"]
 [ext_resource type="Script" path="res://Scripts/Customer/Merchant.gd" id="2_ctbpc"]
-[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Diamond.tres" id="3_f8ut3"]
+[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/RawMinerals/Diamond.tres" id="3_f8ut3"]
+[ext_resource type="PackedScene" uid="uid://c53wl0s54jdx6" path="res://Scenes/Customers/Shop_item_button.tscn" id="4_32cyx"]
 
-[node name="Customers" type="Node2D"]
-script = ExtResource("1_24x0k")
+[node name="Customers" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ckx4r")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1153.0
-offset_bottom = 647.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.998
+offset_right = 1.0
+offset_bottom = 0.295959
 
-[node name="Button" type="Button" parent="Panel"]
+[node name="serve_button" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.183
@@ -25,14 +36,177 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Serve"
 
-[node name="Customer" type="Node2D" parent="Panel"]
-
-[node name="Merchand" type="ColorRect" parent="Panel/Customer"]
-offset_left = 476.0
-offset_top = 259.0
-offset_right = 639.0
-offset_bottom = 411.0
+[node name="Merchand" type="ColorRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.413
+anchor_top = 0.4
+anchor_right = 0.554
+anchor_bottom = 0.635
+offset_left = -0.189026
+offset_top = 0.199982
+offset_right = 0.237976
+offset_bottom = 0.154968
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("2_ctbpc")
 item = ExtResource("3_f8ut3")
 price = 20
 name = "Jack"
+
+[node name="Panel2" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2"]
+custom_minimum_size = Vector2(80, 20)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.272
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 20.0
+offset_right = -0.256012
+offset_bottom = -15.0
+grow_vertical = 2
+
+[node name="Shop_item_button2" parent="Panel2/VBoxContainer" instance=ExtResource("4_32cyx")]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.287
+anchor_top = 0.028
+anchor_right = 0.988
+anchor_bottom = 0.972
+offset_left = -0.476013
+offset_top = 0.0240002
+offset_right = -0.223999
+offset_bottom = -0.0240479
+
+[node name="Name_panel" type="Panel" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.606
+anchor_top = 0.03
+anchor_right = 0.983
+anchor_bottom = 0.119
+offset_left = 0.169983
+offset_top = -0.18
+offset_right = -0.315002
+offset_bottom = -0.113998
+
+[node name="Name" type="Label" parent="Panel2/Panel/Name_panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.981
+offset_bottom = 0.0259972
+scale = Vector2(1.00774, 1.00944)
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Desc_panel" type="Panel" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.607
+anchor_top = 0.132
+anchor_right = 0.984
+anchor_bottom = 0.853
+offset_left = 0.36496
+offset_top = 0.00800323
+offset_right = -0.119995
+offset_bottom = 0.0819702
+
+[node name="Description" type="Label" parent="Panel2/Panel/Desc_panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.995
+offset_top = 1.0
+offset_bottom = 0.184967
+text = "Description
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Item_image" type="TextureRect" parent="Panel2/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.183
+anchor_right = 0.598
+anchor_bottom = 0.82
+offset_left = 11.0
+offset_top = 0.10199
+offset_right = -0.390045
+offset_bottom = 0.0799561
+
+[node name="Buy_button" type="Button" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.609
+anchor_top = 0.868
+anchor_right = 0.983
+anchor_bottom = 0.985
+offset_left = -0.245026
+offset_top = -0.00799561
+offset_right = -0.315002
+offset_bottom = 0.0900269
+text = "BUY"
+
+[node name="Price" type="Label" parent="Panel2/Panel/Buy_button"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.694
+anchor_top = 0.577
+anchor_right = 0.973
+anchor_bottom = 0.901
+offset_left = 0.106003
+offset_top = 0.0329971
+offset_right = 0.126984
+offset_bottom = 0.0289993
+text = "Price (Ga)"
+
+[node name="Skip" type="Button" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.148
+anchor_top = 0.868
+anchor_right = 0.522
+anchor_bottom = 0.985
+offset_left = -0.139999
+offset_top = -0.00799561
+offset_right = -0.210022
+offset_bottom = 0.0900269
+text = "Skip"
+
+[node name="Shop_text" type="Label" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.017
+anchor_right = 0.593
+anchor_bottom = 0.157
+offset_left = -0.0500002
+offset_top = -0.302001
+offset_right = -0.365051
+offset_bottom = -0.142006
+text = "Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/serve_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel2/VBoxContainer/Shop_item_button2" to="Panel2/VBoxContainer/Shop_item_button2" method="_on_pressed"]
