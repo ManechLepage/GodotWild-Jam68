@@ -40,6 +40,7 @@ func start_choosing():
 	is_smelting = false
 	
 	timer.stop()
+	get_parent().stop()
 	
 	if not Inventory.items.has(smeltor_list[(smelter_tier - 1) * 2]):
 		button1.disabled = true
@@ -79,3 +80,4 @@ func activate_smeltor():
 	panel.visible = false
 	
 	timer.start()
+	get_parent().play()

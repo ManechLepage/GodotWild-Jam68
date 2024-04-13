@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://b18x7uwk4vpmy"]
 
-[ext_resource type="SpriteFrames" uid="uid://c812nj5rx0yg6" path="res://Graphics/sections/Generator/generator2.tres" id="1_vxvd2"]
+[ext_resource type="SpriteFrames" uid="uid://c812nj5rx0yg6" path="res://Graphics/sections/Generator/generator2.tres" id="1_01aw0"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipSection.gd" id="2_va4xf"]
 
 [node name="SpaceshipSection" type="AnimatedSprite2D"]
 texture_filter = 1
 scale = Vector2(5, 5)
-sprite_frames = ExtResource("1_vxvd2")
+sprite_frames = ExtResource("1_01aw0")
 script = ExtResource("2_va4xf")
