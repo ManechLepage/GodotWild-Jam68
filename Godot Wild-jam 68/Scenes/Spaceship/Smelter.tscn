@@ -45,3 +45,5 @@ offset_bottom = 71.0
 [node name="SmelterComponent" type="Node" parent="." index="2"]
 script = ExtResource("2_q1rom")
 smeltor_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("3_hptp1"), ExtResource("4_884st"), ExtResource("5_c08dr"), ExtResource("6_mfcij")])
+
+[node name="Timer" type="Timer" parent="SmelterComponent" index="0"]

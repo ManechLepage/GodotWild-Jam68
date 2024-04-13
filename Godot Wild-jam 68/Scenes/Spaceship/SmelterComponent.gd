@@ -3,7 +3,7 @@ extends Node
 var smelter_tier: int
 var smelting: Smeltor
 @export var smeltor_list: Array[Item] = []
-
+$Timer
 enum Smeltor
 {
 	Iron = 0,
