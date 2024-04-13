@@ -16,12 +16,18 @@ func _ready():
 	
 	var front = FRONT.instantiate()
 	front.pos = Vector2(2, 0)
+	add_child(front)
+	add_section(front.pos, front)
 	
 	var generator = GENERATOR.instantiate()
 	generator.pos = Vector2(1, 1)
+	add_child(generator)
+	add_section(generator.pos, generator)	
 	
 	var smelter = SMELTER.instantiate()
 	smelter.pos = Vector2(3, 1)
+	add_child(smelter)
+	add_section(smelter.pos, smelter)	
 	
 	update_pos()
 
@@ -45,4 +51,4 @@ func add_item(item:Item, count:int):
 
 func update_pos():
 	for i in get_children():
-		i.position = Vector2(i.pos.x * 50.0, i.pos.y * 50.0)
+		i.position = Vector2(i.pos.x * 200.0, i.pos.y * 200.0)

@@ -2,6 +2,14 @@ extends Resource
 
 class_name Item
 
+enum ItemType
+{
+	Mat,
+	Ship_Section,
+	Product,
+	Upgrade
+}
+
 enum GenerateType 
 {
 	Generate,
@@ -10,7 +18,6 @@ enum GenerateType
 	None
 }
 
-@export var id: int = 0
 @export var name: String = ""
 @export var price: int = 0
 

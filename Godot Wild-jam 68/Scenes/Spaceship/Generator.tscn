@@ -1,12 +1,48 @@
 [gd_scene load_steps=4 format=3 uid="uid://b82ugruem048x"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_lgxny"]
-[ext_resource type="PackedScene" uid="uid://1qrwpmtdpowc" path="res://Scenes/Spaceship/Ship Components/item_generator.tscn" id="2_6ksar"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/Generator.gd" id="3_7gxae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
+size = Vector2(148, 148)
 
 [node name="GeneratorSection" instance=ExtResource("1_lgxny")]
 
-[node name="ItemGenerator" parent="." index="0" instance=ExtResource("2_6ksar")]
+[node name="Area2D" type="Area2D" parent="." index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("RectangleShape2D_bdrhe")
 
 [node name="Generator" type="Node" parent="." index="1"]
 script = ExtResource("3_7gxae")
+
+[node name="Timer" type="Timer" parent="Generator" index="0"]
+autostart = true
+
+[node name="Panel" type="Panel" parent="." index="2"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -174.0
+offset_top = -170.0
+offset_right = 26.0
+offset_bottom = -90.0
+grow_horizontal = 2
+
+[node name="Button" type="Button" parent="Panel" index="0"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 8.0
+offset_right = 84.0
+offset_bottom = 72.0
+
+[node name="Button2" type="Button" parent="Panel" index="1"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 7.0
+offset_right = 184.0
+offset_bottom = 71.0
+
+[connection signal="input_event" from="Area2D" to="Generator" method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="Generator" method="_on_area_2d_mouse_entered"]
+[connection signal="timeout" from="Generator/Timer" to="Generator" method="_on_timer_timeout"]

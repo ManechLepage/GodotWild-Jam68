@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhfbtdxfiw6y"]
+
+[ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_hr68y"]
+[ext_resource type="PackedScene" uid="uid://1qrwpmtdpowc" path="res://Scenes/Spaceship/Ship Components/item_generator.tscn" id="2_p315x"]
+[ext_resource type="Script" path="res://Scenes/Spaceship/ForgeComponent.gd" id="3_pm4hy"]
+
+[node name="ForgeSection" instance=ExtResource("1_hr68y")]
+type = 2
+
+[node name="ItemGenerator" parent="." index="0" instance=ExtResource("2_p315x")]
+
+[node name="ForgeComponent" type="Node" parent="." index="1"]
+script = ExtResource("3_pm4hy")
