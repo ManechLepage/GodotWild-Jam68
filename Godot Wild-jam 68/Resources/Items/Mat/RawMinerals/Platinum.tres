@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://b4f4bxtrjitpf"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b4f4bxtrjitpf"]
 
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="1_74q3a"]
+[ext_resource type="Texture2D" uid="uid://b40jwsc76cqwg" path="res://Graphics/Items/Minerals/platinum.png" id="1_udelg"]
 
 [resource]
 script = ExtResource("1_74q3a")
 ID = 6
 name = "Iron"
+icon = ExtResource("1_udelg")
 type = 0
 price = 0
+forge_tier = 1
+craft = Array[ExtResource("1_74q3a")]([])

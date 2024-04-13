@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://2ac0v4the36h"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://2ac0v4the36h"]
 
+[ext_resource type="Texture2D" uid="uid://dxdx8x2uoft3f" path="res://Graphics/Items/Minerals/RawGold.png" id="1_eefn0"]
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_covph"]
 [ext_resource type="Resource" uid="uid://3kybpbviwd5" path="res://Resources/Items/Mat/Smelted/Gold.tres" id="2_slw5s"]
 
@@ -7,6 +8,9 @@
 script = ExtResource("2_covph")
 ID = 4
 name = "Raw Gold"
+icon = ExtResource("1_eefn0")
 type = 0
 smelted_item = ExtResource("2_slw5s")
 price = 0
+forge_tier = 1
+craft = Array[ExtResource("2_covph")]([])
