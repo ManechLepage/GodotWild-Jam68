@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_fgces")
-name = "Gold"
+ID = 101
+name = "Iron"
+type = 0
 price = 0

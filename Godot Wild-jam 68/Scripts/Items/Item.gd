@@ -8,9 +8,14 @@ enum ItemType
 	Product,
 }
 
+@export var ID: int
 @export var name: String = ""
-@export var price: int = 0
+@export var icon: Texture2D
+
+@export var type: ItemType
 
 @export var smelted_item: Item
 
-@export var icon: Texture2D
+@export var price: int = 0
+@export var forge_tier: int = 1
+@export var craft: Array[Item] = []

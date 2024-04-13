@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_qwb2r")
-name = "Iron"
+ID = 102
+name = "Tin"
+type = 0
 price = 0

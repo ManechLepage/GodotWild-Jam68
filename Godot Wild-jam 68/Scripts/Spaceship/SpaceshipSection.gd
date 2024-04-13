@@ -31,7 +31,7 @@ func remove_item(item:Item):
 		var value = Inventory.items[item]
 		value -= 1
 		if value <= 0:
-			Inventory.erase(item)
+			Inventory.items.erase(item)
 		else:
 			Inventory.items[item] = value
 	inventory_panel.update_inventory_panel()

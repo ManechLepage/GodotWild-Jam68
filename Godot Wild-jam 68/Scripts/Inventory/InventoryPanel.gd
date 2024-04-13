@@ -6,7 +6,6 @@ const ITEM_LABEL = preload("res://Scenes/Inventory/item_label.tscn")
 func _ready():
 	pass 
 
-
 func _process(delta):
 	pass
 

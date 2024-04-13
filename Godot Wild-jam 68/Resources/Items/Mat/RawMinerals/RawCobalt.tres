@@ -5,6 +5,8 @@
 
 [resource]
 script = ExtResource("2_0b5gi")
+ID = 3
 name = "Raw Cobalt"
-price = 0
+type = 0
 smelted_item = ExtResource("2_b4cvl")
+price = 0

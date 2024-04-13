@@ -10,6 +10,7 @@
 unique_name_in_owner = true
 position = Vector2(-200, 0)
 script = ExtResource("1_kbkme")
+item_list = Array[Resource("res://Scripts/Items/Item.gd")]([null, null, null, null, null, null, null, null, null, null])
 
 [node name="InventoryPanel" type="Panel" parent="." groups=["Inventory"]]
 anchors_preset = -1

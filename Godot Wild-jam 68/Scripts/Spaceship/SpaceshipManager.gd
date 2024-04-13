@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var item_list: Array[Item] = []
+
 var section_list = []
 
 const FRONT = preload("res://Scenes/Spaceship/Front.tscn")
@@ -8,6 +10,7 @@ const SMELTER = preload("res://Scenes/Spaceship/Smelter.tscn")
 const FORGE = preload("res://Scenes/Spaceship/Forge.tscn")
 
 func _ready():
+	Inventory.load_all_items(item_list)
 	for i in range(5):
 		var row = []
 		for j in range(5):

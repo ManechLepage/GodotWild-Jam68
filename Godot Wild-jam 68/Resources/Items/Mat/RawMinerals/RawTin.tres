@@ -5,6 +5,8 @@
 
 [resource]
 script = ExtResource("2_wt15o")
+ID = 2
 name = "Raw Tin"
-price = 0
+type = 0
 smelted_item = ExtResource("2_n1yyx")
+price = 0
