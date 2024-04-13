@@ -1,17 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://coeiv8b28o7bf"]
 
-[ext_resource type="Texture2D" uid="uid://dxa4jghsxvve2" path="res://Graphics/0o8c1qbrt9m71.png" id="1_balkv"]
+[ext_resource type="Texture2D" uid="uid://bto364ul11v33" path="res://Graphics/sections/Forge/Tier1/forge6.png" id="1_jotje"]
 [ext_resource type="Script" path="res://Scenes/Forge/button_forge.gd" id="2_l23j6"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_oa6ot"]
 
 [node name="Button" type="Button"]
+texture_filter = 1
 offset_left = 20.0
 offset_top = 8.0
-offset_right = 84.0
-offset_bottom = 72.0
+offset_right = 60.0
+offset_bottom = 48.0
 button_group = SubResource("ButtonGroup_oa6ot")
-icon = ExtResource("1_balkv")
+icon = ExtResource("1_jotje")
 script = ExtResource("2_l23j6")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

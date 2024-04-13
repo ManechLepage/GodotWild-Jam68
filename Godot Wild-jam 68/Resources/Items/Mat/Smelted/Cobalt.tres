@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://chkfe8q5132hu"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://chkfe8q5132hu"]
 
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="1_daf0q"]
+[ext_resource type="Texture2D" uid="uid://mv0lp0uay648" path="res://Graphics/Items/Minerals/cobalt.png" id="1_hy1l2"]
 
 [resource]
 script = ExtResource("1_daf0q")
 ID = 103
 name = "Cobalt"
+icon = ExtResource("1_hy1l2")
 type = 0
 price = 0
+forge_tier = 1
+craft = Array[ExtResource("1_daf0q")]([])

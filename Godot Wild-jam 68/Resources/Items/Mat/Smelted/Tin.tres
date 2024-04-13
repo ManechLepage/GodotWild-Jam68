@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bovhh82i43fsp"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bovhh82i43fsp"]
 
+[ext_resource type="Texture2D" uid="uid://66epc16dtlf0" path="res://Graphics/Items/Minerals/Tin.png" id="1_8mhyt"]
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="1_qwb2r"]
 
 [resource]
 script = ExtResource("1_qwb2r")
 ID = 102
 name = "Tin"
+icon = ExtResource("1_8mhyt")
 type = 0
 price = 0
+forge_tier = 1
+craft = Array[ExtResource("1_qwb2r")]([])

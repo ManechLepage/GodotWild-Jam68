@@ -31,29 +31,56 @@ generator_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("3_
 autostart = true
 
 [node name="Panel" type="Panel" parent="." index="2"]
-visible = false
+texture_filter = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -174.0
-offset_top = -170.0
-offset_right = 26.0
-offset_bottom = -90.0
+offset_left = -55.0
+offset_top = -58.0
+offset_right = 23.0
+offset_bottom = -20.0
 grow_horizontal = 2
 
 [node name="Button" type="Button" parent="Panel" index="0"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 8.0
-offset_right = 84.0
-offset_bottom = 72.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -16.0
+offset_right = 34.0
+offset_bottom = 16.0
+grow_vertical = 2
+
+[node name="ColorRect" type="TextureRect" parent="Panel/Button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Button2" type="Button" parent="Panel" index="1"]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 7.0
-offset_right = 184.0
-offset_bottom = 71.0
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -16.0
+offset_right = -2.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ColorRect2" type="TextureRect" parent="Panel/Button2" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="input_event" from="Area2D" to="Generator" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="Generator" method="_on_area_2d_mouse_entered"]

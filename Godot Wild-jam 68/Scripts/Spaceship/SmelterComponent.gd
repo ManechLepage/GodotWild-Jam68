@@ -52,8 +52,8 @@ func start_choosing():
 	else:
 		button2.disabled = false
 	
-	button1.icon = smeltor_list[(smelter_tier - 1) * 2].icon	
-	button2.icon = smeltor_list[((smelter_tier - 1) * 2) + 1].icon	
+	button1.get_child(0).texture = smeltor_list[(smelter_tier - 1) * 2].smelted_item.icon
+	button2.get_child(0).texture = smeltor_list[((smelter_tier - 1) * 2) + 1].smelted_item.icon
 
 func _on_button_pressed1():
 	smelting = (smelter_tier - 1) * 2

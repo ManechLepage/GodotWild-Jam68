@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c2dkqdu3pm6pu"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c2dkqdu3pm6pu"]
 
+[ext_resource type="Texture2D" uid="uid://c7v2tlc1sjmk5" path="res://Graphics/Items/Minerals/rawTin.png" id="1_duujh"]
 [ext_resource type="Resource" uid="uid://bovhh82i43fsp" path="res://Resources/Items/Mat/Smelted/Tin.tres" id="2_n1yyx"]
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_wt15o"]
 
@@ -7,6 +8,9 @@
 script = ExtResource("2_wt15o")
 ID = 2
 name = "Raw Tin"
+icon = ExtResource("1_duujh")
 type = 0
 smelted_item = ExtResource("2_n1yyx")
 price = 0
+forge_tier = 1
+craft = Array[ExtResource("2_wt15o")]([])

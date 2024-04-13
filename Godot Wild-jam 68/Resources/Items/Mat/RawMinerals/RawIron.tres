@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d1siwpjnsnisd"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d1siwpjnsnisd"]
 
+[ext_resource type="Texture2D" uid="uid://g6v7bxnxkrbh" path="res://Graphics/Items/Minerals/rawIron.png" id="1_qkeyj"]
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_nwbth"]
 [ext_resource type="Resource" uid="uid://bjtwtxjx2i3ea" path="res://Resources/Items/Mat/Smelted/Iron.tres" id="2_qahi4"]
 
@@ -7,6 +8,9 @@
 script = ExtResource("2_nwbth")
 ID = 1
 name = "Raw Iron"
+icon = ExtResource("1_qkeyj")
 type = 0
 smelted_item = ExtResource("2_qahi4")
 price = 0
+forge_tier = 1
+craft = Array[ExtResource("2_nwbth")]([])

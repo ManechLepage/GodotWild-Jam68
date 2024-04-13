@@ -52,7 +52,7 @@ func load_choices():
 		h_box_container.add_child(item)
 	
 	panel.size = Vector2(h_box_container.size.x + 8.0, h_box_container.size.y)
-	panel.position = Vector2(panel.size.x / -2,-160.0)
+	panel.position = Vector2(panel.size.x / -2,-58.0)
 
 func can_craft(item:Item):
 	for i in item.craft:

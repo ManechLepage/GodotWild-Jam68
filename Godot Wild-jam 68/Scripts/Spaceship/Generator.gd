@@ -43,8 +43,8 @@ func start_choosing():
 	isChoosing = true
 	panel.visible = true
 	
-	button1.icon = generator_list[(generator_tier - 1) * 2].icon
-	button2.icon = generator_list[((generator_tier - 1) * 2) + 1].icon
+	button1.get_child(0).texture = generator_list[(generator_tier - 1) * 2].icon
+	button2.get_child(0).texture = generator_list[((generator_tier - 1) * 2) + 1].icon
 	
 	timer.stop()
 	get_parent().stop()

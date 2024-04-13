@@ -7,7 +7,7 @@ var goal_item: Item
 @onready var sell_button = $"../Button"
 
 func _ready():
-	pass
+	get_parent().play()
 
 func _process(delta):
 	pass

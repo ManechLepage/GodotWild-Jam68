@@ -23,14 +23,13 @@ scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_bdrhe")
 
 [node name="Panel" type="Panel" parent="." index="1"]
-visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -94.0
-offset_top = -160.0
-offset_right = -54.0
-offset_bottom = -85.0
+offset_left = -36.0
+offset_top = -58.0
+offset_right = 4.0
+offset_bottom = -18.0
 grow_horizontal = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel" index="0"]

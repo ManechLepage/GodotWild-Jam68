@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://hkecx5u5gpr8"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://hkecx5u5gpr8"]
 
+[ext_resource type="Texture2D" uid="uid://bc7kd0qjkpkhg" path="res://Graphics/Items/Minerals/RawCobalt.png" id="1_7plin"]
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_0b5gi"]
 [ext_resource type="Resource" uid="uid://chkfe8q5132hu" path="res://Resources/Items/Mat/Smelted/Cobalt.tres" id="2_b4cvl"]
 
@@ -7,6 +8,9 @@
 script = ExtResource("2_0b5gi")
 ID = 3
 name = "Raw Cobalt"
+icon = ExtResource("1_7plin")
 type = 0
 smelted_item = ExtResource("2_b4cvl")
 price = 0
+forge_tier = 1
+craft = Array[ExtResource("2_0b5gi")]([])
