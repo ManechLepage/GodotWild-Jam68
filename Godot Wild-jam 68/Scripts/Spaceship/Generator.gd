@@ -47,8 +47,10 @@ func start_choosing():
 	button2.icon = generator_list[((generator_tier - 1) * 2) + 1].icon
 	
 	timer.stop()
+	get_parent().stop()
 
 func activate_generator():
+	get_parent().play()
 	isChoosing = false
 	panel.visible = false
 	timer.start()

@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://2ac0v4the36h" path="res://Resources/Items/Mat/RawMinerals/RawGold.tres" id="6_mfcij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
-size = Vector2(148, 148)
+size = Vector2(32.2, 32.2)
 
 [node name="Smelter" instance=ExtResource("1_kafey")]
 type = 2
@@ -16,6 +16,8 @@ type = 2
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0.1, 0.1)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_bdrhe")
 
 [node name="Panel" type="Panel" parent="." index="1"]

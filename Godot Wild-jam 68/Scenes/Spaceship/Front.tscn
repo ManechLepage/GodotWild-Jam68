@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Spaceship/FrontComponent.gd" id="3_5qadi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3fhv0"]
-size = Vector2(148, 148)
+size = Vector2(32, 32.2)
 
 [node name="FrontSection" instance=ExtResource("1_btyyg")]
 
@@ -41,6 +41,8 @@ offset_bottom = 72.0
 [node name="Area2D" type="Area2D" parent="." index="3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 0.1)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3fhv0")
 
 [connection signal="pressed" from="Panel/Button" to="FrontComponent" method="_on_button_pressed1"]

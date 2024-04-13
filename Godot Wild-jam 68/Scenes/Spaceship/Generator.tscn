@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://b82ugruem048x"]
+[gd_scene load_steps=11 format=3 uid="uid://b82ugruem048x"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_lgxny"]
+[ext_resource type="SpriteFrames" uid="uid://irf2hvths7jt" path="res://Graphics/sections/Generator/generator1.tres" id="2_3oxqq"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/Generator.gd" id="3_7gxae"]
 [ext_resource type="Resource" uid="uid://d1siwpjnsnisd" path="res://Resources/Items/Mat/RawMinerals/RawIron.tres" id="3_s1p8i"]
 [ext_resource type="Resource" uid="uid://c2dkqdu3pm6pu" path="res://Resources/Items/Mat/RawMinerals/RawTin.tres" id="4_g3cqn"]
@@ -10,9 +11,10 @@
 [ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/RawMinerals/Diamond.tres" id="8_kgkrw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
-size = Vector2(148, 148)
+size = Vector2(32, 32)
 
 [node name="GeneratorSection" instance=ExtResource("1_lgxny")]
+sprite_frames = ExtResource("2_3oxqq")
 type = 1
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
