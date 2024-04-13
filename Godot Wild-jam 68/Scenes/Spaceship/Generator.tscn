@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://b82ugruem048x"]
+[gd_scene load_steps=6 format=3 uid="uid://b82ugruem048x"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_lgxny"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/Generator.gd" id="3_7gxae"]
+[ext_resource type="Resource" uid="uid://d1siwpjnsnisd" path="res://Resources/Items/Mat/RawIron.tres" id="3_6752e"]
+[ext_resource type="Resource" uid="uid://bjtwtxjx2i3ea" path="res://Resources/Items/Mat/Iron.tres" id="4_wkvnp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
 size = Vector2(148, 148)
 
 [node name="GeneratorSection" instance=ExtResource("1_lgxny")]
+type = 1
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
@@ -15,11 +18,13 @@ shape = SubResource("RectangleShape2D_bdrhe")
 
 [node name="Generator" type="Node" parent="." index="1"]
 script = ExtResource("3_7gxae")
+generator_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("3_6752e"), ExtResource("4_wkvnp"), null, null, null, null])
 
 [node name="Timer" type="Timer" parent="Generator" index="0"]
 autostart = true
 
 [node name="Panel" type="Panel" parent="." index="2"]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -46,3 +51,5 @@ offset_bottom = 71.0
 [connection signal="input_event" from="Area2D" to="Generator" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="Generator" method="_on_area_2d_mouse_entered"]
 [connection signal="timeout" from="Generator/Timer" to="Generator" method="_on_timer_timeout"]
+[connection signal="pressed" from="Panel/Button" to="Generator" method="_on_button_pressed1"]
+[connection signal="pressed" from="Panel/Button2" to="Generator" method="_on_button_pressed2"]

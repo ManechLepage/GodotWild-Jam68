@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_fgces")
-id = 0
-name = ""
+name = "Iron"
+price = 0
 generate_type = 1
 generate_cooldown = 0.0

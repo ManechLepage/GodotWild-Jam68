@@ -1,11 +1,11 @@
 extends Node2D
 
 var section_list = []
-var items = {}
 
 const FRONT = preload("res://Scenes/Spaceship/Front.tscn")
 const GENERATOR = preload("res://Scenes/Spaceship/Generator.tscn")
 const SMELTER = preload("res://Scenes/Spaceship/Smelter.tscn")
+
 
 func _ready():
 	for i in range(5):
@@ -42,12 +42,6 @@ func add_section(pos: Vector2, section: Node2D):
 		section_list[x][y] = section
 	else:
 		print("Invalid position:", pos)
-
-func add_item(item:Item, count:int):
-	if items.has(item):
-		items[item] += count
-	else:
-		items[item] = count
 
 func update_pos():
 	for i in get_children():

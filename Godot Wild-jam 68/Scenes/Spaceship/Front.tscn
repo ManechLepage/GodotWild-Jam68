@@ -1,9 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4fe8jqbvfpqh"]
+[gd_scene load_steps=4 format=3 uid="uid://d4fe8jqbvfpqh"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_btyyg"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/FrontComponent.gd" id="3_5qadi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fhv0"]
+size = Vector2(148, 148)
 
 [node name="FrontSection" instance=ExtResource("1_btyyg")]
 
 [node name="FrontComponent" type="Node2D" parent="." index="0"]
 script = ExtResource("3_5qadi")
+
+[node name="Button" type="Button" parent="." index="1"]
+texture_filter = 1
+offset_left = -50.0
+offset_top = -205.0
+offset_right = 50.0
+offset_bottom = -173.0
+text = "Sell"
+
+[node name="Panel" type="Panel" parent="." index="2"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -124.0
+offset_top = -170.0
+offset_right = -24.0
+offset_bottom = -90.0
+grow_horizontal = 2
+
+[node name="Button" type="Button" parent="Panel" index="0"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 8.0
+offset_right = 84.0
+offset_bottom = 72.0
+
+[node name="Area2D" type="Area2D" parent="." index="3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("RectangleShape2D_3fhv0")
+
+[connection signal="pressed" from="Panel/Button" to="FrontComponent" method="_on_button_pressed1"]
+[connection signal="input_event" from="Area2D" to="FrontComponent" method="_on_area_2d_input_event"]

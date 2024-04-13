@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bo58y2rri2wo7"]
+
+[node name="ItemLabel" type="Label"]
+texture_filter = 1
+text = "Item Name"
+
+[node name="Count" type="Label" parent="."]
+layout_mode = 0
+offset_left = 162.0
+offset_top = -3.0
+offset_right = 202.0
+offset_bottom = 28.0
+text = "3"
+horizontal_alignment = 2
+vertical_alignment = 1

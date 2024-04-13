@@ -1,13 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=4 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
-[ext_resource type="Script" path="res://Scenes/CustomerManager.gd" id="3_l103r"]
+[ext_resource type="Script" path="res://Scripts/Inventory/InventoryPanel.gd" id="2_5fnoo"]
+[ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="3_l103r"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node"]
 
 [node name="SpaceshipManager" type="Node2D" parent="."]
 unique_name_in_owner = true
+position = Vector2(-200, 0)
 script = ExtResource("1_kbkme")
+
+[node name="InventoryPanel" type="Panel" parent="." groups=["Inventory"]]
+anchors_preset = -1
+anchor_left = 0.248
+anchor_top = -0.498
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 76.304
+offset_top = -2.29599
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_5fnoo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

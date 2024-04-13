@@ -1,13 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhfbtdxfiw6y"]
+[gd_scene load_steps=3 format=3 uid="uid://dl322dbt6e1q7"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_hr68y"]
-[ext_resource type="PackedScene" uid="uid://1qrwpmtdpowc" path="res://Scenes/Spaceship/Ship Components/item_generator.tscn" id="2_p315x"]
-[ext_resource type="Script" path="res://Scenes/Spaceship/ForgeComponent.gd" id="3_pm4hy"]
 
-[node name="ForgeSection" instance=ExtResource("1_hr68y")]
-type = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
+size = Vector2(148, 148)
 
-[node name="ItemGenerator" parent="." index="0" instance=ExtResource("2_p315x")]
+[node name="Forge" instance=ExtResource("1_hr68y")]
+type = 3
 
-[node name="ForgeComponent" type="Node" parent="." index="1"]
-script = ExtResource("3_pm4hy")
+[node name="Area2D" type="Area2D" parent="." index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("RectangleShape2D_bdrhe")
+
+[node name="Panel" type="Panel" parent="." index="1"]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -174.0
+offset_top = -170.0
+offset_right = 26.0
+offset_bottom = -90.0
+grow_horizontal = 2
+
+[node name="Button" type="Button" parent="Panel" index="0"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 8.0
+offset_right = 84.0
+offset_bottom = 72.0
+
+[node name="Button2" type="Button" parent="Panel" index="1"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 7.0
+offset_right = 184.0
+offset_bottom = 71.0
