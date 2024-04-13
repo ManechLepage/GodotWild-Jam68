@@ -31,6 +31,7 @@ func start_choosing():
 	is_forging = false
 	
 	timer.stop()
+	get_parent().stop()
 	
 	unload_last_choices()
 	load_choices()
@@ -69,6 +70,7 @@ func _on_timer_timeout():
 	print(f_string % forging.name)
 	
 	timer.stop()
+	get_parent().stop()
 
 func activate_forger():
 	is_choosing = false
@@ -76,6 +78,7 @@ func activate_forger():
 	panel.visible = false
 	
 	timer.start()
+	get_parent().play()
 
 func press_button(button):
 	print(button.item.name)

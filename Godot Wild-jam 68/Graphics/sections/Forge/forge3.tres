@@ -1,0 +1,50 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://bbcjbekq6rucv"]
+
+[ext_resource type="Texture2D" uid="uid://pxp87exej5wm" path="res://Graphics/sections/Forge/Tier3/forge3.png" id="1_l6bih"]
+[ext_resource type="Texture2D" uid="uid://bxujacjl3xhr6" path="res://Graphics/sections/Forge/Tier3/forge4.png" id="2_rjbsa"]
+[ext_resource type="Texture2D" uid="uid://cf4ce4bplc8hf" path="res://Graphics/sections/Forge/Tier3/forge5.png" id="3_g2qou"]
+[ext_resource type="Texture2D" uid="uid://hqqn63w2lee8" path="res://Graphics/sections/Forge/Tier3/forge6.png" id="4_nia0c"]
+[ext_resource type="Texture2D" uid="uid://dsy2ht381dii8" path="res://Graphics/sections/Forge/Tier3/forge7.png" id="5_flc6l"]
+[ext_resource type="Texture2D" uid="uid://co51x67j4vhfs" path="res://Graphics/sections/Forge/Tier3/forge8.png" id="6_c8kqm"]
+[ext_resource type="Texture2D" uid="uid://cuqkoambevmtq" path="res://Graphics/sections/Forge/Tier3/forge9.png" id="7_5a6xq"]
+[ext_resource type="Texture2D" uid="uid://hml3pngb28sy" path="res://Graphics/sections/Forge/Tier3/forge10.png" id="8_silf5"]
+[ext_resource type="Texture2D" uid="uid://b4g4exsugj6vx" path="res://Graphics/sections/Forge/Tier3/forge11.png" id="9_b41j5"]
+[ext_resource type="Texture2D" uid="uid://dxr8q7wgkh7ls" path="res://Graphics/sections/Forge/Tier3/forge12.png" id="10_xtgi2"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l6bih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rjbsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g2qou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nia0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_flc6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c8kqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5a6xq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_silf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_b41j5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xtgi2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
