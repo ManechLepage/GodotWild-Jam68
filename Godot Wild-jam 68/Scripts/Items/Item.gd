@@ -12,6 +12,7 @@ enum GenerateType
 
 @export var id: int = 0
 @export var name: String = ""
+@export var price: int = 0
 
 @export var generate_type: GenerateType
 @export var generate_cooldown: float
