@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://b82ugruem048x"]
+[gd_scene load_steps=10 format=3 uid="uid://b82ugruem048x"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_lgxny"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/Generator.gd" id="3_7gxae"]
-[ext_resource type="Resource" uid="uid://d1siwpjnsnisd" path="res://Resources/Items/Mat/RawIron.tres" id="3_6752e"]
-[ext_resource type="Resource" uid="uid://bjtwtxjx2i3ea" path="res://Resources/Items/Mat/Iron.tres" id="4_wkvnp"]
+[ext_resource type="Resource" uid="uid://d1siwpjnsnisd" path="res://Resources/Items/Mat/RawMinerals/RawIron.tres" id="3_s1p8i"]
+[ext_resource type="Resource" uid="uid://c2dkqdu3pm6pu" path="res://Resources/Items/Mat/RawMinerals/RawTin.tres" id="4_g3cqn"]
+[ext_resource type="Resource" uid="uid://hkecx5u5gpr8" path="res://Resources/Items/Mat/RawMinerals/RawCobalt.tres" id="5_6yvse"]
+[ext_resource type="Resource" uid="uid://2ac0v4the36h" path="res://Resources/Items/Mat/RawMinerals/RawGold.tres" id="6_0e4sq"]
+[ext_resource type="Resource" uid="uid://b4f4bxtrjitpf" path="res://Resources/Items/Mat/RawMinerals/Platinum.tres" id="7_542fm"]
+[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/RawMinerals/Diamond.tres" id="8_kgkrw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
 size = Vector2(148, 148)
@@ -18,7 +22,7 @@ shape = SubResource("RectangleShape2D_bdrhe")
 
 [node name="Generator" type="Node" parent="." index="1"]
 script = ExtResource("3_7gxae")
-generator_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("3_6752e"), ExtResource("4_wkvnp"), null, null, null, null])
+generator_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("3_s1p8i"), ExtResource("4_g3cqn"), ExtResource("5_6yvse"), ExtResource("6_0e4sq"), ExtResource("8_kgkrw"), ExtResource("7_542fm")])
 
 [node name="Timer" type="Timer" parent="Generator" index="0"]
 autostart = true

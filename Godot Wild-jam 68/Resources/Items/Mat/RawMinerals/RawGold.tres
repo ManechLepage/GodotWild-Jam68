@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://2ac0v4the36h"]
+
+[ext_resource type="Resource" uid="uid://bjtwtxjx2i3ea" path="res://Resources/Items/Mat/Smelted/Iron.tres" id="1_xgd37"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_covph"]
+
+[resource]
+script = ExtResource("2_covph")
+name = "Raw Iron"
+price = 0
+generated_item = ExtResource("1_xgd37")

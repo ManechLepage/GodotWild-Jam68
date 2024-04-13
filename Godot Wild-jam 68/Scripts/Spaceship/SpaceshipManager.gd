@@ -5,7 +5,7 @@ var section_list = []
 const FRONT = preload("res://Scenes/Spaceship/Front.tscn")
 const GENERATOR = preload("res://Scenes/Spaceship/Generator.tscn")
 const SMELTER = preload("res://Scenes/Spaceship/Smelter.tscn")
-
+const FORGE = preload("res://Scenes/Spaceship/Forge.tscn")
 
 func _ready():
 	for i in range(5):
@@ -22,12 +22,17 @@ func _ready():
 	var generator = GENERATOR.instantiate()
 	generator.pos = Vector2(1, 1)
 	add_child(generator)
-	add_section(generator.pos, generator)	
+	add_section(generator.pos, generator)
 	
 	var smelter = SMELTER.instantiate()
 	smelter.pos = Vector2(3, 1)
 	add_child(smelter)
-	add_section(smelter.pos, smelter)	
+	add_section(smelter.pos, smelter)
+	
+	var forge = FORGE.instantiate()
+	forge.pos = Vector2(2, 1)
+	add_child(forge)
+	add_section(forge.pos, forge)
 	
 	update_pos()
 
