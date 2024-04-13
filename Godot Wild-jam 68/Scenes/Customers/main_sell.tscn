@@ -61,22 +61,6 @@ text = "Price (Ga)
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Quantity" type="Label" parent="Sell_menu/Desc_panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.04
-anchor_top = 0.308
-anchor_right = 0.94
-anchor_bottom = 0.409
-offset_left = -0.0800009
-offset_top = 0.195984
-offset_right = -4.88
-offset_bottom = 0.28299
-text = "Quantity
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Icon" type="TextureRect" parent="Sell_menu"]
 layout_mode = 1
 anchors_preset = -1

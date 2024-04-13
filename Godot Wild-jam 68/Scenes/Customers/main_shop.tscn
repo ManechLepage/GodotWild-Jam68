@@ -39,9 +39,6 @@ grow_vertical = 2
 [node name="Shop_item_button2" parent="Control/Panel/VBoxContainer" instance=ExtResource("1_pta8g")]
 layout_mode = 2
 
-[node name="Shop_item_button" parent="Control/Panel/VBoxContainer" instance=ExtResource("1_pta8g")]
-layout_mode = 2
-
 [node name="Panel" type="Panel" parent="Control/Panel"]
 layout_mode = 1
 anchors_preset = -1
@@ -73,6 +70,7 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.981
 offset_bottom = 0.0259972
+scale = Vector2(1.00774, 1.00944)
 text = "Name"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -102,21 +100,6 @@ text = "Description
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label" type="Label" parent="Control/Panel/Panel/Desc_panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.056
-anchor_top = 0.874
-anchor_right = 0.957
-anchor_bottom = 0.975
-offset_left = 0.0319996
-offset_top = 0.0619812
-offset_right = 0.0289917
-offset_bottom = -0.0750122
-text = "Quantity"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Item_image" type="TextureRect" parent="Control/Panel/Panel"]
 unique_name_in_owner = true
 layout_mode = 1
@@ -130,27 +113,43 @@ offset_right = -0.390045
 offset_bottom = 0.0799561
 
 [node name="Buy_button" type="Button" parent="Control/Panel/Panel"]
-layout_mode = 0
-offset_left = 490.0
-offset_top = 526.0
-offset_right = 791.0
-offset_bottom = 597.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.609
+anchor_top = 0.868
+anchor_right = 0.983
+anchor_bottom = 0.985
+offset_left = -0.245026
+offset_top = -0.00799561
+offset_right = -0.315002
+offset_bottom = 0.0900269
 text = "BUY"
 
 [node name="Price" type="Label" parent="Control/Panel/Panel/Buy_button"]
-layout_mode = 0
-offset_left = 209.0
-offset_top = 41.0
-offset_right = 293.0
-offset_bottom = 64.0
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.694
+anchor_top = 0.577
+anchor_right = 0.973
+anchor_bottom = 0.901
+offset_left = 0.106003
+offset_top = 0.0329971
+offset_right = 0.126984
+offset_bottom = 0.0289993
 text = "Price (Ga)"
 
 [node name="Skip" type="Button" parent="Control/Panel/Panel"]
-layout_mode = 0
-offset_left = 119.0
-offset_top = 526.0
-offset_right = 420.0
-offset_bottom = 597.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.148
+anchor_top = 0.868
+anchor_right = 0.522
+anchor_bottom = 0.985
+offset_left = -0.139999
+offset_top = -0.00799561
+offset_right = -0.210022
+offset_bottom = 0.0900269
 text = "Skip"
 
 [node name="SHop_text" type="Label" parent="Control/Panel/Panel"]
@@ -167,3 +166,5 @@ offset_bottom = -0.142006
 text = "Shop"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer/Shop_item_button2" to="Control/Panel/VBoxContainer/Shop_item_button2" method="_on_pressed"]

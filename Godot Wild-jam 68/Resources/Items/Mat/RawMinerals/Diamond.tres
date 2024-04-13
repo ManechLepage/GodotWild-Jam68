@@ -7,4 +7,6 @@ script = ExtResource("1_2r80u")
 ID = 5
 name = "Diamond"
 type = 0
-price = 0
+price = 10
+forge_tier = 1
+craft = Array[ExtResource("1_2r80u")]([])
