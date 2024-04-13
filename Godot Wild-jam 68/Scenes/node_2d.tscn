@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6qakkmmt38gg"]
 
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
-[ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="2_jydh4"]
+[ext_resource type="Script" path="res://Scenes/CustomerManager.gd" id="3_l103r"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,6 +9,8 @@
 unique_name_in_owner = true
 script = ExtResource("1_kbkme")
 
-[node name="SpaceshipSection" parent="SpaceshipManager" instance=ExtResource("2_jydh4")]
-
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CustomerManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_l103r")
