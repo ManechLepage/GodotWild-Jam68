@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://bo13fiufhdgil"]
+
+[ext_resource type="Resource" uid="uid://3kybpbviwd5" path="res://Resources/Items/Mat/Smelted/Gold.tres" id="1_snw68"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_igcg8"]
+[ext_resource type="Resource" uid="uid://chkfe8q5132hu" path="res://Resources/Items/Mat/Smelted/Cobalt.tres" id="2_ijhep"]
+[ext_resource type="Texture2D" uid="uid://dole88234vjyb" path="res://Graphics/Items/Products/Crown.png" id="3_km24w"]
+
+[resource]
+script = ExtResource("2_igcg8")
+ID = 0
+name = "Crown"
+icon = ExtResource("3_km24w")
+type = 1
+price = 18
+forge_tier = 2
+craft = Array[ExtResource("2_igcg8")]([ExtResource("1_snw68"), ExtResource("2_ijhep")])

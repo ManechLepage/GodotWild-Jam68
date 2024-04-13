@@ -66,13 +66,17 @@ func _on_button_pressed2():
 func _on_timer_timeout():
 	var parent = get_parent()
 	var item = smeltor_list[smelting]
-	parent.add_item(item.smelted_item)
-	parent.remove_item(item)
+	if Inventory.items.has(item):
+		timer.stop()
+		get_parent().stop()
+	else:
+		parent.add_item(item.smelted_item)
+		parent.remove_item(item)
+		
+		var f_string = "Smelting %s into %s..."
+		print(f_string % [item.name, item.smelted_item.name])
 	
-	var f_string = "Smelting %s into %s..."
-	print(f_string % [item.name, item.smelted_item.name])
 	
-	# timer.stop() # Make it automatic or not?
 
 func activate_smeltor():
 	is_choosing = false

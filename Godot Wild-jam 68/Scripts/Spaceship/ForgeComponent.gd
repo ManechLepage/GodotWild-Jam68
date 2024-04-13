@@ -45,7 +45,7 @@ func load_choices():
 	
 	for i in items:
 		var item = ITEM.instantiate()
-		# item.icon = i.icon
+		item.icon = i.icon
 		item.item = i
 		item.disabled = not can_craft(i)
 		

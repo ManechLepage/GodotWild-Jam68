@@ -31,6 +31,7 @@ generator_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("3_
 autostart = true
 
 [node name="Panel" type="Panel" parent="." index="2"]
+visible = false
 texture_filter = 1
 anchors_preset = 5
 anchor_left = 0.5

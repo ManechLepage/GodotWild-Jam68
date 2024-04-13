@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://v4uepdtaptxd"]
+
+[ext_resource type="Resource" uid="uid://c4bndeme8mfiy" path="res://Resources/Items/Mat/Products/GreatSword.tres" id="1_1dq2u"]
+[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/RawMinerals/Diamond.tres" id="2_720e1"]
+[ext_resource type="Texture2D" uid="uid://63uak06aau1p" path="res://Graphics/Items/Products/CeremonialSword.png" id="3_fu02v"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="3_rg326"]
+
+[resource]
+script = ExtResource("3_rg326")
+ID = 0
+name = "Ceremonial Sword"
+icon = ExtResource("3_fu02v")
+type = 1
+price = 30
+forge_tier = 3
+craft = Array[ExtResource("3_rg326")]([ExtResource("1_1dq2u"), ExtResource("2_720e1")])

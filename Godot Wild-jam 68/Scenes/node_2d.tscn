@@ -1,34 +1,78 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=12 format=3 uid="uid://dwoj6jb5h2y5j"]
 
+[ext_resource type="Script" path="res://Scripts/Backgrounds/ParallaxBackground.gd" id="1_iyqd7"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
+[ext_resource type="Texture2D" uid="uid://bv6llkox8dhrx" path="res://Graphics/Background/sky.png" id="1_ui1sg"]
 [ext_resource type="Script" path="res://Scripts/Inventory/InventoryPanel.gd" id="2_5fnoo"]
+[ext_resource type="Texture2D" uid="uid://cgmnj6stchody" path="res://Graphics/Background/bg1.png" id="2_8nx5b"]
 [ext_resource type="Resource" uid="uid://d1x3fincm36cu" path="res://Resources/Items/Mat/Products/IronSword.tres" id="2_t5q4a"]
 [ext_resource type="Resource" uid="uid://cuejfcb5d25lm" path="res://Resources/Items/Mat/Products/TinHammer.tres" id="3_14e8w"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="3_l103r"]
+[ext_resource type="Texture2D" uid="uid://bss41g17jiu6x" path="res://Graphics/Background/bg2.png" id="4_twm04"]
 [ext_resource type="Resource" uid="uid://c0jscdnucolit" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
+[ext_resource type="Texture2D" uid="uid://drq7eou3e3882" path="res://Graphics/Background/bg3.png" id="5_r05xb"]
 
 [node name="Node2D" type="Node"]
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_iyqd7")
+
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(979, 550)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("1_ui1sg")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1960, 1100)
+
+[node name="Bg1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(982, 548)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("2_8nx5b")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(2, 1.5)
+motion_mirroring = Vector2(1960, 1100)
+
+[node name="Bg1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(982, 548)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("4_twm04")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.4, -0.4)
+motion_mirroring = Vector2(1960, 1100)
+
+[node name="Bg1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(982, 548)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("5_r05xb")
+
 [node name="SpaceshipManager" type="Node2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-200, 0)
+position = Vector2(386, 198)
 script = ExtResource("1_kbkme")
 item_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("2_t5q4a"), ExtResource("3_14e8w"), ExtResource("4_u62bt")])
 
+[node name="CustomerManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_l103r")
+
 [node name="InventoryPanel" type="Panel" parent="." groups=["Inventory"]]
 anchors_preset = -1
-anchor_left = 0.248
-anchor_top = -0.498
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 76.304
-offset_top = -2.29599
-offset_right = -1.0
+anchor_right = 1.704
+anchor_bottom = 1.695
+offset_left = 1589.0
+offset_right = -2.00818
+offset_bottom = 167.64
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.00535, 0.867509)
 script = ExtResource("2_5fnoo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="InventoryPanel"]
+custom_minimum_size = Vector2(303, 43)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,9 +83,3 @@ offset_right = -6.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="CustomerManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("3_l103r")

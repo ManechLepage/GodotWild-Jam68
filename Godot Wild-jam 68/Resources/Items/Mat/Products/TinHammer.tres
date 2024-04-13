@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cuejfcb5d25lm"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cuejfcb5d25lm"]
 
 [ext_resource type="Resource" uid="uid://bovhh82i43fsp" path="res://Resources/Items/Mat/Smelted/Tin.tres" id="1_6h8p5"]
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_1766n"]
+[ext_resource type="Texture2D" uid="uid://cmi1cfp41rtk6" path="res://Graphics/Items/Products/TinHammer.png" id="2_mo71v"]
 
 [resource]
 script = ExtResource("2_1766n")
 ID = 0
 name = "Tin Hammer"
+icon = ExtResource("2_mo71v")
 type = 1
 price = 5
 forge_tier = 1

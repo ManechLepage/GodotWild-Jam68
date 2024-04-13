@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bl7pjqw7vxktu"]
+
+[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/RawMinerals/Diamond.tres" id="1_kao7a"]
+[ext_resource type="Texture2D" uid="uid://b8t4vdn01a3ma" path="res://Graphics/Items/Products/DiamondNecklace.png" id="2_iicsj"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="3_eh36a"]
+
+[resource]
+script = ExtResource("3_eh36a")
+ID = 0
+name = "Diamond Necklace"
+icon = ExtResource("2_iicsj")
+type = 1
+price = 21
+forge_tier = 3
+craft = Array[ExtResource("3_eh36a")]([ExtResource("1_kao7a")])

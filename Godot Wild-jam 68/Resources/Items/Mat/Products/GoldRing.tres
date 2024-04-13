@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dpbpy8miaqgry"]
+
+[ext_resource type="Resource" uid="uid://3kybpbviwd5" path="res://Resources/Items/Mat/Smelted/Gold.tres" id="1_fgnbm"]
+[ext_resource type="Texture2D" uid="uid://bodeb56nks0fy" path="res://Graphics/Items/Products/GoldRing.png" id="2_0oqgh"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_mavvk"]
+
+[resource]
+script = ExtResource("2_mavvk")
+ID = 0
+name = "Gold Ring"
+icon = ExtResource("2_0oqgh")
+type = 1
+price = 15
+forge_tier = 2
+craft = Array[ExtResource("2_mavvk")]([ExtResource("1_fgnbm")])
