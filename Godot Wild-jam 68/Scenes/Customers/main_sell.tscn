@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://cg1c8dohjnblu"]
+
+[node name="Main_sell" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sell_menu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -3.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Desc_panel" type="Panel" parent="Sell_menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.015
+anchor_top = 0.022
+anchor_right = 0.278
+anchor_bottom = 0.975
+offset_left = -0.235001
+offset_top = -0.146001
+offset_right = -0.422028
+offset_bottom = 0.0750122
+
+[node name="Name" type="Label" parent="Sell_menu/Desc_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.031
+anchor_right = 0.94
+anchor_bottom = 0.127
+offset_left = 0.0879993
+offset_top = -0.00300026
+offset_right = 0.119995
+offset_bottom = 0.148994
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Price" type="Label" parent="Sell_menu/Desc_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.162
+anchor_right = 0.917
+anchor_bottom = 0.263
+offset_left = -6.912
+offset_top = -0.306
+offset_right = 0.065979
+offset_bottom = -0.219009
+text = "Price (Ga)
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quantity" type="Label" parent="Sell_menu/Desc_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.308
+anchor_right = 0.94
+anchor_bottom = 0.409
+offset_left = -0.0800009
+offset_top = 0.195984
+offset_right = -4.88
+offset_bottom = 0.28299
+text = "Quantity
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Sell_menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.287
+anchor_top = 0.154
+anchor_right = 0.709
+anchor_bottom = 0.795
+offset_left = 0.237
+offset_top = -0.0220108
+offset_right = 0.358948
+offset_bottom = -0.184998
+
+[node name="Sell_text" type="Label" parent="Sell_menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.293
+anchor_top = 0.037
+anchor_right = 0.977
+anchor_bottom = 0.148
+offset_left = 0.342987
+offset_top = 0.209
+offset_right = -0.57312
+offset_bottom = -0.164001
+text = "Sell"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Skip_sell_menu" type="Panel" parent="Sell_menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.284
+anchor_top = 0.79
+anchor_right = 0.982
+anchor_bottom = 0.975
+offset_left = -0.31601
+offset_top = 0.0299988
+offset_right = -0.318115
+offset_bottom = 0.0750122
+
+[node name="Skip_button" type="Button" parent="Sell_menu/Skip_sell_menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016
+anchor_top = 0.193
+anchor_right = 0.489
+anchor_bottom = 0.84
+offset_left = 0.167999
+offset_top = 0.032999
+offset_right = -0.178009
+offset_bottom = 0.0399933
+text = "Skip"
+
+[node name="Sell_button" type="Button" parent="Sell_menu/Skip_sell_menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.514
+anchor_top = 0.185
+anchor_right = 0.986
+anchor_bottom = 0.832
+offset_left = -0.227997
+offset_top = -0.0149994
+offset_right = 0.227966
+offset_bottom = -0.00800323
+text = "Sell"

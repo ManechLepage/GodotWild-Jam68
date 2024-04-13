@@ -31,6 +31,7 @@ folder_colors={
 "res://Graphics/": "pink",
 "res://Resources/": "purple",
 "res://Scenes/": "red",
+"res://Scenes/Customers/": "yellow",
 "res://Scenes/Spaceship/": "orange",
 "res://Scripts/": "green"
 }

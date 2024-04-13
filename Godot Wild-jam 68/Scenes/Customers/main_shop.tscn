@@ -1,0 +1,169 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv8avkdkn7qw8"]
+
+[ext_resource type="PackedScene" uid="uid://c53wl0s54jdx6" path="res://Scenes/Customers/Shop_item_button.tscn" id="1_pta8g"]
+
+[node name="Main_shop" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -3.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
+custom_minimum_size = Vector2(80, 20)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.272
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 20.0
+offset_right = -0.256012
+offset_bottom = -15.0
+grow_vertical = 2
+
+[node name="Shop_item_button2" parent="Control/Panel/VBoxContainer" instance=ExtResource("1_pta8g")]
+layout_mode = 2
+
+[node name="Shop_item_button" parent="Control/Panel/VBoxContainer" instance=ExtResource("1_pta8g")]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.287
+anchor_top = 0.028
+anchor_right = 0.988
+anchor_bottom = 0.972
+offset_left = -0.476013
+offset_top = 0.0240002
+offset_right = -0.223999
+offset_bottom = -0.0240479
+
+[node name="Name_panel" type="Panel" parent="Control/Panel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.606
+anchor_top = 0.03
+anchor_right = 0.983
+anchor_bottom = 0.119
+offset_left = 0.169983
+offset_top = -0.18
+offset_right = -0.315002
+offset_bottom = -0.113998
+
+[node name="Name" type="Label" parent="Control/Panel/Panel/Name_panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.981
+offset_bottom = 0.0259972
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Desc_panel" type="Panel" parent="Control/Panel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.607
+anchor_top = 0.132
+anchor_right = 0.984
+anchor_bottom = 0.853
+offset_left = 0.36496
+offset_top = 0.00800323
+offset_right = -0.119995
+offset_bottom = 0.0819702
+
+[node name="Description" type="Label" parent="Control/Panel/Panel/Desc_panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.995
+offset_top = 1.0
+offset_bottom = 0.184967
+text = "Description
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Control/Panel/Panel/Desc_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.874
+anchor_right = 0.957
+anchor_bottom = 0.975
+offset_left = 0.0319996
+offset_top = 0.0619812
+offset_right = 0.0289917
+offset_bottom = -0.0750122
+text = "Quantity"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Item_image" type="TextureRect" parent="Control/Panel/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.183
+anchor_right = 0.598
+anchor_bottom = 0.82
+offset_left = 11.0
+offset_top = 0.10199
+offset_right = -0.390045
+offset_bottom = 0.0799561
+
+[node name="Buy_button" type="Button" parent="Control/Panel/Panel"]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 526.0
+offset_right = 791.0
+offset_bottom = 597.0
+text = "BUY"
+
+[node name="Price" type="Label" parent="Control/Panel/Panel/Buy_button"]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 41.0
+offset_right = 293.0
+offset_bottom = 64.0
+text = "Price (Ga)"
+
+[node name="Skip" type="Button" parent="Control/Panel/Panel"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 526.0
+offset_right = 420.0
+offset_bottom = 597.0
+text = "Skip"
+
+[node name="SHop_text" type="Label" parent="Control/Panel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.017
+anchor_right = 0.593
+anchor_bottom = 0.157
+offset_left = -0.0500002
+offset_top = -0.302001
+offset_right = -0.365051
+offset_bottom = -0.142006
+text = "Shop"
+horizontal_alignment = 1
+vertical_alignment = 1

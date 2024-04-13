@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckjqs3swohew5"]
+
+[ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="1_24x0k"]
+[ext_resource type="Script" path="res://Scripts/Customer/Merchant.gd" id="2_ctbpc"]
+[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Diamond.tres" id="3_f8ut3"]
+
+[node name="Customers" type="Node2D"]
+script = ExtResource("1_24x0k")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1153.0
+offset_bottom = 647.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.183
+anchor_top = 0.765
+anchor_right = 0.817
+anchor_bottom = 1.0
+offset_left = 0.500992
+offset_top = 0.0449829
+offset_right = -0.501038
+grow_horizontal = 2
+grow_vertical = 0
+text = "Serve"
+
+[node name="Customer" type="Node2D" parent="Panel"]
+
+[node name="Merchand" type="ColorRect" parent="Panel/Customer"]
+offset_left = 476.0
+offset_top = 259.0
+offset_right = 639.0
+offset_bottom = 411.0
+script = ExtResource("2_ctbpc")
+item = ExtResource("3_f8ut3")
+price = 20
+name = "Jack"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c53wl0s54jdx6"]
 
 [ext_resource type="Script" path="res://Scripts/Items/Shop_item_button.gd" id="1_if7ak"]
-[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/Diamond.tres" id="2_nerp2"]
+[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Diamond.tres" id="2_nerp2"]
 
 [node name="Shop_item_button" type="Button"]
 custom_minimum_size = Vector2(300, 60)
