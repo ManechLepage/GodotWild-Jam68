@@ -1,6 +1,6 @@
 extends Button
 @onready var item_name = %Name
-@onready var price = %Price
+@onready var price = $"../../Panel/Button/Price"
 @onready var description = %Description
 @onready var item_image = %Item_image
 @export var item: Item
