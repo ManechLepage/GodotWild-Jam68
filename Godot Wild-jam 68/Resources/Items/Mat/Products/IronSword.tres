@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d1x3fincm36cu"]
+
+[ext_resource type="Resource" uid="uid://bjtwtxjx2i3ea" path="res://Resources/Items/Mat/Smelted/Iron.tres" id="1_l5g2u"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="1_lymmw"]
+
+[resource]
+script = ExtResource("1_lymmw")
+ID = 0
+name = "Iron Sword"
+type = 1
+price = 5
+forge_tier = 1
+craft = Array[ExtResource("1_lymmw")]([ExtResource("1_l5g2u"), ExtResource("1_l5g2u")])

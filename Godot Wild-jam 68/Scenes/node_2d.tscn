@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=6 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
 [ext_resource type="Script" path="res://Scripts/Inventory/InventoryPanel.gd" id="2_5fnoo"]
+[ext_resource type="Resource" uid="uid://d1x3fincm36cu" path="res://Resources/Items/Mat/Products/IronSword.tres" id="2_t5q4a"]
+[ext_resource type="Resource" uid="uid://cuejfcb5d25lm" path="res://Resources/Items/Mat/Products/TinHammer.tres" id="3_14e8w"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="3_l103r"]
 
 [node name="Node2D" type="Node"]
@@ -10,7 +12,7 @@
 unique_name_in_owner = true
 position = Vector2(-200, 0)
 script = ExtResource("1_kbkme")
-item_list = Array[Resource("res://Scripts/Items/Item.gd")]([null, null, null, null, null, null, null, null, null, null])
+item_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("2_t5q4a"), ExtResource("3_14e8w")])
 
 [node name="InventoryPanel" type="Panel" parent="." groups=["Inventory"]]
 anchors_preset = -1

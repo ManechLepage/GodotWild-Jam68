@@ -15,29 +15,25 @@ type = 3
 shape = SubResource("RectangleShape2D_bdrhe")
 
 [node name="Panel" type="Panel" parent="." index="1"]
-visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -174.0
-offset_top = -170.0
-offset_right = 26.0
-offset_bottom = -90.0
+offset_left = -94.0
+offset_top = -160.0
+offset_right = -54.0
+offset_bottom = -85.0
 grow_horizontal = 2
 
-[node name="Button" type="Button" parent="Panel" index="0"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 8.0
-offset_right = 84.0
-offset_bottom = 72.0
-
-[node name="Button2" type="Button" parent="Panel" index="1"]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 7.0
-offset_right = 184.0
-offset_bottom = 71.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
 
 [node name="ForgeComponent" type="Node" parent="." index="2"]
 script = ExtResource("2_elvxe")

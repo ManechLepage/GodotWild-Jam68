@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://coeiv8b28o7bf"]
+
+[ext_resource type="Texture2D" uid="uid://dxa4jghsxvve2" path="res://Graphics/0o8c1qbrt9m71.png" id="1_balkv"]
+
+[node name="Button" type="Button"]
+offset_left = 20.0
+offset_top = 8.0
+offset_right = 84.0
+offset_bottom = 72.0
+icon = ExtResource("1_balkv")

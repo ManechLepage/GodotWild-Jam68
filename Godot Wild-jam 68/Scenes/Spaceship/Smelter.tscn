@@ -19,7 +19,6 @@ type = 2
 shape = SubResource("RectangleShape2D_bdrhe")
 
 [node name="Panel" type="Panel" parent="." index="1"]
-visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
