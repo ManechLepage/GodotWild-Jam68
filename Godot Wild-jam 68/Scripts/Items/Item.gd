@@ -11,6 +11,6 @@ enum ItemType
 @export var name: String = ""
 @export var price: int = 0
 
-@export var generated_item: Item
+@export var smelted_item: Item
 
 @export var icon: Texture2D
