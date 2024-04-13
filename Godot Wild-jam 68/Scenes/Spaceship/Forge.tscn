@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl322dbt6e1q7"]
+[gd_scene load_steps=5 format=3 uid="uid://dl322dbt6e1q7"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_hr68y"]
+[ext_resource type="Script" path="res://Scenes/Spaceship/ForgeHContainer.gd" id="2_3eteh"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/ForgeComponent.gd" id="2_elvxe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
@@ -15,6 +16,7 @@ type = 3
 shape = SubResource("RectangleShape2D_bdrhe")
 
 [node name="Panel" type="Panel" parent="." index="1"]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -34,6 +36,7 @@ offset_right = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
+script = ExtResource("2_3eteh")
 
 [node name="ForgeComponent" type="Node" parent="." index="2"]
 script = ExtResource("2_elvxe")

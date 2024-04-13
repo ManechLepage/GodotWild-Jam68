@@ -12,6 +12,7 @@ size = Vector2(148, 148)
 script = ExtResource("3_5qadi")
 
 [node name="Button" type="Button" parent="." index="1"]
+visible = false
 texture_filter = 1
 offset_left = -50.0
 offset_top = -205.0
@@ -20,6 +21,7 @@ offset_bottom = -173.0
 text = "Sell"
 
 [node name="Panel" type="Panel" parent="." index="2"]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

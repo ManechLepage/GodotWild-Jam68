@@ -71,7 +71,7 @@ func _on_timer_timeout():
 	var f_string = "Smelting %s into %s..."
 	print(f_string % [item.name, item.smelted_item.name])
 	
-	timer.stop() # Make it automatic or not?
+	# timer.stop() # Make it automatic or not?
 
 func activate_smeltor():
 	is_choosing = false
