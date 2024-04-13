@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cufmu2tdvuh5p"]
+
+[ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_kafey"]
+[ext_resource type="PackedScene" uid="uid://1qrwpmtdpowc" path="res://Scenes/Spaceship/Ship Components/item_generator.tscn" id="2_p0h8t"]
+
+[node name="SmelterSection" instance=ExtResource("1_kafey")]
+type = 2
+
+[node name="ItemGenerator" parent="." index="0" instance=ExtResource("2_p0h8t")]

@@ -1,13 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6qakkmmt38gg"]
+[gd_scene load_steps=6 format=3 uid="uid://c6qakkmmt38gg"]
 
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
+[ext_resource type="PackedScene" uid="uid://d4fe8jqbvfpqh" path="res://Scenes/Spaceship/Front.tscn" id="2_2srhm"]
+[ext_resource type="PackedScene" uid="uid://cufmu2tdvuh5p" path="res://Scenes/Spaceship/Smelter.tscn" id="2_bxd17"]
 [ext_resource type="Script" path="res://Scenes/CustomerManager.gd" id="3_l103r"]
+[ext_resource type="PackedScene" uid="uid://b82ugruem048x" path="res://Scenes/Spaceship/Generator.tscn" id="3_ykggf"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="SpaceshipManager" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_kbkme")
+
+[node name="SmelterSection" parent="SpaceshipManager" instance=ExtResource("2_bxd17")]
+position = Vector2(261, -37)
+pos = Vector2(1, 3)
+
+[node name="FrontSection" parent="SpaceshipManager" instance=ExtResource("2_2srhm")]
+position = Vector2(163, -155)
+pos = Vector2(2, 0)
+
+[node name="GeneratorSection" parent="SpaceshipManager" instance=ExtResource("3_ykggf")]
+position = Vector2(-104, -149)
+pos = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

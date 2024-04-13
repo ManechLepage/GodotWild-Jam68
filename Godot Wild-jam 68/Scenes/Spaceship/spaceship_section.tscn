@@ -4,5 +4,6 @@
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipSection.gd" id="2_va4xf"]
 
 [node name="SpaceshipSection" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_k051f")
 script = ExtResource("2_va4xf")

@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_fgces")
-ID = 0
-Name = "Iron"
+id = 0
+name = ""
+generate_type = 1
+generate_cooldown = 0.0

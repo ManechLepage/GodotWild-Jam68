@@ -1,6 +1,5 @@
-extends Node2D
+extends Node
 
-@export var item_list = []
 
 func _ready():
 	pass

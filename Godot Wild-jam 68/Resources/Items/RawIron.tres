@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d1siwpjnsnisd"]
+
+[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="1_cub5g"]
+[ext_resource type="Resource" uid="uid://bjtwtxjx2i3ea" path="res://Resources/Items/Iron.tres" id="1_tk408"]
+
+[resource]
+script = ExtResource("1_cub5g")
+id = 2
+name = "Raw Iron"
+generate_type = 1
+generate_cooldown = 5.0
+generated_item = ExtResource("1_tk408")

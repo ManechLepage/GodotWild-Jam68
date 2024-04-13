@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_2r80u")
-ID = 1
-Name = "Diamond"
+id = 1
+name = "Diamond"
+can_generate = true
+generate_cooldown = 30.0
