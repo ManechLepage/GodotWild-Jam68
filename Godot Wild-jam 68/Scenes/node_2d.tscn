@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6qakkmmt38gg"]
+[gd_scene load_steps=3 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
 [ext_resource type="Script" path="res://Scenes/CustomerManager.gd" id="3_l103r"]
