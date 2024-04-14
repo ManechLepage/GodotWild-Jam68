@@ -9,6 +9,7 @@ script = ExtResource("2_mavvk")
 ID = 0
 name = "Gold Ring"
 icon = ExtResource("2_0oqgh")
+description = ""
 type = 1
 price = 15
 forge_tier = 2

@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://2ac0v4the36h" path="res://Resources/Items/Mat/RawMinerals/RawGold.tres" id="6_mfcij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
-size = Vector2(148, 148)
+size = Vector2(32.3333, 32)
 
 [node name="Smelter" instance=ExtResource("1_kafey")]
 type = 2
@@ -16,31 +16,59 @@ type = 2
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-0.166666, 0.333334)
 shape = SubResource("RectangleShape2D_bdrhe")
 
 [node name="Panel" type="Panel" parent="." index="1"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -174.0
-offset_top = -170.0
-offset_right = 26.0
-offset_bottom = -90.0
+offset_left = -55.0
+offset_top = -58.0
+offset_right = 23.0
+offset_bottom = -20.0
 grow_horizontal = 2
 
 [node name="Button" type="Button" parent="Panel" index="0"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 8.0
-offset_right = 84.0
-offset_bottom = 72.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 2.66666
+offset_top = -16.0
+offset_right = 34.6667
+offset_bottom = 16.0
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Button" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Button2" type="Button" parent="Panel" index="1"]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 7.0
-offset_right = 184.0
-offset_bottom = 71.0
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -34.6667
+offset_top = -16.0
+offset_right = -2.66667
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Button2" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="SmelterComponent" type="Node" parent="." index="2"]
 script = ExtResource("2_klcya")

@@ -19,7 +19,6 @@ type = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 visible = false
 position = Vector2(0.1, 0.2)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_bdrhe")
 
 [node name="Panel" type="Panel" parent="." index="1"]

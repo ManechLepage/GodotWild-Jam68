@@ -10,6 +10,7 @@ script = ExtResource("3_nj26w")
 ID = 0
 name = "War Hammer"
 icon = ExtResource("3_i7o7l")
+description = ""
 type = 1
 price = 16
 forge_tier = 2

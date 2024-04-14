@@ -10,6 +10,7 @@ script = ExtResource("3_2adm0")
 ID = 0
 name = "Great Sword"
 icon = ExtResource("3_ee42c")
+description = ""
 type = 1
 price = 17
 forge_tier = 2

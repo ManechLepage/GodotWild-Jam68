@@ -47,7 +47,6 @@ offset_bottom = 72.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 visible = false
 position = Vector2(0, 0.1)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3fhv0")
 
 [connection signal="pressed" from="Panel/Button" to="FrontComponent" method="_on_button_pressed1"]

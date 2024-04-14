@@ -9,6 +9,7 @@ script = ExtResource("3_eh36a")
 ID = 0
 name = "Diamond Necklace"
 icon = ExtResource("2_iicsj")
+description = ""
 type = 1
 price = 21
 forge_tier = 3

@@ -10,6 +10,7 @@ script = ExtResource("3_x0j8p")
 ID = 0
 name = "Platinum Crown"
 icon = ExtResource("3_15b5w")
+description = ""
 type = 1
 price = 27
 forge_tier = 3
