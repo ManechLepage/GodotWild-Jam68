@@ -1,23 +1,60 @@
-[gd_scene load_steps=3 format=3 uid="uid://c53wl0s54jdx6"]
+[gd_scene load_steps=4 format=3 uid="uid://c53wl0s54jdx6"]
 
+[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="1_6pbhp"]
 [ext_resource type="Script" path="res://Scripts/Items/Shop_item_button.gd" id="1_if7ak"]
-[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Diamond.tres" id="2_nerp2"]
+[ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="4_vqfr4"]
 
 [node name="Shop_item_button" type="Button"]
+texture_filter = 1
 custom_minimum_size = Vector2(300, 60)
 offset_left = 36.0
 offset_top = 29.0
-offset_right = 298.0
-offset_bottom = 80.0
-text = "Item Name"
+offset_right = 476.0
+offset_bottom = 89.0
+theme = ExtResource("1_6pbhp")
 alignment = 0
 script = ExtResource("1_if7ak")
-item = ExtResource("2_nerp2")
 
 [node name="Price_button" type="Label" parent="."]
-layout_mode = 0
-offset_left = 227.0
-offset_top = 33.0
-offset_right = 297.0
-offset_bottom = 56.0
-text = "Price(Ga)"
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -159.0
+offset_top = -31.0
+offset_right = -24.0
+offset_bottom = -3.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Price"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -28.0
+offset_right = 16.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_vqfr4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Item Name"
+vertical_alignment = 1

@@ -14,7 +14,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
 size = Vector2(32, 32)
 
-[node name="GeneratorSection" instance=ExtResource("1_lgxny")]
+[node name="Generator" instance=ExtResource("1_lgxny")]
 sprite_frames = ExtResource("2_3oxqq")
 type = 1
 

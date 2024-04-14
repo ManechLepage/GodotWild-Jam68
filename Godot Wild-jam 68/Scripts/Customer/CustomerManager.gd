@@ -24,6 +24,7 @@ func load_customer():
 	
 	customer.get_child(0).text = item.name
 	customer.get_child(1).text = str(item.price)
+	customer.get_child(2).texture = item.icon
 	customer.item = item
 	
 	v_box_container.add_child(customer)

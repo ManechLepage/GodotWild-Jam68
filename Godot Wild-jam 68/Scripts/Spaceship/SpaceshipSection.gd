@@ -10,10 +10,10 @@ extends AnimatedSprite2D
 
 enum SectionType 
 {
-	Front,
-	Miner,
-	Smelter,
-	Forger
+	Front = 0,
+	Miner = 1,
+	Smelter = 2,
+	Forger = 3
 }
 
 @export var pos: Vector2
