@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dl322dbt6e1q7"]
+[gd_scene load_steps=7 format=3 uid="uid://dl322dbt6e1q7"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_hr68y"]
 [ext_resource type="SpriteFrames" uid="uid://dwqgoff1ca67h" path="res://Graphics/sections/Forge/forge1.tres" id="2_2g2ex"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/ForgeHContainer.gd" id="2_3eteh"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/ForgeComponent.gd" id="2_elvxe"]
+[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="3_ovg0e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
 size = Vector2(32.2, 32)
@@ -31,6 +32,7 @@ offset_top = -58.0
 offset_right = 4.0
 offset_bottom = -18.0
 grow_horizontal = 2
+theme = ExtResource("3_ovg0e")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel" index="0"]
 layout_mode = 1

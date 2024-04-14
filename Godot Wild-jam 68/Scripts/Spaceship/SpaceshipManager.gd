@@ -40,8 +40,6 @@ func _ready():
 	
 	create_section(SMELTER, Vector2(2, 1), 1)
 	create_section(SMELTER, Vector2(2, 2), 2)
-	
-	update_pos()
 
 func create_section(type:PackedScene, pos:Vector2, tier:int):
 	var section = type.instantiate()

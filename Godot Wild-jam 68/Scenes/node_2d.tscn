@@ -1,118 +1,30 @@
-[gd_scene load_steps=26 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=16 format=3 uid="uid://dwoj6jb5h2y5j"]
 
-[ext_resource type="Script" path="res://Scripts/Backgrounds/ParallaxBackground.gd" id="1_iyqd7"]
+[ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="1_1hp5l"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
-[ext_resource type="Texture2D" uid="uid://bv6llkox8dhrx" path="res://Graphics/Background/sky.png" id="1_ui1sg"]
 [ext_resource type="Script" path="res://Scripts/Inventory/InventoryPanel.gd" id="2_5fnoo"]
-[ext_resource type="Texture2D" uid="uid://cgmnj6stchody" path="res://Graphics/Background/bg1.png" id="2_8nx5b"]
 [ext_resource type="Resource" uid="uid://d1x3fincm36cu" path="res://Resources/Items/Mat/Products/IronSword.tres" id="2_t5q4a"]
 [ext_resource type="Resource" uid="uid://cuejfcb5d25lm" path="res://Resources/Items/Mat/Products/TinHammer.tres" id="3_14e8w"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="3_l103r"]
-[ext_resource type="Texture2D" uid="uid://bss41g17jiu6x" path="res://Graphics/Background/bg2.png" id="4_twm04"]
 [ext_resource type="Resource" uid="uid://c0jscdnucolit" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
-[ext_resource type="Texture2D" uid="uid://drq7eou3e3882" path="res://Graphics/Background/bg3.png" id="5_r05xb"]
-[ext_resource type="Texture2D" uid="uid://casasu7qt8ldp" path="res://Graphics/Background/planet1_aura.png" id="6_1naja"]
-[ext_resource type="Script" path="res://Scenes/Rotate.gd" id="6_7yx6w"]
 [ext_resource type="Resource" uid="uid://v4uepdtaptxd" path="res://Resources/Items/Mat/Products/CeremonialSword.tres" id="7_7omu2"]
-[ext_resource type="Texture2D" uid="uid://bxg2kkxj5yna8" path="res://Graphics/Background/planet1.png" id="7_gvflt"]
 [ext_resource type="Resource" uid="uid://bo13fiufhdgil" path="res://Resources/Items/Mat/Products/Crown.tres" id="8_d5u56"]
 [ext_resource type="Resource" uid="uid://bl7pjqw7vxktu" path="res://Resources/Items/Mat/Products/DiamondNecklace.tres" id="9_4ee0j"]
-[ext_resource type="Texture2D" uid="uid://07dw22exc4hj" path="res://Graphics/Background/planet2_aura.png" id="9_13dls"]
 [ext_resource type="Resource" uid="uid://dpbpy8miaqgry" path="res://Resources/Items/Mat/Products/GoldRing.tres" id="10_6xdoc"]
-[ext_resource type="Texture2D" uid="uid://bmkcglxumahx4" path="res://Graphics/Background/planet2.png" id="10_q8y63"]
 [ext_resource type="Resource" uid="uid://c4bndeme8mfiy" path="res://Resources/Items/Mat/Products/GreatSword.tres" id="11_73ndc"]
-[ext_resource type="Texture2D" uid="uid://dowqb8bnci3oc" path="res://Graphics/Background/planet3_aura.png" id="11_pxx4b"]
-[ext_resource type="Texture2D" uid="uid://13rq50djwhmv" path="res://Graphics/Background/planet3.png" id="12_o6w0o"]
 [ext_resource type="Resource" uid="uid://bdoisje2sdqxo" path="res://Resources/Items/Mat/Products/PlatinumCrown.tres" id="13_nehk4"]
+[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="15_tpdjp"]
 [ext_resource type="Resource" uid="uid://byk00iyofuh40" path="res://Resources/Items/Mat/Products/WarHammer.tres" id="16_wraly"]
 
 [node name="Node2D" type="Node"]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-script = ExtResource("1_iyqd7")
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_1hp5l")]
 
-[node name="Sky" type="Sprite2D" parent="ParallaxBackground"]
-position = Vector2(979, 550)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("1_ui1sg")
+[node name="SeperatorManager" type="Node2D" parent="."]
+position = Vector2(386, 198)
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.7, 1)
-motion_mirroring = Vector2(1960, 1100)
-
-[node name="Bg1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(982, 548)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("2_8nx5b")
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(2, 1.5)
-motion_mirroring = Vector2(1960, 1100)
-
-[node name="Bg1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2(982, 548)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("4_twm04")
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(1.4, -0.4)
-motion_mirroring = Vector2(1960, 1100)
-
-[node name="Bg1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2(982, 548)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("5_r05xb")
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-motion_scale = Vector2(-0.3, 0.5)
-motion_mirroring = Vector2(1960, 1100)
-
-[node name="Bg2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2(475, 394)
-scale = Vector2(1.67, 1.67)
-texture = ExtResource("6_1naja")
-script = ExtResource("6_7yx6w")
-speed = 0.1
-
-[node name="Bg1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2(475, 394)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("7_gvflt")
-
-[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-motion_scale = Vector2(-0.8, -0.4)
-motion_mirroring = Vector2(1960, 1100)
-
-[node name="Bg2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
-position = Vector2(1395, 9.00006)
-scale = Vector2(1.67, 1.67)
-texture = ExtResource("9_13dls")
-script = ExtResource("6_7yx6w")
-speed = 0.2
-
-[node name="Bg1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
-position = Vector2(1395, 9)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("10_q8y63")
-
-[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-motion_scale = Vector2(0.1, -0.7)
-motion_mirroring = Vector2(1960, 1100)
-
-[node name="Bg2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
-position = Vector2(1093, 688)
-scale = Vector2(1.67, 1.67)
-texture = ExtResource("11_pxx4b")
-script = ExtResource("6_7yx6w")
-speed = 0.3
-
-[node name="Bg1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
-position = Vector2(1093, 688)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("12_o6w0o")
+[node name="AddButtonManager" type="Node2D" parent="."]
+position = Vector2(386, 198)
 
 [node name="SpaceshipManager" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -125,15 +37,15 @@ unique_name_in_owner = true
 script = ExtResource("3_l103r")
 
 [node name="InventoryPanel" type="Panel" parent="." groups=["Inventory"]]
+texture_filter = 1
 anchors_preset = -1
-anchor_right = 1.704
-anchor_bottom = 1.695
-offset_left = 1589.0
-offset_right = -2.00818
-offset_bottom = 167.64
+offset_left = 1475.0
+offset_right = 1957.0
+offset_bottom = 1267.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.00535, 0.867509)
+theme = ExtResource("15_tpdjp")
 script = ExtResource("2_5fnoo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="InventoryPanel"]
@@ -142,15 +54,54 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 7.0
-offset_top = 8.0
-offset_right = -6.0
-offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SeperatorManager" type="Node2D" parent="."]
-position = Vector2(386, 198)
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 257.0
+offset_bottom = 77.0
+theme = ExtResource("15_tpdjp")
+text = "Recipes"
 
-[node name="AddButtonManager" type="Node2D" parent="."]
-position = Vector2(386, 198)
+[node name="Panel" type="Panel" parent="."]
+offset_top = 623.0
+offset_right = 411.0
+offset_bottom = 1103.0
+theme = ExtResource("15_tpdjp")
+script = ExtResource("3_l103r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = -6.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.5
+offset_top = -14.0
+offset_right = 205.5
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Current customers"
+horizontal_alignment = 1
+vertical_alignment = 1

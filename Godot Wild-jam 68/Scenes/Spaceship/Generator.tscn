@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b82ugruem048x"]
+[gd_scene load_steps=12 format=3 uid="uid://b82ugruem048x"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_lgxny"]
 [ext_resource type="SpriteFrames" uid="uid://irf2hvths7jt" path="res://Graphics/sections/Generator/generator1.tres" id="2_3oxqq"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://2ac0v4the36h" path="res://Resources/Items/Mat/RawMinerals/RawGold.tres" id="6_0e4sq"]
 [ext_resource type="Resource" uid="uid://b4f4bxtrjitpf" path="res://Resources/Items/Mat/RawMinerals/Platinum.tres" id="7_542fm"]
 [ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/RawMinerals/Diamond.tres" id="8_kgkrw"]
+[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="10_2efr0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdrhe"]
 size = Vector2(32, 32)
@@ -41,6 +42,7 @@ offset_top = -58.0
 offset_right = 23.0
 offset_bottom = -20.0
 grow_horizontal = 2
+theme = ExtResource("10_2efr0")
 
 [node name="Button" type="Button" parent="Panel" index="0"]
 layout_mode = 1

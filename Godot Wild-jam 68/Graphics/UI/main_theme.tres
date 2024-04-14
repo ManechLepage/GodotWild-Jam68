@@ -1,0 +1,45 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://ctb0ar3july17"]
+
+[ext_resource type="StyleBox" uid="uid://c7wf617sp2sva" path="res://Graphics/UI/MainTheme/Button/button_normal.tres" id="1_588bq"]
+[ext_resource type="FontFile" uid="uid://cxk34x5t20fg5" path="res://Graphics/UI/Fonts/Minecraft.ttf" id="1_u0yqi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl1x6"]
+bg_color = Color(0.117647, 0.117647, 0.117647, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwauc"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.392157, 0.392157, 0.392157, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p88hn"]
+bg_color = Color(0.0431373, 0.0352941, 0.0862745, 0.611765)
+border_width_bottom = 1
+border_color = Color(0.46, 0.46, 0.46, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[resource]
+default_font = ExtResource("1_u0yqi")
+default_font_size = 28
+Button/styles/hover = SubResource("StyleBoxFlat_gl1x6")
+Button/styles/normal = ExtResource("1_588bq")
+Panel/styles/normal = SubResource("StyleBoxFlat_bwauc")
+Panel/styles/panel = SubResource("StyleBoxFlat_p88hn")

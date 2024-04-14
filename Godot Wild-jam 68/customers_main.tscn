@@ -1,11 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://ckjqs3swohew5"]
 
 [ext_resource type="Script" path="res://customers_main.gd" id="1_ckx4r"]
-[ext_resource type="Script" path="res://Scripts/Customer/Merchant.gd" id="2_ctbpc"]
-[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/RawMinerals/Diamond.tres" id="3_f8ut3"]
+[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="2_iew62"]
 [ext_resource type="PackedScene" uid="uid://c53wl0s54jdx6" path="res://Scenes/Customers/Shop_item_button.tscn" id="4_32cyx"]
+[ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="5_j8h5v"]
 
 [node name="Customers" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 0.998
 offset_right = 1.0
 offset_bottom = 0.295959
+theme = ExtResource("2_iew62")
 
 [node name="serve_button" type="Button" parent="Panel"]
 layout_mode = 1
@@ -49,10 +51,6 @@ offset_right = 0.237976
 offset_bottom = 0.154968
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_ctbpc")
-item = ExtResource("3_f8ut3")
-price = 20
-name = "Jack"
 
 [node name="Panel2" type="Panel" parent="."]
 visible = false
@@ -64,6 +62,7 @@ offset_top = -2.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_iew62")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel2"]
 custom_minimum_size = Vector2(80, 20)
@@ -207,6 +206,8 @@ offset_bottom = -0.142006
 text = "Shop"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("5_j8h5v")]
 
 [connection signal="pressed" from="Panel/serve_button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel2/VBoxContainer/Shop_item_button2" to="Panel2/VBoxContainer/Shop_item_button2" method="_on_pressed"]

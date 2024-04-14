@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://yxkdxfwv8wkm"]
+[gd_scene load_steps=9 format=3 uid="uid://yxkdxfwv8wkm"]
 
 [ext_resource type="PackedScene" uid="uid://b18x7uwk4vpmy" path="res://Scenes/Spaceship/spaceship_section.tscn" id="1_kafey"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SmelterComponent.gd" id="2_klcya"]
+[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="2_tahy0"]
 [ext_resource type="Resource" uid="uid://d1siwpjnsnisd" path="res://Resources/Items/Mat/RawMinerals/RawIron.tres" id="3_hptp1"]
 [ext_resource type="Resource" uid="uid://c2dkqdu3pm6pu" path="res://Resources/Items/Mat/RawMinerals/RawTin.tres" id="4_884st"]
 [ext_resource type="Resource" uid="uid://hkecx5u5gpr8" path="res://Resources/Items/Mat/RawMinerals/RawCobalt.tres" id="5_c08dr"]
@@ -29,6 +30,7 @@ offset_top = -58.0
 offset_right = 23.0
 offset_bottom = -20.0
 grow_horizontal = 2
+theme = ExtResource("2_tahy0")
 
 [node name="Button" type="Button" parent="Panel" index="0"]
 layout_mode = 1
