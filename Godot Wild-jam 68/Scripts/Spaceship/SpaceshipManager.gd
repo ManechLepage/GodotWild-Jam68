@@ -7,6 +7,7 @@ var add_button_pos_list = []
 
 @onready var seperator_manager = $"../SeperatorManager"
 @onready var add_button_manager = $"../AddButtonManager"
+@onready var money_panel = $"../MoneyPanel"
 
 const FRONT = preload("res://Scenes/Spaceship/Front.tscn")
 const GENERATOR = preload("res://Scenes/Spaceship/Generator.tscn")
@@ -20,7 +21,11 @@ var max_grid_size_x = 8
 var max_grid_size_y = 5
 var margin = 192.0
 
+var money = 0
+
 func _ready():
+	add_money(0)
+	
 	Inventory.load_all_items(item_list)
 	for i in range(max_grid_size_x):
 		var row = []
@@ -136,3 +141,7 @@ func add_plus_button(pos1, pos2):
 	button.visible = false
 	
 	add_button_manager.add_child(button)
+
+func add_money(value:int):
+	money += value
+	money_panel.get_child(0).text = str(money)

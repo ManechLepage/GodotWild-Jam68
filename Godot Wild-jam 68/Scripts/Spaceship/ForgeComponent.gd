@@ -87,6 +87,5 @@ func activate_forger():
 	get_parent().play()
 
 func press_button(button):
-	print(button.item.name)
 	forging = button.item
 	activate_forger()

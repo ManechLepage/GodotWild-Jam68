@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=18 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="1_1hp5l"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
@@ -14,7 +14,9 @@
 [ext_resource type="Resource" uid="uid://c4bndeme8mfiy" path="res://Resources/Items/Mat/Products/GreatSword.tres" id="11_73ndc"]
 [ext_resource type="Resource" uid="uid://bdoisje2sdqxo" path="res://Resources/Items/Mat/Products/PlatinumCrown.tres" id="13_nehk4"]
 [ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="15_tpdjp"]
+[ext_resource type="Script" path="res://Scripts/Customer/CustomerContainer.gd" id="16_p2edk"]
 [ext_resource type="Resource" uid="uid://byk00iyofuh40" path="res://Resources/Items/Mat/Products/WarHammer.tres" id="16_wraly"]
+[ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="17_xwekb"]
 
 [node name="Node2D" type="Node"]
 
@@ -70,13 +72,13 @@ offset_bottom = 77.0
 theme = ExtResource("15_tpdjp")
 text = "Recipes"
 
-[node name="Panel" type="Panel" parent="."]
+[node name="CustomerPanel" type="Panel" parent="."]
 offset_top = 623.0
-offset_right = 411.0
+offset_right = 420.0
 offset_bottom = 1103.0
 theme = ExtResource("15_tpdjp")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CustomerPanel" groups=["Customers"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -87,12 +89,14 @@ offset_right = -6.0
 offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.966549, 1.05791)
+script = ExtResource("16_p2edk")
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
+[node name="Panel" type="Panel" parent="CustomerPanel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 35)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/Panel"]
+[node name="Label" type="Label" parent="CustomerPanel/VBoxContainer/Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -108,5 +112,49 @@ grow_vertical = 2
 text = "Current customers"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MoneyPanel" type="Panel" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_top = 0.216
+anchor_bottom = 0.216
+offset_left = 11.0
+offset_top = -52.968
+offset_right = 205.0
+offset_bottom = 21.032
+grow_horizontal = 2
+theme = ExtResource("15_tpdjp")
+
+[node name="Label" type="Label" parent="MoneyPanel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -27.0
+offset_right = 122.0
+offset_bottom = 47.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "230
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MoneyPanel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -32.0
+offset_right = -29.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("17_xwekb")
 
 [connection signal="timeout" from="CustomerManager/Timer" to="CustomerManager" method="_on_timer_timeout"]
