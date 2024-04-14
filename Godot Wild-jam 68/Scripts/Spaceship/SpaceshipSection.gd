@@ -25,6 +25,9 @@ func _ready():
 
 func set_animation_types():
 	pass
+	#if type == SectionType.Front:
+		#get_parent().spritefram
+		#Inventory.front_animation
 
 func add_item(item:Item):
 	if Inventory.items.has(item):

@@ -4,10 +4,21 @@ var items = {}
 
 var all_products: Array[Item] = []
 
-var generator_animations: Array[SpriteFrames] = []
-var smelter_animations: Array[SpriteFrames] = []
-var forge_animations: Array[SpriteFrames] = []
-#var front_animation: SpriteFrames = "res://Graphics/sections/Front/front.tres"
+var generator_animations: Array[SpriteFrames] = [
+	load("res://Graphics/sections/Generator/generator1.tres"),
+	load("res://Graphics/sections/Generator/generator2.tres"),
+	load("res://Graphics/sections/Generator/generator3.tres")
+	]
+var smelter_animations: Array[SpriteFrames] = [
+	load("res://Graphics/sections/Smelter/smelter1.tres"),
+	load("res://Graphics/sections/Smelter/smelter2.tres")
+]
+var forge_animations: Array[SpriteFrames] = [
+	load("res://Graphics/sections/Forge/forge1.tres"),
+	load("res://Graphics/sections/Forge/forge2.tres"),
+	load("res://Graphics/sections/Forge/forge3.tres")
+]
+var front_animation: SpriteFrames = load("res://Graphics/sections/Front/front.tres")
 
 
 func load_all_items(item_list: Array[Item]):
