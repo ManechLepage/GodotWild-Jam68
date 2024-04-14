@@ -6,8 +6,9 @@
 [resource]
 script = ExtResource("1_74q3a")
 ID = 6
-name = "Iron"
+name = "Platinum"
 icon = ExtResource("1_udelg")
+description = ""
 type = 0
 price = 0
 forge_tier = 1

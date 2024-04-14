@@ -21,9 +21,11 @@
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_1hp5l")]
 
 [node name="SeperatorManager" type="Node2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(386, 198)
 
 [node name="AddButtonManager" type="Node2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(386, 198)
 
 [node name="SpaceshipManager" type="Node2D" parent="."]
@@ -36,9 +38,11 @@ item_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("7_7omu2
 unique_name_in_owner = true
 script = ExtResource("3_l103r")
 
+[node name="Timer" type="Timer" parent="CustomerManager"]
+autostart = true
+
 [node name="InventoryPanel" type="Panel" parent="." groups=["Inventory"]]
 texture_filter = 1
-anchors_preset = -1
 offset_left = 1475.0
 offset_right = 1957.0
 offset_bottom = 1267.0
@@ -71,7 +75,6 @@ offset_top = 623.0
 offset_right = 411.0
 offset_bottom = 1103.0
 theme = ExtResource("15_tpdjp")
-script = ExtResource("3_l103r")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -105,3 +108,5 @@ grow_vertical = 2
 text = "Current customers"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="timeout" from="CustomerManager/Timer" to="CustomerManager" method="_on_timer_timeout"]

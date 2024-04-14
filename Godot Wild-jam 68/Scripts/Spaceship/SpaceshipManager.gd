@@ -133,6 +133,6 @@ func add_seperator(pos1, pos2, tier1, tier2, side):
 func add_plus_button(pos1, pos2):
 	var button = ADD_SECTION_BUTTON.instantiate()
 	button.position = Vector2((pos2.x * margin) - 32, (pos2.y * margin) - 32)
-	button.visible = true
+	button.visible = false
 	
 	add_button_manager.add_child(button)
