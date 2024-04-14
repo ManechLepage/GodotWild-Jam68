@@ -1,6 +1,5 @@
 extends Node
 
-@export var generator_tier = 1
 var generating:Generator
 
 @export var isChoosing = false
@@ -10,6 +9,7 @@ var cooldown: float
 @onready var timer = $Timer
 @onready var button1 = $"../Panel/Button"
 @onready var button2 = $"../Panel/Button2"
+
 
 enum Generator
 {
@@ -22,7 +22,7 @@ enum Generator
 }
 
 func _ready():
-	cooldown = 3.0 * generator_tier
+	cooldown = 3.0 * get_parent().tier
 	timer.wait_time = cooldown
 
 func _process(delta):
@@ -43,8 +43,8 @@ func start_choosing():
 	isChoosing = true
 	panel.visible = true
 	
-	button1.get_child(0).texture = generator_list[(generator_tier - 1) * 2].icon
-	button2.get_child(0).texture = generator_list[((generator_tier - 1) * 2) + 1].icon
+	button1.get_child(0).texture = generator_list[(get_parent().tier - 1) * 2].icon
+	button2.get_child(0).texture = generator_list[((get_parent().tier - 1) * 2) + 1].icon
 	
 	timer.stop()
 	get_parent().stop()
@@ -56,9 +56,9 @@ func activate_generator():
 	timer.start()
 
 func _on_button_pressed1():
-	generating = (generator_tier - 1) * 2
+	generating = (get_parent().tier - 1) * 2
 	activate_generator()
 
 func _on_button_pressed2():
-	generating = ((generator_tier - 1) * 2) + 1
+	generating = ((get_parent().tier - 1) * 2) + 1
 	activate_generator()

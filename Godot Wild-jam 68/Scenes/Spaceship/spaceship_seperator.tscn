@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwqpe5g2jbnb1"]
+
+[ext_resource type="SpriteFrames" uid="uid://bcsacmgeqgybt" path="res://Graphics/sections/Seperator/seperator.tres" id="1_vtfpb"]
+
+[node name="SpaceshipSection" type="AnimatedSprite2D"]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("1_vtfpb")
+frame_progress = 0.934729

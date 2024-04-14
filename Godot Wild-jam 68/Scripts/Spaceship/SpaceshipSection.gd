@@ -6,6 +6,9 @@ extends AnimatedSprite2D
 @onready var button2 = $Panel/Button2
 @onready var inventory_panel: Panel
 
+@export var tier = 1
+@export var animationTiers: Array[SpriteFrames] = []
+
 enum SectionType 
 {
 	Front,
@@ -18,6 +21,10 @@ enum SectionType
 
 func _ready():
 	inventory_panel = get_tree().get_first_node_in_group("Inventory")
+	set_animation_types()
+
+func set_animation_types():
+	pass
 
 func add_item(item:Item):
 	if Inventory.items.has(item):

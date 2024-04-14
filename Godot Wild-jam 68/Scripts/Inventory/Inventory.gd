@@ -4,6 +4,12 @@ var items = {}
 
 var all_products: Array[Item] = []
 
+var generator_animations: Array[SpriteFrames] = []
+var smelter_animations: Array[SpriteFrames] = []
+var forge_animations: Array[SpriteFrames] = []
+#var front_animation: SpriteFrames = "res://Graphics/sections/Front/front.tres"
+
+
 func load_all_items(item_list: Array[Item]):
 	all_products = item_list
 

@@ -1,10 +1,10 @@
 extends Node
 
-var smelter_tier: int = 1
 var smelting: Smeltor
 
 @export var cooldown: float = 4.0
 @export var smeltor_list: Array[Item] = []
+@export var animationTiers: Array[SpriteFrames] = []
 
 @onready var timer = $Timer
 @onready var button1 = $"../Panel/Button"
@@ -42,39 +42,38 @@ func start_choosing():
 	timer.stop()
 	get_parent().stop()
 	
-	if not Inventory.items.has(smeltor_list[(smelter_tier - 1) * 2]):
+	if not Inventory.items.has(smeltor_list[(get_parent().tier - 1) * 2]):
 		button1.disabled = true
 	else:
 		button1.disabled = false
 	
-	if not Inventory.items.has(smeltor_list[((smelter_tier - 1) * 2) + 1]):
+	if not Inventory.items.has(smeltor_list[((get_parent().tier - 1) * 2) + 1]):
 		button2.disabled = true
 	else:
 		button2.disabled = false
 	
-	button1.get_child(0).texture = smeltor_list[(smelter_tier - 1) * 2].smelted_item.icon
-	button2.get_child(0).texture = smeltor_list[((smelter_tier - 1) * 2) + 1].smelted_item.icon
+	button1.get_child(0).texture = smeltor_list[(get_parent().tier - 1) * 2].smelted_item.icon
+	button2.get_child(0).texture = smeltor_list[((get_parent().tier - 1) * 2) + 1].smelted_item.icon
 
 func _on_button_pressed1():
-	smelting = (smelter_tier - 1) * 2
+	smelting = (get_parent().tier - 1) * 2
 	activate_smeltor()
 
 func _on_button_pressed2():
-	smelting = ((smelter_tier - 1) * 2) + 1
+	smelting = ((get_parent().tier - 1) * 2) + 1
 	activate_smeltor()
 
 func _on_timer_timeout():
 	var parent = get_parent()
 	var item = smeltor_list[smelting]
-	if Inventory.items.has(item):
-		timer.stop()
-		get_parent().stop()
-	else:
-		parent.add_item(item.smelted_item)
-		parent.remove_item(item)
-		
-		var f_string = "Smelting %s into %s..."
-		print(f_string % [item.name, item.smelted_item.name])
+	timer.stop()
+	
+	# A REGLER PLUS TARD (IL FAUT CHECK SI IL Y A LITEM A SMELT)
+	parent.add_item(item.smelted_item)
+	parent.remove_item(item)
+	
+	var f_string = "Smelting %s into %s..."
+	print(f_string % [item.name, item.smelted_item.name])
 	
 	
 

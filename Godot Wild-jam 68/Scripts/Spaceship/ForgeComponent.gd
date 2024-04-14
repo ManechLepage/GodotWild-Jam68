@@ -1,7 +1,6 @@
 extends Node
 
 var forge_cooldown: Array[int] = [5, 10, 15]
-@export var forge_tier = 1
 
 var is_forging = false
 var is_choosing = false
@@ -14,7 +13,7 @@ var forging: Item
 const ITEM = preload("res://Scenes/Forge/item.tscn")
 
 func _ready():
-	timer.wait_time = forge_cooldown[forge_tier - 1]
+	timer.wait_time = forge_cooldown[get_parent().tier - 1]
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
@@ -41,7 +40,7 @@ func unload_last_choices():
 		i.queue_free()
 
 func load_choices():
-	var items = Inventory.load_products_from_tier(forge_tier)
+	var items = Inventory.load_products_from_tier(get_parent().tier)
 	
 	for i in items:
 		var item = ITEM.instantiate()
