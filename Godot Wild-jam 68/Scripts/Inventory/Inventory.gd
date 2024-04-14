@@ -20,6 +20,11 @@ var forge_animations: Array[SpriteFrames] = [
 ]
 var front_animation: SpriteFrames = load("res://Graphics/sections/Front/front.tres")
 
+var seperators: Array[SpriteFrames] = [
+	load("res://Graphics/sections/Seperator/seperator.tres"),
+	load("res://Graphics/sections/Seperator/seperator2.tres"),
+	load("res://Graphics/sections/Seperator/seperator3.tres")
+]
 
 func load_all_items(item_list: Array[Item]):
 	all_products = item_list

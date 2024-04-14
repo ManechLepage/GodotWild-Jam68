@@ -71,12 +71,12 @@ func add_seperators():
 			if section_list[i][j] != null:
 				if i + 1 < max_grid_size and j < max_grid_size:
 					if section_list[i + 1][j] != null:
-						add_seperator(section_list[i][j].pos, section_list[i + 1][j].pos, true)
+						add_seperator(section_list[i][j].pos, section_list[i + 1][j].pos, section_list[i][j].tier, section_list[i + 1][j].tier, true)
 				if i < max_grid_size and j + 1 < max_grid_size:
 					if section_list[i][j + 1] != null:
-						add_seperator(section_list[i][j].pos, section_list[i][j + 1].pos, false)
+						add_seperator(section_list[i][j].pos, section_list[i][j + 1].pos, section_list[i][j].tier, section_list[i][j + 1].tier, false)
 
-func add_seperator(pos1, pos2, side):
+func add_seperator(pos1, pos2, tier1, tier2, side):
 	var seperator = SPACESHIP_SEPERATOR.instantiate()
 	var pos_x: float
 	var pos_y: float
@@ -88,6 +88,8 @@ func add_seperator(pos1, pos2, side):
 		pos_y = ((pos1.y + pos2.y) / 2) * margin
 		seperator.rotation = PI / 2
 	seperator.position = Vector2(pos_x, pos_y)
+	var tier = max(tier1, tier2)
+	seperator.set_sprite_frames(Inventory.seperators[tier - 1])
 	seperator.play()
 	seperator_manager.add_child(seperator)
 	print(seperator.position)
