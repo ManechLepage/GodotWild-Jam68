@@ -24,6 +24,7 @@ enum Generator
 func _ready():
 	cooldown = 3.0 * get_parent().tier
 	timer.wait_time = cooldown
+	timer.stop()
 
 func _process(delta):
 	pass

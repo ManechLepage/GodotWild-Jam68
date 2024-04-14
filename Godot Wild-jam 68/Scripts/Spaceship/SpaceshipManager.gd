@@ -3,8 +3,10 @@ extends Node2D
 @export var item_list: Array[Item] = []
 
 var section_list = []
+var add_button_pos_list = []
 
 @onready var seperator_manager = $"../SeperatorManager"
+@onready var add_button_manager = $"../AddButtonManager"
 
 const FRONT = preload("res://Scenes/Spaceship/Front.tscn")
 const GENERATOR = preload("res://Scenes/Spaceship/Generator.tscn")
@@ -12,31 +14,32 @@ const SMELTER = preload("res://Scenes/Spaceship/Smelter.tscn")
 const FORGE = preload("res://Scenes/Spaceship/Forge.tscn")
 
 const SPACESHIP_SEPERATOR = preload("res://Scenes/Spaceship/spaceship_seperator.tscn")
+const ADD_SECTION_BUTTON = preload("res://Scenes/UI/add_section_button.tscn")
 
-var max_grid_size = 5
+var max_grid_size_x = 8
+var max_grid_size_y = 5
 var margin = 192.0
 
 func _ready():
 	Inventory.load_all_items(item_list)
-	for i in range(max_grid_size):
+	for i in range(max_grid_size_x):
 		var row = []
-		for j in range(max_grid_size):
+		for j in range(max_grid_size_y):
 			row.append(null)
 		section_list.append(row)
 	
-	create_section(FRONT, Vector2(2, 0), 1)
-	create_section(FORGE, Vector2(1, 0), 2)
+	create_section(FRONT, Vector2(4, 0), 1)
 	
-	create_section(FORGE, Vector2(2, 1), 1)
-	create_section(FORGE, Vector2(2, 2), 2)
-	create_section(FORGE, Vector2(2, 3), 3)	
+	create_section(FORGE, Vector2(4, 1), 1)
+	create_section(FORGE, Vector2(5, 1), 2)
+	create_section(FORGE, Vector2(5, 2), 3)
 	
-	create_section(GENERATOR, Vector2(1, 1), 1)
-	create_section(GENERATOR, Vector2(1, 2), 2)
-	create_section(GENERATOR, Vector2(1, 3), 3)
+	create_section(GENERATOR, Vector2(3, 1), 1)
+	create_section(GENERATOR, Vector2(3, 2), 2)
+	create_section(GENERATOR, Vector2(3, 3), 3)
 	
-	create_section(SMELTER, Vector2(3, 1), 1)
-	create_section(SMELTER, Vector2(3, 2), 2)
+	create_section(SMELTER, Vector2(2, 1), 1)
+	create_section(SMELTER, Vector2(2, 2), 2)
 	
 	update_pos()
 
@@ -62,20 +65,43 @@ func add_section(pos: Vector2, section: Node2D):
 	update_pos()
 
 func update_pos():
+	for i in seperator_manager.get_children():
+		i.queue_free()
+	for i in add_button_manager.get_children():
+		i.queue_free()
+	add_button_pos_list.clear()
 	for i in get_children():
 		i.position = Vector2(i.pos.x * margin, i.pos.y * margin)
 	add_seperators()
 
 func add_seperators():
-	for i in range(max_grid_size):
-		for j in range(max_grid_size):
+	for i in range(max_grid_size_x):
+		for j in range(max_grid_size_y):
 			if section_list[i][j] != null:
-				if i + 1 < max_grid_size and j < max_grid_size:
+				if i + 1 < max_grid_size_x:
 					if section_list[i + 1][j] != null:
 						add_seperator(section_list[i][j].pos, section_list[i + 1][j].pos, section_list[i][j].tier, section_list[i + 1][j].tier, true)
-				if i < max_grid_size and j + 1 < max_grid_size:
+					else:
+						if Vector2(i + 1, j) not in add_button_pos_list:
+							add_plus_button(section_list[i][j].pos, Vector2(i + 1, j))
+							add_button_pos_list.append(Vector2(i + 1, j))
+				if j + 1 < max_grid_size_y:
 					if section_list[i][j + 1] != null:
 						add_seperator(section_list[i][j].pos, section_list[i][j + 1].pos, section_list[i][j].tier, section_list[i][j + 1].tier, false)
+					else:
+						if Vector2(i, j + 1) not in add_button_pos_list:
+							add_plus_button(section_list[i][j].pos,Vector2(i, j + 1))
+							add_button_pos_list.append(Vector2(i, j + 1))
+				if i - 1 > 0:
+					if section_list[i - 1][j] == null:
+						if Vector2(i - 1, j) not in add_button_pos_list:
+							add_plus_button(section_list[i][j].pos, Vector2(i - 1, j))
+							add_button_pos_list.append(Vector2(i - 1, j))
+				if j - 1 > 0:
+					if section_list[i][j - 1] == null:
+						if Vector2(i, j - 1) not in add_button_pos_list:
+							add_plus_button(section_list[i][j].pos,Vector2(i, j - 1))
+							add_button_pos_list.append(Vector2(i, j - 1))
 
 func add_seperator(pos1, pos2, tier1, tier2, side):
 	var seperator = SPACESHIP_SEPERATOR.instantiate()
@@ -105,4 +131,10 @@ func add_seperator(pos1, pos2, tier1, tier2, side):
 		seperator.rotation += PI
 	seperator.play()
 	seperator_manager.add_child(seperator)
-	print(seperator.position)
+
+func add_plus_button(pos1, pos2):
+	var button = ADD_SECTION_BUTTON.instantiate()
+	button.position = Vector2((pos2.x * margin) - 32, (pos2.y * margin) - 32)
+	button.visible = true
+	
+	add_button_manager.add_child(button)
