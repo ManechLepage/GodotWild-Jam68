@@ -83,6 +83,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+texture_filter = 1
+scale = Vector2(0.666667, 0.666667)
+
 [connection signal="input_event" from="Area2D" to="Generator" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="Generator" method="_on_area_2d_mouse_entered"]
 [connection signal="timeout" from="Generator/Timer" to="Generator" method="_on_timer_timeout"]

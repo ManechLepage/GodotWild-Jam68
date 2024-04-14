@@ -10,6 +10,7 @@ var smelting: Smeltor
 @onready var button1 = $"../Panel/Button"
 @onready var button2 = $"../Panel/Button2"
 @onready var panel = $"../Panel"
+@onready var sprite_2d = $"../Sprite2D"
 
 var is_smelting = false
 var is_choosing = false
@@ -32,7 +33,12 @@ func _process(delta):
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			start_choosing()
+			if not is_choosing:
+				start_choosing()
+			else:
+				is_choosing = false
+				panel.visible = false
+				sprite_2d.visible = true
 
 func start_choosing():
 	panel.visible = true
@@ -41,6 +47,7 @@ func start_choosing():
 	
 	timer.stop()
 	get_parent().stop()
+	sprite_2d.visible = false
 	
 	if not Inventory.items.has(smeltor_list[(get_parent().tier - 1) * 2]):
 		button1.disabled = true
@@ -66,8 +73,7 @@ func _on_button_pressed2():
 func _on_timer_timeout():
 	var parent = get_parent()
 	var item = smeltor_list[smelting]
-	timer.stop()
-	
+	# timer.stop()
 	# A REGLER PLUS TARD (IL FAUT CHECK SI IL Y A LITEM A SMELT)
 	parent.add_item(item.smelted_item)
 	parent.remove_item(item)
@@ -81,6 +87,8 @@ func activate_smeltor():
 	is_choosing = false
 	is_smelting = true
 	panel.visible = false
+	sprite_2d.visible = true
+	sprite_2d.texture = smeltor_list[smelting].smelted_item.icon
 	
 	timer.start()
 	get_parent().play()

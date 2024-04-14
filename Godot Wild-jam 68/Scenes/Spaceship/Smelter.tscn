@@ -83,6 +83,10 @@ smeltor_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("3_hp
 
 [node name="Timer" type="Timer" parent="SmelterComponent" index="0"]
 
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+texture_filter = 1
+scale = Vector2(0.666667, 0.666667)
+
 [connection signal="input_event" from="Area2D" to="SmelterComponent" method="_on_area_2d_input_event"]
 [connection signal="pressed" from="Panel/Button" to="SmelterComponent" method="_on_button_pressed1"]
 [connection signal="pressed" from="Panel/Button2" to="SmelterComponent" method="_on_button_pressed2"]

@@ -10,8 +10,9 @@ var forging: Item
 @onready var panel = $"../Panel"
 @onready var timer = $Timer
 @onready var h_box_container = $"../Panel/HBoxContainer"
-const ITEM = preload("res://Scenes/Forge/item.tscn")
+@onready var sprite_2d = $"../Sprite2D"
 
+const ITEM = preload("res://Scenes/Forge/item.tscn")
 func _ready():
 	timer.wait_time = forge_cooldown[get_parent().tier - 1]
 
@@ -22,10 +23,12 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 				start_choosing()
 			else:
 				panel.visible = false
+				sprite_2d.visible = true
 				is_choosing = false
 
 func start_choosing():
 	panel.visible = true
+	sprite_2d.visible = false
 	is_choosing = true
 	is_forging = false
 	
@@ -70,11 +73,15 @@ func _on_timer_timeout():
 	
 	timer.stop()
 	get_parent().stop()
+	sprite_2d.visible = false
 
 func activate_forger():
 	is_choosing = false
 	is_forging = true
 	panel.visible = false
+	sprite_2d.visible = true
+	sprite_2d.texture = forging.icon
+	
 	
 	timer.start()
 	get_parent().play()

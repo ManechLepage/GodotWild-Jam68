@@ -2,14 +2,14 @@ extends Node
 
 var generating:Generator
 
-@export var isChoosing = false
+@export var is_choosing = false
 @onready var panel = $"../Panel"
 @export var generator_list: Array[Item] = []
 var cooldown: float
 @onready var timer = $Timer
 @onready var button1 = $"../Panel/Button"
 @onready var button2 = $"../Panel/Button2"
-
+@onready var sprite_2d = $"../Sprite2D"
 
 enum Generator
 {
@@ -37,11 +37,17 @@ func _on_timer_timeout():
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			start_choosing()
+			if not is_choosing:
+				start_choosing()
+			else:
+				is_choosing = false
+				panel.visible = false
+				sprite_2d.visible = true
 
 func start_choosing():
-	isChoosing = true
+	is_choosing = true
 	panel.visible = true
+	sprite_2d.visible = false
 	
 	button1.get_child(0).texture = generator_list[(get_parent().tier - 1) * 2].icon
 	button2.get_child(0).texture = generator_list[((get_parent().tier - 1) * 2) + 1].icon
@@ -51,9 +57,11 @@ func start_choosing():
 
 func activate_generator():
 	get_parent().play()
-	isChoosing = false
+	is_choosing = false
 	panel.visible = false
+	sprite_2d.visible = true
 	timer.start()
+	sprite_2d.texture = generator_list[generating].icon
 
 func _on_button_pressed1():
 	generating = (get_parent().tier - 1) * 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=20 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="Script" path="res://Scripts/Backgrounds/ParallaxBackground.gd" id="1_iyqd7"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bss41g17jiu6x" path="res://Graphics/Background/bg2.png" id="4_twm04"]
 [ext_resource type="Resource" uid="uid://c0jscdnucolit" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
 [ext_resource type="Texture2D" uid="uid://drq7eou3e3882" path="res://Graphics/Background/bg3.png" id="5_r05xb"]
+[ext_resource type="Texture2D" uid="uid://dvukixhfkh344" path="res://Graphics/Background/planets.png" id="6_di7bs"]
 [ext_resource type="Resource" uid="uid://v4uepdtaptxd" path="res://Resources/Items/Mat/Products/CeremonialSword.tres" id="7_7omu2"]
 [ext_resource type="Resource" uid="uid://bo13fiufhdgil" path="res://Resources/Items/Mat/Products/Crown.tres" id="8_d5u56"]
 [ext_resource type="Resource" uid="uid://bl7pjqw7vxktu" path="res://Resources/Items/Mat/Products/DiamondNecklace.tres" id="9_4ee0j"]
@@ -55,6 +56,15 @@ motion_mirroring = Vector2(1960, 1100)
 position = Vector2(982, 548)
 scale = Vector2(1.7, 1.7)
 texture = ExtResource("5_r05xb")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(-0.3, 0.5)
+motion_mirroring = Vector2(1960, 1100)
+
+[node name="Bg1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(982, 548)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("6_di7bs")
 
 [node name="SpaceshipManager" type="Node2D" parent="."]
 unique_name_in_owner = true
