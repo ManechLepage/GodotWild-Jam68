@@ -7,7 +7,6 @@ extends AnimatedSprite2D
 @onready var inventory_panel: Panel
 
 @export var tier = 1
-@export var animationTiers: Array[SpriteFrames] = []
 
 enum SectionType 
 {
@@ -24,10 +23,14 @@ func _ready():
 	set_animation_types()
 
 func set_animation_types():
-	pass
-	#if type == SectionType.Front:
-		#get_parent().spritefram
-		#Inventory.front_animation
+	if type == SectionType.Front:
+		set_sprite_frames(Inventory.front_animation)
+	elif type == SectionType.Miner:
+		set_sprite_frames(Inventory.generator_animations[tier - 1])
+	elif type == SectionType.Smelter:
+		set_sprite_frames(Inventory.smelter_animations[tier - 1])
+	else:
+		set_sprite_frames(Inventory.forge_animations[tier - 1])
 
 func add_item(item:Item):
 	if Inventory.items.has(item):

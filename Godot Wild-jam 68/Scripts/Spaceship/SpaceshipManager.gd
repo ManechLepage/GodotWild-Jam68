@@ -14,7 +14,7 @@ const FORGE = preload("res://Scenes/Spaceship/Forge.tscn")
 const SPACESHIP_SEPERATOR = preload("res://Scenes/Spaceship/spaceship_seperator.tscn")
 
 var max_grid_size = 5
-var margin = 320.0
+var margin = 192.0
 
 func _ready():
 	Inventory.load_all_items(item_list)
@@ -28,9 +28,11 @@ func _ready():
 	
 	create_section(FORGE, Vector2(2, 1), 1)
 	create_section(FORGE, Vector2(2, 2), 2)
+	create_section(FORGE, Vector2(2, 3), 3)	
 	
 	create_section(GENERATOR, Vector2(1, 1), 1)
-	create_section(GENERATOR, Vector2(1, 2), 2)	
+	create_section(GENERATOR, Vector2(1, 2), 2)
+	create_section(GENERATOR, Vector2(1, 3), 3)
 	
 	create_section(SMELTER, Vector2(3, 1), 1)
 	create_section(SMELTER, Vector2(3, 2), 2)

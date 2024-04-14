@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=19 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="Script" path="res://Scripts/Backgrounds/ParallaxBackground.gd" id="1_iyqd7"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
@@ -11,6 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://bss41g17jiu6x" path="res://Graphics/Background/bg2.png" id="4_twm04"]
 [ext_resource type="Resource" uid="uid://c0jscdnucolit" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
 [ext_resource type="Texture2D" uid="uid://drq7eou3e3882" path="res://Graphics/Background/bg3.png" id="5_r05xb"]
+[ext_resource type="Resource" uid="uid://v4uepdtaptxd" path="res://Resources/Items/Mat/Products/CeremonialSword.tres" id="7_7omu2"]
+[ext_resource type="Resource" uid="uid://bo13fiufhdgil" path="res://Resources/Items/Mat/Products/Crown.tres" id="8_d5u56"]
+[ext_resource type="Resource" uid="uid://bl7pjqw7vxktu" path="res://Resources/Items/Mat/Products/DiamondNecklace.tres" id="9_4ee0j"]
+[ext_resource type="Resource" uid="uid://dpbpy8miaqgry" path="res://Resources/Items/Mat/Products/GoldRing.tres" id="10_6xdoc"]
+[ext_resource type="Resource" uid="uid://c4bndeme8mfiy" path="res://Resources/Items/Mat/Products/GreatSword.tres" id="11_73ndc"]
+[ext_resource type="Resource" uid="uid://bdoisje2sdqxo" path="res://Resources/Items/Mat/Products/PlatinumCrown.tres" id="13_nehk4"]
+[ext_resource type="Resource" uid="uid://byk00iyofuh40" path="res://Resources/Items/Mat/Products/WarHammer.tres" id="16_wraly"]
 
 [node name="Node2D" type="Node"]
 
@@ -53,7 +60,7 @@ texture = ExtResource("5_r05xb")
 unique_name_in_owner = true
 position = Vector2(386, 198)
 script = ExtResource("1_kbkme")
-item_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("2_t5q4a"), ExtResource("3_14e8w"), ExtResource("4_u62bt")])
+item_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("7_7omu2"), ExtResource("8_d5u56"), ExtResource("9_4ee0j"), ExtResource("10_6xdoc"), ExtResource("11_73ndc"), ExtResource("2_t5q4a"), ExtResource("13_nehk4"), ExtResource("4_u62bt"), ExtResource("3_14e8w"), ExtResource("16_wraly")])
 
 [node name="CustomerManager" type="Node" parent="."]
 unique_name_in_owner = true

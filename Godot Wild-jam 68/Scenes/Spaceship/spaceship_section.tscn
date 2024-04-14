@@ -5,6 +5,7 @@
 
 [node name="SpaceshipSection" type="AnimatedSprite2D"]
 texture_filter = 1
-scale = Vector2(5, 5)
+position = Vector2(48, 48)
+scale = Vector2(3, 3)
 sprite_frames = ExtResource("1_01aw0")
 script = ExtResource("2_va4xf")

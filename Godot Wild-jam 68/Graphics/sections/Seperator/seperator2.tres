@@ -1,0 +1,66 @@
+[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://hndq5yjw3den"]
+
+[ext_resource type="Texture2D" uid="uid://cxvhn20wdd41e" path="res://Graphics/sections/Seperator/seperator2/section_seperator2.png" id="1_vyq8r"]
+[ext_resource type="Texture2D" uid="uid://o3nsamy87u7f" path="res://Graphics/sections/Seperator/seperator2/section_seperator3.png" id="2_r34m6"]
+[ext_resource type="Texture2D" uid="uid://bor81w5bxok1s" path="res://Graphics/sections/Seperator/seperator2/section_seperator4.png" id="3_gj4n5"]
+[ext_resource type="Texture2D" uid="uid://4bjfv7os8bjd" path="res://Graphics/sections/Seperator/seperator2/section_seperator5.png" id="4_1w8lj"]
+[ext_resource type="Texture2D" uid="uid://dpmqhbvcfk1n4" path="res://Graphics/sections/Seperator/seperator2/section_seperator6.png" id="5_cor2u"]
+[ext_resource type="Texture2D" uid="uid://c1ae5hppvvjre" path="res://Graphics/sections/Seperator/seperator2/section_seperator7.png" id="6_q5a5q"]
+[ext_resource type="Texture2D" uid="uid://drebug460ih5i" path="res://Graphics/sections/Seperator/seperator2/section_seperator8.png" id="7_gaaax"]
+[ext_resource type="Texture2D" uid="uid://cf0dak1edrfco" path="res://Graphics/sections/Seperator/seperator2/section_seperator9.png" id="8_b2mk0"]
+[ext_resource type="Texture2D" uid="uid://cbwuf42qm0jot" path="res://Graphics/sections/Seperator/seperator2/section_seperator10.png" id="9_jweq6"]
+[ext_resource type="Texture2D" uid="uid://t4qehv1v3unw" path="res://Graphics/sections/Seperator/seperator2/section_seperator11.png" id="10_x5l5c"]
+[ext_resource type="Texture2D" uid="uid://bsxbwlyregqxv" path="res://Graphics/sections/Seperator/seperator2/section_seperator12.png" id="11_ytc5s"]
+[ext_resource type="Texture2D" uid="uid://twgschccuo4j" path="res://Graphics/sections/Seperator/seperator2/section_seperator13.png" id="12_wsm2h"]
+[ext_resource type="Texture2D" uid="uid://d1j7voj4t0iyn" path="res://Graphics/sections/Seperator/seperator2/section_seperator14.png" id="13_uid6f"]
+[ext_resource type="Texture2D" uid="uid://bj2a80wiku1i0" path="res://Graphics/sections/Seperator/seperator2/section_seperator15.png" id="14_23prg"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vyq8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_r34m6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gj4n5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1w8lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cor2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q5a5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gaaax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b2mk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jweq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_x5l5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ytc5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wsm2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_uid6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_23prg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]

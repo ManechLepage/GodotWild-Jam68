@@ -4,6 +4,6 @@
 
 [node name="SpaceshipSection" type="AnimatedSprite2D"]
 texture_filter = 1
-scale = Vector2(5, 5)
+scale = Vector2(3, 3)
 sprite_frames = ExtResource("1_vtfpb")
 frame_progress = 0.934729
