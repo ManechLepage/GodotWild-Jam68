@@ -23,7 +23,10 @@ var front_animation: SpriteFrames = load("res://Graphics/sections/Front/front.tr
 var seperators: Array[SpriteFrames] = [
 	load("res://Graphics/sections/Seperator/seperator.tres"),
 	load("res://Graphics/sections/Seperator/seperator2.tres"),
-	load("res://Graphics/sections/Seperator/seperator3.tres")
+	load("res://Graphics/sections/Seperator/seperator3.tres"),
+	load("res://Graphics/sections/Seperator/seperator1-2.tres"),
+	load("res://Graphics/sections/Seperator/seperator1-3.tres"),
+	load("res://Graphics/sections/Seperator/seperator2-3.tres")
 ]
 
 func load_all_items(item_list: Array[Item]):

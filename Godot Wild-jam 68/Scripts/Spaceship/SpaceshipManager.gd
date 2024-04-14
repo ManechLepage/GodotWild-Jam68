@@ -25,6 +25,7 @@ func _ready():
 		section_list.append(row)
 	
 	create_section(FRONT, Vector2(2, 0), 1)
+	create_section(FORGE, Vector2(1, 0), 2)
 	
 	create_section(FORGE, Vector2(2, 1), 1)
 	create_section(FORGE, Vector2(2, 2), 2)
@@ -88,8 +89,20 @@ func add_seperator(pos1, pos2, tier1, tier2, side):
 		pos_y = ((pos1.y + pos2.y) / 2) * margin
 		seperator.rotation = PI / 2
 	seperator.position = Vector2(pos_x, pos_y)
-	var tier = max(tier1, tier2)
-	seperator.set_sprite_frames(Inventory.seperators[tier - 1])
+	var tier:int
+	var min_tier = min(tier1, tier2)
+	var max_tier = max(tier1, tier2)
+	if tier1 == tier2:
+		tier = tier1 - 1
+	elif min_tier == 1 and max_tier == 2:
+		tier = 3
+	elif min_tier == 1 and max_tier == 3:
+		tier = 4
+	else:
+		tier = 5
+	seperator.set_sprite_frames(Inventory.seperators[tier])
+	if tier1 > tier2:
+		seperator.rotation += PI
 	seperator.play()
 	seperator_manager.add_child(seperator)
 	print(seperator.position)
