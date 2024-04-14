@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://cuejfcb5d25lm" path="res://Resources/Items/Mat/Products/TinHammer.tres" id="3_14e8w"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="3_l103r"]
 [ext_resource type="Texture2D" uid="uid://bss41g17jiu6x" path="res://Graphics/Background/bg2.png" id="4_twm04"]
-[ext_resource type="Resource" uid="uid://c0jscdnucolit" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
+[ext_resource type="Resource" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
 [ext_resource type="Texture2D" uid="uid://drq7eou3e3882" path="res://Graphics/Background/bg3.png" id="5_r05xb"]
 [ext_resource type="Texture2D" uid="uid://dvukixhfkh344" path="res://Graphics/Background/planets.png" id="6_di7bs"]
 [ext_resource type="Resource" uid="uid://v4uepdtaptxd" path="res://Resources/Items/Mat/Products/CeremonialSword.tres" id="7_7omu2"]
