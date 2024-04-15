@@ -21,12 +21,6 @@ Inventory="*res://Scripts/Inventory/Inventory.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Quotes="*res://Scripts/Quotes/Quotes.gd"
 
-[display]
-
-window/size/mode=4
-window/size/resizable=false
-window/size/borderless=true
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")

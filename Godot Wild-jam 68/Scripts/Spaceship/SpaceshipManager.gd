@@ -7,7 +7,8 @@ var add_button_pos_list = []
 
 @onready var seperator_manager = $"../SeperatorManager"
 @onready var add_button_manager = $"../AddButtonManager"
-@onready var money_panel = $"../MoneyPanel"
+@onready var money_panel = %MoneyPanel
+
 
 const FRONT = preload("res://Scenes/Spaceship/Front.tscn")
 const GENERATOR = preload("res://Scenes/Spaceship/Generator.tscn")

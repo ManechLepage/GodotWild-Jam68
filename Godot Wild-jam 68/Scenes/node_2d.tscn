@@ -18,9 +18,143 @@
 [ext_resource type="Resource" uid="uid://byk00iyofuh40" path="res://Resources/Items/Mat/Products/WarHammer.tres" id="16_wraly"]
 [ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="17_xwekb"]
 
-[node name="Node2D" type="Node"]
+[node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_1hp5l")]
+scroll_ignore_camera_zoom = true
+
+[node name="CustomerCtrl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 739.0
+offset_right = 414.0
+offset_bottom = 1097.0
+
+[node name="CustomerPanel" type="Panel" parent="CustomerCtrl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("15_tpdjp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CustomerCtrl/CustomerPanel" groups=["Customers"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = -6.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.966549, 1.05791)
+script = ExtResource("16_p2edk")
+
+[node name="Panel" type="Panel" parent="CustomerCtrl/CustomerPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CustomerCtrl/CustomerPanel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.115
+anchor_right = 1.115
+anchor_bottom = 0.9
+offset_left = -0.0900002
+offset_top = 3.5
+offset_right = 0.0899963
+grow_horizontal = 2
+grow_vertical = 2
+text = "Current customers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InventoryCtrl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1502.0
+offset_top = 5.0
+offset_right = 1962.0
+offset_bottom = 1100.0
+
+[node name="InventoryPanel" type="Panel" parent="InventoryCtrl" groups=["Inventory"]]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("15_tpdjp")
+script = ExtResource("2_5fnoo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryCtrl/InventoryPanel"]
+custom_minimum_size = Vector2(303, 43)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MoneyCtrl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 160.0
+offset_right = 229.0
+offset_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MoneyPanel" type="Panel" parent="MoneyCtrl"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("15_tpdjp")
+
+[node name="Label" type="Label" parent="MoneyCtrl/MoneyPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.077
+anchor_top = 0.135
+anchor_right = 0.629
+anchor_bottom = 1.135
+offset_left = -0.0619984
+offset_top = 0.00999928
+offset_right = -0.026001
+offset_bottom = 0.00999451
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "230
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MoneyCtrl/MoneyPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.644
+anchor_top = 0.068
+anchor_right = 0.974
+anchor_bottom = 0.932
+offset_left = 0.0639877
+offset_top = -0.0320001
+offset_right = -23.956
+offset_bottom = -23.968
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("17_xwekb")
 
 [node name="SeperatorManager" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -43,26 +177,6 @@ script = ExtResource("3_l103r")
 [node name="Timer" type="Timer" parent="CustomerManager"]
 autostart = true
 
-[node name="InventoryPanel" type="Panel" parent="." groups=["Inventory"]]
-texture_filter = 1
-offset_left = 1475.0
-offset_right = 1957.0
-offset_bottom = 1267.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.00535, 0.867509)
-theme = ExtResource("15_tpdjp")
-script = ExtResource("2_5fnoo")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="InventoryPanel"]
-custom_minimum_size = Vector2(303, 43)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
 offset_left = 8.0
@@ -72,89 +186,8 @@ offset_bottom = 77.0
 theme = ExtResource("15_tpdjp")
 text = "Recipes"
 
-[node name="CustomerPanel" type="Panel" parent="."]
-offset_top = 623.0
-offset_right = 420.0
-offset_bottom = 1103.0
-theme = ExtResource("15_tpdjp")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CustomerPanel" groups=["Customers"]]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = 10.0
-offset_right = -6.0
-offset_bottom = -9.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.966549, 1.05791)
-script = ExtResource("16_p2edk")
-
-[node name="Panel" type="Panel" parent="CustomerPanel/VBoxContainer"]
-custom_minimum_size = Vector2(0, 35)
-layout_mode = 2
-
-[node name="Label" type="Label" parent="CustomerPanel/VBoxContainer/Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -205.5
-offset_top = -14.0
-offset_right = 205.5
-offset_bottom = 14.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Current customers"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MoneyPanel" type="Panel" parent="."]
-texture_filter = 1
-anchors_preset = -1
-anchor_top = 0.216
-anchor_bottom = 0.216
-offset_left = 11.0
-offset_top = -52.968
-offset_right = 205.0
-offset_bottom = 21.032
-grow_horizontal = 2
-theme = ExtResource("15_tpdjp")
-
-[node name="Label" type="Label" parent="MoneyPanel"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -15.0
-offset_top = -27.0
-offset_right = 122.0
-offset_bottom = 47.0
-grow_vertical = 2
-theme_override_font_sizes/font_size = 70
-text = "230
-"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="MoneyPanel"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -69.0
-offset_top = -32.0
-offset_right = -29.0
-offset_bottom = 8.0
-grow_horizontal = 0
-grow_vertical = 2
-scale = Vector2(1.6, 1.6)
-texture = ExtResource("17_xwekb")
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(981, 551)
+zoom = Vector2(0.59, 0.59)
 
 [connection signal="timeout" from="CustomerManager/Timer" to="CustomerManager" method="_on_timer_timeout"]

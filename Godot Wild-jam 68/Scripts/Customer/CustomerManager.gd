@@ -4,7 +4,7 @@ extends Node
 @export var cooldown = 6.0
 @export var max_customer = 5
 
-@onready var v_box_container = $"../CustomerPanel/VBoxContainer"
+@onready var v_box_container = %VBoxContainer
 
 const CUSTOMER_LABEL = preload("res://Scenes/Inventory/customer_label.tscn")
 const MERCHANT_SHOP_BUTTON = preload("res://Scenes/UI/merchant_shop_button.tscn")
