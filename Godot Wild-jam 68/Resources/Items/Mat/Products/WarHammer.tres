@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://byk00iyofuh40"]
 
 [ext_resource type="Resource" uid="uid://cuejfcb5d25lm" path="res://Resources/Items/Mat/Products/TinHammer.tres" id="1_2w7mj"]
-[ext_resource type="Resource" uid="uid://chkfe8q5132hu" path="res://Resources/Items/Mat/Smelted/Cobalt.tres" id="2_iapm5"]
+[ext_resource type="Resource" uid="uid://3kybpbviwd5" path="res://Resources/Items/Mat/Smelted/Gold.tres" id="2_7mkah"]
 [ext_resource type="Texture2D" uid="uid://8qkrdjssv6kb" path="res://Graphics/Items/Products/WarHammer.png" id="3_i7o7l"]
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="3_nj26w"]
 
@@ -11,7 +11,8 @@ ID = 0
 name = "War Hammer"
 icon = ExtResource("3_i7o7l")
 description = ""
+use = ""
 type = 1
 price = 16
 forge_tier = 2
-craft = Array[ExtResource("3_nj26w")]([ExtResource("1_2w7mj"), ExtResource("2_iapm5")])
+craft = Array[ExtResource("3_nj26w")]([ExtResource("1_2w7mj"), ExtResource("2_7mkah")])

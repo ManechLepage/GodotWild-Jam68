@@ -1,8 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1672ho0lyewd"]
+[gd_scene load_steps=11 format=3 uid="uid://c1672ho0lyewd"]
 
 [ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="1_a3xho"]
 [ext_resource type="PackedScene" uid="uid://bb36o10yj2hd4" path="res://wiki_button.tscn" id="2_ob5fn"]
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="2_wkb4o"]
+[ext_resource type="Resource" uid="uid://c2dkqdu3pm6pu" path="res://Resources/Items/Mat/RawMinerals/RawTin.tres" id="3_g8i00"]
+[ext_resource type="Resource" uid="uid://d1siwpjnsnisd" path="res://Resources/Items/Mat/RawMinerals/RawIron.tres" id="4_s38t5"]
+[ext_resource type="Resource" uid="uid://2ac0v4the36h" path="res://Resources/Items/Mat/RawMinerals/RawGold.tres" id="5_i4g2x"]
+[ext_resource type="Resource" uid="uid://hkecx5u5gpr8" path="res://Resources/Items/Mat/RawMinerals/RawCobalt.tres" id="6_xqun4"]
+[ext_resource type="Resource" uid="uid://b4f4bxtrjitpf" path="res://Resources/Items/Mat/RawMinerals/Platinum.tres" id="7_1kb61"]
+[ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/RawMinerals/Diamond.tres" id="8_bqbwq"]
 [ext_resource type="Script" path="res://Scenes/UI/Back_button.gd" id="9_en6dn"]
 
 [node name="Wiki" type="Control"]
@@ -38,21 +44,27 @@ offset_bottom = -0.357056
 
 [node name="Button" parent="Panel/VBoxContainer" instance=ExtResource("2_ob5fn")]
 layout_mode = 2
+item = ExtResource("3_g8i00")
 
 [node name="Button2" parent="Panel/VBoxContainer" instance=ExtResource("2_ob5fn")]
 layout_mode = 2
+item = ExtResource("4_s38t5")
 
 [node name="Button3" parent="Panel/VBoxContainer" instance=ExtResource("2_ob5fn")]
 layout_mode = 2
+item = ExtResource("5_i4g2x")
 
 [node name="Button4" parent="Panel/VBoxContainer" instance=ExtResource("2_ob5fn")]
 layout_mode = 2
+item = ExtResource("6_xqun4")
 
 [node name="Button5" parent="Panel/VBoxContainer" instance=ExtResource("2_ob5fn")]
 layout_mode = 2
+item = ExtResource("7_1kb61")
 
 [node name="Button6" parent="Panel/VBoxContainer" instance=ExtResource("2_ob5fn")]
 layout_mode = 2
+item = ExtResource("8_bqbwq")
 
 [node name="Back_button" type="Button" parent="Panel"]
 layout_mode = 1
