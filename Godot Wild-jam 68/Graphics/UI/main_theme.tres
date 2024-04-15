@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://ctb0ar3july17"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b3fenlmxk7d58"]
 
 [ext_resource type="StyleBox" uid="uid://c7wf617sp2sva" path="res://Graphics/UI/MainTheme/Button/button_normal.tres" id="1_588bq"]
 [ext_resource type="FontFile" uid="uid://cxk34x5t20fg5" path="res://Graphics/UI/Fonts/Minecraft.ttf" id="1_u0yqi"]

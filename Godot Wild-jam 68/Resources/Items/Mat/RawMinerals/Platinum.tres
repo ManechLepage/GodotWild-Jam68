@@ -6,9 +6,16 @@
 [resource]
 script = ExtResource("1_74q3a")
 ID = 6
+<<<<<<< Updated upstream
 name = "Platinum"
 icon = ExtResource("1_udelg")
 description = ""
+=======
+name = "Platnum"
+icon = ExtResource("1_udelg")
+description = "Platinum is found in stars. However, it is not like iron. This sort of extraction requires an exploding star resulting in a need for a super-advanced generator (tier 3)."
+use = "Use: Platinum crown (Crown + 1x Platinum) "
+>>>>>>> Stashed changes
 type = 0
 price = 0
 forge_tier = 1

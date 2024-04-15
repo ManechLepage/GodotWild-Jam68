@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=18 format=3 uid="uid://dwoj6jb5h2y5j"]
+=======
+[gd_scene load_steps=17 format=3 uid="uid://dwoj6jb5h2y5j"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="1_1hp5l"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
@@ -6,17 +10,23 @@
 [ext_resource type="Resource" uid="uid://d1x3fincm36cu" path="res://Resources/Items/Mat/Products/IronSword.tres" id="2_t5q4a"]
 [ext_resource type="Resource" uid="uid://cuejfcb5d25lm" path="res://Resources/Items/Mat/Products/TinHammer.tres" id="3_14e8w"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="3_l103r"]
-[ext_resource type="Resource" uid="uid://c0jscdnucolit" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
-[ext_resource type="Resource" uid="uid://v4uepdtaptxd" path="res://Resources/Items/Mat/Products/CeremonialSword.tres" id="7_7omu2"]
+[ext_resource type="Resource" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
+[ext_resource type="Resource" path="res://Resources/Items/Mat/Products/CeremonialSword.tres" id="7_7omu2"]
 [ext_resource type="Resource" uid="uid://bo13fiufhdgil" path="res://Resources/Items/Mat/Products/Crown.tres" id="8_d5u56"]
-[ext_resource type="Resource" uid="uid://bl7pjqw7vxktu" path="res://Resources/Items/Mat/Products/DiamondNecklace.tres" id="9_4ee0j"]
-[ext_resource type="Resource" uid="uid://dpbpy8miaqgry" path="res://Resources/Items/Mat/Products/GoldRing.tres" id="10_6xdoc"]
-[ext_resource type="Resource" uid="uid://c4bndeme8mfiy" path="res://Resources/Items/Mat/Products/GreatSword.tres" id="11_73ndc"]
+[ext_resource type="Resource" path="res://Resources/Items/Mat/Products/DiamondNecklace.tres" id="9_4ee0j"]
+[ext_resource type="Resource" path="res://Resources/Items/Mat/Products/GoldRing.tres" id="10_6xdoc"]
+[ext_resource type="Resource" path="res://Resources/Items/Mat/Products/GreatSword.tres" id="11_73ndc"]
 [ext_resource type="Resource" uid="uid://bdoisje2sdqxo" path="res://Resources/Items/Mat/Products/PlatinumCrown.tres" id="13_nehk4"]
+<<<<<<< Updated upstream
 [ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="15_tpdjp"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerContainer.gd" id="16_p2edk"]
 [ext_resource type="Resource" uid="uid://byk00iyofuh40" path="res://Resources/Items/Mat/Products/WarHammer.tres" id="16_wraly"]
 [ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="17_xwekb"]
+=======
+[ext_resource type="Theme" uid="uid://b3fenlmxk7d58" path="res://Graphics/UI/main_theme.tres" id="15_tpdjp"]
+[ext_resource type="Resource" uid="uid://byk00iyofuh40" path="res://Resources/Items/Mat/Products/WarHammer.tres" id="16_wraly"]
+[ext_resource type="Script" path="res://Scenes/Button.gd" id="16_yad07"]
+>>>>>>> Stashed changes
 
 [node name="Node2D" type="Node"]
 
@@ -71,6 +81,7 @@ offset_right = 257.0
 offset_bottom = 77.0
 theme = ExtResource("15_tpdjp")
 text = "Recipes"
+script = ExtResource("16_yad07")
 
 [node name="CustomerPanel" type="Panel" parent="."]
 offset_top = 623.0
@@ -113,6 +124,7 @@ text = "Current customers"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+<<<<<<< Updated upstream
 [node name="MoneyPanel" type="Panel" parent="."]
 texture_filter = 1
 anchors_preset = -1
@@ -158,3 +170,6 @@ scale = Vector2(1.6, 1.6)
 texture = ExtResource("17_xwekb")
 
 [connection signal="timeout" from="CustomerManager/Timer" to="CustomerManager" method="_on_timer_timeout"]
+=======
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+>>>>>>> Stashed changes

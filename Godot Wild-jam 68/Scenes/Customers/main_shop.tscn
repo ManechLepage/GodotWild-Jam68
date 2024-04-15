@@ -47,6 +47,13 @@ offset_right = -0.256012
 offset_bottom = -15.0
 grow_vertical = 2
 
+<<<<<<< Updated upstream
+=======
+[node name="Shop_item_button2" parent="Control/Panel/VBoxContainer" instance=ExtResource("1_pta8g")]
+layout_mode = 2
+item = null
+
+>>>>>>> Stashed changes
 [node name="Panel" type="Panel" parent="Control/Panel"]
 layout_mode = 1
 anchors_preset = -1
