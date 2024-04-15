@@ -9,7 +9,6 @@ extends CanvasLayer
 @onready var balloon: Control = %Balloon
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
-@onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
 ## The dialogue resource
 var resource: DialogueResource
@@ -47,9 +46,6 @@ var dialogue_line: DialogueLine:
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
 
-		responses_menu.hide()
-		responses_menu.set_responses(dialogue_line.responses)
-
 		# Show our balloon
 		balloon.show()
 		will_hide_balloon = false
@@ -62,7 +58,6 @@ var dialogue_line: DialogueLine:
 		# Wait for input
 		if dialogue_line.responses.size() > 0:
 			balloon.focus_mode = Control.FOCUS_NONE
-			responses_menu.show()
 		elif dialogue_line.time != "":
 			var time = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
 			await get_tree().create_timer(time).timeout
@@ -78,11 +73,6 @@ var dialogue_line: DialogueLine:
 func _ready() -> void:
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
-
-	# If the responses menu doesn't have a next action set, use this one
-	if responses_menu.next_action.is_empty():
-		responses_menu.next_action = next_action
-
 
 func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing

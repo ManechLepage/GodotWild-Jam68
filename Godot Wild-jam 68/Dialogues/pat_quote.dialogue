@@ -1,0 +1,5 @@
+~ this_is_a_node_title
+
+Pat: {{Quotes.get_quote()}}
+
+=> END

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dv8avkdkn7qw8"]
+[gd_scene load_steps=7 format=3 uid="uid://dv8avkdkn7qw8"]
 
 [ext_resource type="Script" path="res://Scenes/Customers/PatShop.gd" id="1_n7k8h"]
 [ext_resource type="PackedScene" uid="uid://dl322dbt6e1q7" path="res://Scenes/Spaceship/Forge.tscn" id="2_f3ayb"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b82ugruem048x" path="res://Scenes/Spaceship/Generator.tscn" id="3_mqdxa"]
 [ext_resource type="PackedScene" uid="uid://yxkdxfwv8wkm" path="res://Scenes/Spaceship/Smelter.tscn" id="4_0uxo2"]
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="6_aaf77"]
-[ext_resource type="SpriteFrames" uid="uid://irf2hvths7jt" path="res://Graphics/sections/Generator/generator1.tres" id="6_ras4i"]
 
 [node name="Patshop" type="Node"]
 script = ExtResource("1_n7k8h")
@@ -16,6 +15,7 @@ tier_rarity3 = Array[float]([0.5, 0.3, 0.2])
 tier_rarity2 = Array[float]([0.8, 0.2])
 
 [node name="Control" type="Control" parent="."]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,7 +45,7 @@ anchor_bottom = 1.0
 offset_left = 12.0
 offset_top = 20.0
 offset_right = -0.256012
-offset_bottom = -15.0
+offset_bottom = -306.0
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Control/Panel"]
@@ -116,18 +116,17 @@ unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(402, 435)
 scale = Vector2(15, 15)
-sprite_frames = ExtResource("6_ras4i")
 
 [node name="Buy_button" type="Button" parent="Control/Panel/Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.609
+anchor_left = 0.123
 anchor_top = 0.868
-anchor_right = 0.983
+anchor_right = 0.488
 anchor_bottom = 0.985
-offset_left = -0.245026
+offset_left = -0.0149994
 offset_top = -0.00799561
-offset_right = -0.315002
+offset_right = 0.159973
 offset_bottom = 0.0900269
 
 [node name="Price" type="Label" parent="Control/Panel/Panel/Buy_button"]
@@ -137,7 +136,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 5.0
-offset_bottom = 5.0
+offset_bottom = 2.99994
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 61
@@ -149,15 +148,26 @@ vertical_alignment = 1
 [node name="Skip" type="Button" parent="Control/Panel/Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.148
+anchor_left = 0.645
 anchor_top = 0.868
-anchor_right = 0.522
+anchor_right = 0.98
 anchor_bottom = 0.985
-offset_left = -0.139999
+offset_left = -0.225037
 offset_top = -0.00799561
-offset_right = -0.210022
+offset_right = 0.0999756
 offset_bottom = 0.0900269
-text = "Skip"
+
+[node name="Label" type="Label" parent="Control/Panel/Panel/Skip"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 61
+text = "Done"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SHop_text" type="Label" parent="Control/Panel/Panel"]
 layout_mode = 1
@@ -171,6 +181,49 @@ offset_top = -0.302001
 offset_right = -0.365051
 offset_bottom = -0.142006
 text = "Welcome to Pat's Shop!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.012
+anchor_top = 0.538
+anchor_right = 0.281
+anchor_bottom = 0.965
+offset_left = 0.188
+offset_top = -0.0860291
+offset_right = -0.43103
+offset_bottom = -0.355042
+grow_vertical = 0
+
+[node name="PatQuote" type="Label" parent="Control/Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.055
+anchor_top = 0.147
+anchor_right = 0.961
+anchor_bottom = 0.947
+offset_left = 0.00499916
+offset_top = 0.0449982
+offset_right = 0.0509949
+offset_bottom = 0.0449982
+grow_horizontal = 2
+grow_vertical = 2
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Control/Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.033
+anchor_right = 1.0
+anchor_bottom = 0.154
+offset_top = 0.0570011
+offset_bottom = -0.00800323
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pat"
 horizontal_alignment = 1
 vertical_alignment = 1
 

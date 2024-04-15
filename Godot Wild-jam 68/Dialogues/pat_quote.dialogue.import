@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://gh1nwycupc8q"
+path="res://.godot/imported/pat_quote.dialogue-a45cdf74625059222bdda6781f5fe92d.tres"
+
+[deps]
+
+source_file="res://Dialogues/pat_quote.dialogue"
+dest_files=["res://.godot/imported/pat_quote.dialogue-a45cdf74625059222bdda6781f5fe92d.tres"]
+
+[params]
+
+defaults=true

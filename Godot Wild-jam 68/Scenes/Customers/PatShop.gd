@@ -15,6 +15,8 @@ const SHOP_ITEM_BUTTON = preload("res://Scenes/Customers/Shop_item_button.tscn")
 @onready var item_name = %Name
 @onready var item_image = %Item_image
 
+@onready var pat_quote = %PatQuote
+
 func _ready():
 	var rng = RandomNumberGenerator.new()
 	var shop_size = rng.randi_range(shop_size_min_max.x, shop_size_min_max.y)
@@ -37,6 +39,8 @@ func _ready():
 		
 		v_box_container.add_child(button)
 		button.load_values(section, tier, price)
+		
+	pat_quote.text = Quotes.get_quote()
 
 func get_random_tier(tier_rarity):
 	var index = 0
