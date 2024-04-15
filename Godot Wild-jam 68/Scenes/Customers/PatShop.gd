@@ -11,6 +11,10 @@ extends Node
 const SHOP_ITEM_BUTTON = preload("res://Scenes/Customers/Shop_item_button.tscn")
 
 @onready var v_box_container = $Control/Panel/VBoxContainer
+@onready var item_image = %Item_image
+@onready var price = %Price
+@onready var item_name = %Name
+
 
 func _ready():
 	var rng = RandomNumberGenerator.new()
@@ -47,4 +51,9 @@ func get_random_tier(tier_rarity):
 	return index
 
 func load_item(section, tier, price):
-	pass
+	var tier_str:String
+	for i in range(tier):
+		tier_str += "I"
+	
+	item_name.text = section.name
+	price.text = str(price)

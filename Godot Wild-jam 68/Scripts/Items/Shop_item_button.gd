@@ -2,6 +2,7 @@ extends Button
 
 var tier: int
 var section: AnimatedSprite2D
+var price: int
 
 @onready var price_button = $Price_button
 @onready var label = $Label
@@ -15,4 +16,4 @@ func load_values(section, tier, price):
 	price_button.text = str(price)
 
 func _on_pressed():
-	pass
+	get_parent().get_parent().get_parent().get_parent().load_item(section, tier, price)
