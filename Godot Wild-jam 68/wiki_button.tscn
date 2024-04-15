@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://bb36o10yj2hd4"]
 
-[ext_resource type="Script" path="res://Scripts/Items/Shop_item_button.gd" id="1_xw7ih"]
+[ext_resource type="Script" path="res://wiki_button.gd" id="1_nvrpc"]
 
 [node name="Button" type="Button"]
 custom_minimum_size = Vector2(0, 80)
 text = "Generator"
-script = ExtResource("1_xw7ih")
+script = ExtResource("1_nvrpc")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

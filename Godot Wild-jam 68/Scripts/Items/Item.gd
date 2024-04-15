@@ -12,6 +12,7 @@ enum ItemType
 @export var name: String = ""
 @export var icon: Texture2D
 @export var description: String = ""
+@export var use: String = ""
 
 @export var type: ItemType
 
