@@ -210,4 +210,3 @@ vertical_alignment = 1
 [node name="ParallaxBackground" parent="." instance=ExtResource("5_j8h5v")]
 
 [connection signal="pressed" from="Panel/serve_button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Panel2/VBoxContainer/Shop_item_button2" to="Panel2/VBoxContainer/Shop_item_button2" method="_on_pressed"]
