@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv8avkdkn7qw8"]
+[gd_scene load_steps=8 format=3 uid="uid://dv8avkdkn7qw8"]
 
 [ext_resource type="Script" path="res://Scenes/Customers/PatShop.gd" id="1_n7k8h"]
 [ext_resource type="PackedScene" uid="uid://dl322dbt6e1q7" path="res://Scenes/Spaceship/Forge.tscn" id="2_f3ayb"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b82ugruem048x" path="res://Scenes/Spaceship/Generator.tscn" id="3_mqdxa"]
 [ext_resource type="PackedScene" uid="uid://yxkdxfwv8wkm" path="res://Scenes/Spaceship/Smelter.tscn" id="4_0uxo2"]
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="6_aaf77"]
+[ext_resource type="SpriteFrames" uid="uid://irf2hvths7jt" path="res://Graphics/sections/Generator/generator1.tres" id="6_ras4i"]
 
 [node name="Patshop" type="Node"]
 script = ExtResource("1_n7k8h")
@@ -110,17 +111,12 @@ text = "Description
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Item_image" type="TextureRect" parent="Control/Panel/Panel"]
+[node name="Item_image" type="AnimatedSprite2D" parent="Control/Panel/Panel"]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.183
-anchor_right = 0.598
-anchor_bottom = 0.82
-offset_left = 11.0
-offset_top = 0.10199
-offset_right = -0.390045
-offset_bottom = 0.0799561
+texture_filter = 1
+position = Vector2(402, 435)
+scale = Vector2(15, 15)
+sprite_frames = ExtResource("6_ras4i")
 
 [node name="Buy_button" type="Button" parent="Control/Panel/Panel"]
 layout_mode = 1
@@ -133,21 +129,22 @@ offset_left = -0.245026
 offset_top = -0.00799561
 offset_right = -0.315002
 offset_bottom = 0.0900269
-text = "BUY"
 
 [node name="Price" type="Label" parent="Control/Panel/Panel/Buy_button"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.694
-anchor_top = 0.577
-anchor_right = 0.973
-anchor_bottom = 0.901
-offset_left = 3.106
-offset_top = 2.033
-offset_right = 63.127
-offset_bottom = 7.02897
-text = "Price (Ga)"
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 61
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Skip" type="Button" parent="Control/Panel/Panel"]
 layout_mode = 1

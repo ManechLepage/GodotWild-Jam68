@@ -11,10 +11,9 @@ extends Node
 const SHOP_ITEM_BUTTON = preload("res://Scenes/Customers/Shop_item_button.tscn")
 
 @onready var v_box_container = $Control/Panel/VBoxContainer
-@onready var item_image = %Item_image
-@onready var price = %Price
+@onready var item_price = %Price
 @onready var item_name = %Name
-
+@onready var item_image = %Item_image
 
 func _ready():
 	var rng = RandomNumberGenerator.new()
@@ -31,6 +30,8 @@ func _ready():
 		else:
 			tier = get_random_tier(tier_rarity3) + 1
 		
+		section.tier = tier
+		section.set_animation_types()
 		var price = 5 * tier
 		price = randi_range(price - price_range, price + price_range)
 		
@@ -50,10 +51,12 @@ func get_random_tier(tier_rarity):
 			break
 	return index
 
-func load_item(section, tier, price):
+func load_item(section:AnimatedSprite2D, tier, price):
 	var tier_str:String
 	for i in range(tier):
 		tier_str += "I"
 	
-	item_name.text = section.name
-	price.text = str(price)
+	item_name.text = section.name + " " + tier_str
+	item_price.text = str(price)
+	item_image.set_sprite_frames(section.get_sprite_frames())
+	item_image.play()
