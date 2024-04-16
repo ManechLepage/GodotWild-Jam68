@@ -49,8 +49,8 @@ item_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("7_7omu2
 unique_name_in_owner = true
 script = ExtResource("3_l103r")
 cooldown = 15.0
-max_customer = 7
-merchant_index = 14
+merchant_index = 10
+customer_variety = 0.4
 
 [node name="Timer" type="Timer" parent="Main2D/CustomerManager"]
 autostart = true

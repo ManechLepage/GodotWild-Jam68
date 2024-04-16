@@ -12,6 +12,6 @@ icon = ExtResource("2_iicsj")
 description = ""
 use = ""
 type = 1
-price = 21
+price = 16
 forge_tier = 3
 craft = Array[ExtResource("3_eh36a")]([ExtResource("1_kao7a")])

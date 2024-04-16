@@ -13,10 +13,8 @@ size = Vector2(32, 32.2)
 sprite_frames = ExtResource("2_htlqq")
 frame = 2
 frame_progress = 0.610271
-preloadType = null
 
 [node name="Panel2" type="Panel" parent="." index="0"]
-visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

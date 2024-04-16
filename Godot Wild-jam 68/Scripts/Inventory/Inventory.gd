@@ -38,3 +38,16 @@ func load_products_from_tier(tier: int):
 		if i.forge_tier == tier:
 			products.append(i)
 	return products
+
+func sort_items_by_price(items:Array):
+	var sorted_list = items.duplicate()
+
+	var n = sorted_list.size()
+	for i in range(n):
+		for j in range(n - i - 1):
+			if sorted_list[j].price > sorted_list[j + 1].price:
+				var temp = sorted_list[j]
+				sorted_list[j] = sorted_list[j + 1]
+				sorted_list[j + 1] = temp
+
+	return sorted_list

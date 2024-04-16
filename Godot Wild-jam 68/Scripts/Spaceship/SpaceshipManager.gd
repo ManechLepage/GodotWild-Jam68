@@ -25,9 +25,9 @@ var margin = 192.0
 var money = 0
 
 func _ready():
-	add_money(0)
+	add_money(100)
 	
-	Inventory.load_all_items(item_list)
+	Inventory.load_all_items(Inventory.sort_items_by_price(item_list))
 	for i in range(max_grid_size_x):
 		var row = []
 		for j in range(max_grid_size_y):
@@ -136,6 +136,14 @@ func add_plus_button(pos1, pos2):
 	button.pos = pos2
 	
 	add_button_manager.add_child(button)
+
+func get_total_tiers():
+	var total_tiers = 0
+	for i in range(max_grid_size_x):
+		for j in range(max_grid_size_y):
+			if section_list[i][j] != null:
+				total_tiers += section_list[i][j].tier
+	return total_tiers
 
 func add_money(value:int):
 	money += value
