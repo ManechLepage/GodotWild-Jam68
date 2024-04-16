@@ -10,7 +10,7 @@ const CUSTOMER_LABEL = preload("res://Scenes/Inventory/customer_label.tscn")
 const MERCHANT_SHOP_BUTTON = preload("res://Scenes/UI/merchant_shop_button.tscn")
 
 var current_customer_index = 4
-var merchant_index = 5
+@export var merchant_index = 5
 
 var customer_count = 0
 

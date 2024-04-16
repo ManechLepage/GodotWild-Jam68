@@ -22,64 +22,6 @@
 [node name="Node2D" type="Node2D"]
 process_mode = 3
 
-[node name="MoneyCtrl" type="Control" parent="."]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 3
-anchor_top = 0.145
-anchor_right = 0.117
-anchor_bottom = 0.219
-offset_top = 160.0
-offset_right = 259.0
-offset_bottom = 260.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="MoneyPanel" type="Panel" parent="MoneyCtrl"]
-unique_name_in_owner = true
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("15_tpdjp")
-
-[node name="Label" type="Label" parent="MoneyCtrl/MoneyPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.077
-anchor_top = 0.135
-anchor_right = 0.629
-anchor_bottom = 1.135
-offset_left = -10.062
-offset_top = -1.99
-offset_right = -10.026
-offset_bottom = -1.99001
-grow_vertical = 2
-theme_override_font_sizes/font_size = 70
-text = "230
-"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="MoneyCtrl/MoneyPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.644
-anchor_top = 0.068
-anchor_right = 0.974
-anchor_bottom = 0.932
-offset_left = 0.0639954
-offset_top = -0.0320024
-offset_right = -23.956
-offset_bottom = -23.968
-grow_horizontal = 0
-grow_vertical = 2
-scale = Vector2(1.4, 1.4)
-texture = ExtResource("17_xwekb")
-
 [node name="Main2D" type="Node2D" parent="."]
 unique_name_in_owner = true
 process_mode = 1
@@ -106,6 +48,9 @@ item_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("7_7omu2
 [node name="CustomerManager" type="Node" parent="Main2D"]
 unique_name_in_owner = true
 script = ExtResource("3_l103r")
+cooldown = 15.0
+max_customer = 7
+merchant_index = 14
 
 [node name="Timer" type="Timer" parent="Main2D/CustomerManager"]
 autostart = true
@@ -208,5 +153,62 @@ grow_vertical = 2
 text = "Current customers"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MoneyCtrl2" type="Control" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchor_top = 0.145
+anchor_right = 0.117
+anchor_bottom = 0.219
+offset_top = 160.0
+offset_right = 259.0
+offset_bottom = 260.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MoneyPanel" type="Panel" parent="MoneyCtrl2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("15_tpdjp")
+
+[node name="Label" type="Label" parent="MoneyCtrl2/MoneyPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.077
+anchor_top = 0.135
+anchor_right = 0.629
+anchor_bottom = 1.135
+offset_left = -10.062
+offset_top = -1.99
+offset_right = -10.026
+offset_bottom = -1.99001
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "230
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MoneyCtrl2/MoneyPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.644
+anchor_top = 0.068
+anchor_right = 0.974
+anchor_bottom = 0.932
+offset_left = 0.0639954
+offset_top = -0.0320024
+offset_right = -23.956
+offset_bottom = -23.968
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("17_xwekb")
 
 [connection signal="timeout" from="Main2D/CustomerManager/Timer" to="Main2D/CustomerManager" method="_on_timer_timeout"]

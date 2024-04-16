@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ctc6tn15clbtn" path="res://Graphics/UI/Buttons/AddSectionButton/default.png" id="1_qydwj"]
 [ext_resource type="Texture2D" uid="uid://d3prh4lk8na1m" path="res://Graphics/UI/Buttons/AddSectionButton/pressed.png" id="2_8oo1n"]
 [ext_resource type="Texture2D" uid="uid://p50eslf3eqxk" path="res://Graphics/UI/Buttons/AddSectionButton/hover.png" id="3_n0dwl"]
-[ext_resource type="Script" path="res://Scenes/UI/add_section_button.gd" id="4_0c6c2"]
+[ext_resource type="Script" path="res://Scripts/UI/add_section_button.gd" id="4_0c6c2"]
 
 [node name="TextureButton" type="TextureButton"]
 texture_filter = 1

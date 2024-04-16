@@ -17,6 +17,8 @@ const SHOP_ITEM_BUTTON = preload("res://Scenes/Customers/Shop_item_button.tscn")
 
 @onready var pat_quote = %PatQuote
 
+@onready var current_money = %Current_Money
+
 @onready var v_box_container2 = %VBoxContainer
 
 var _section: AnimatedSprite2D
@@ -24,6 +26,7 @@ var _section: AnimatedSprite2D
 func _ready():
 	var rng = RandomNumberGenerator.new()
 	var shop_size = rng.randi_range(shop_size_min_max.x, shop_size_min_max.y)
+	current_money.get_child(0).text = str(get_parent().get_node("Main2D/SpaceshipManager").get_current_money())
 	
 	for i in range(shop_size):
 		var button = SHOP_ITEM_BUTTON.instantiate()
@@ -71,8 +74,13 @@ func load_item(section:AnimatedSprite2D, tier, price):
 	_section = section
 
 func _on_buy_button_pressed():
-	var node = get_parent().get_node("CustomerCtrl/CustomerPanel/VBoxContainer")
-	node.unload_pat_shop(_section)
+	var spaceship_manager = get_parent().get_node("Main2D/SpaceshipManager")
+	var price = int(item_price.text)
+	
+	if spaceship_manager.get_current_money() >= price:
+		spaceship_manager.add_money(-price)
+		var node = get_parent().get_node("CustomerCtrl/CustomerPanel/VBoxContainer")
+		node.unload_pat_shop(_section)
 
 func _on_skip_pressed():
 	var node = get_parent().get_node("CustomerCtrl/CustomerPanel/VBoxContainer")

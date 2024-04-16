@@ -140,3 +140,6 @@ func add_plus_button(pos1, pos2):
 func add_money(value:int):
 	money += value
 	money_panel.get_child(0).text = str(money)
+
+func get_current_money():
+	return int(money_panel.get_child(0).text)

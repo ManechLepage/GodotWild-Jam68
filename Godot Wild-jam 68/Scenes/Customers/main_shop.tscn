@@ -12,7 +12,7 @@
 [node name="Patshop" type="Node"]
 script = ExtResource("1_n7k8h")
 section_types = Array[PackedScene]([ExtResource("2_f3ayb"), ExtResource("3_mqdxa"), ExtResource("4_0uxo2")])
-shop_size_min_max = Vector2(3, 6)
+shop_size_min_max = Vector2(2, 5)
 tier_rarity3 = Array[float]([0.5, 0.3, 0.2])
 tier_rarity2 = Array[float]([0.8, 0.2])
 
@@ -38,16 +38,65 @@ offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Current_Money" type="Button" parent="Control/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.094
+anchor_top = 0.029
+anchor_right = 0.201
+anchor_bottom = 0.121
+offset_left = -0.0296173
+offset_top = -2.50034
+offset_right = 13.7774
+offset_bottom = 6.90565
+scale = Vector2(0.9, 0.9)
+button_mask = 0
+
+[node name="Price" type="Label" parent="Control/Panel/Current_Money"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177
+anchor_top = 0.113
+anchor_right = 0.418
+anchor_bottom = 1.085
+offset_left = 0.0429993
+offset_top = -0.0230007
+offset_right = 0.0619965
+offset_bottom = -0.0350037
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 61
+text = "0
+"
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/Panel/Current_Money"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.567
+anchor_top = 0.085
+anchor_right = 0.957
+anchor_bottom = 0.859
+offset_left = 0.0529938
+offset_top = -0.0349998
+offset_right = 0.0630035
+offset_bottom = 0.0109978
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_gun2r")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
 custom_minimum_size = Vector2(80, 20)
 layout_mode = 1
 anchors_preset = -1
+anchor_top = 0.137
 anchor_right = 0.272
 anchor_bottom = 1.0
 offset_left = 12.0
-offset_top = 20.0
+offset_top = 0.0459976
 offset_right = -0.256012
-offset_bottom = -306.0
+offset_bottom = -4.0
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Control/Panel"]
@@ -130,7 +179,7 @@ anchor_right = 0.396
 anchor_bottom = 0.985
 offset_left = 0.094986
 offset_top = -0.00799561
-offset_right = 0.219971
+offset_right = 0.220581
 offset_bottom = 0.0900269
 
 [node name="Price" type="Label" parent="Control/Panel/Panel/Buy_button"]
@@ -231,11 +280,11 @@ vertical_alignment = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.012
-anchor_top = 0.581
+anchor_top = 0.666
 anchor_right = 0.281
 anchor_bottom = 0.965
 offset_left = 0.188
-offset_top = 0.0929871
+offset_top = 0.0979919
 offset_right = -0.43103
 offset_bottom = -0.35498
 grow_vertical = 0
