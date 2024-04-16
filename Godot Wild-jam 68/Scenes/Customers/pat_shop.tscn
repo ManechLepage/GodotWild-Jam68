@@ -1,24 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://dv8avkdkn7qw8"]
+[gd_scene load_steps=5 format=3 uid="uid://b1vokbwfr0bu3"]
 
-[ext_resource type="Script" path="res://Scenes/Customers/PatShop.gd" id="1_n7k8h"]
-[ext_resource type="PackedScene" uid="uid://dl322dbt6e1q7" path="res://Scenes/Spaceship/Forge.tscn" id="2_f3ayb"]
-[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="2_g6hyl"]
-[ext_resource type="PackedScene" uid="uid://b82ugruem048x" path="res://Scenes/Spaceship/Generator.tscn" id="3_mqdxa"]
-[ext_resource type="PackedScene" uid="uid://yxkdxfwv8wkm" path="res://Scenes/Spaceship/Smelter.tscn" id="4_0uxo2"]
-[ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="6_aaf77"]
-[ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="6_gun2r"]
-[ext_resource type="SpriteFrames" uid="uid://irf2hvths7jt" path="res://Graphics/sections/Generator/generator1.tres" id="6_l3rot"]
+[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="1_nunvn"]
+[ext_resource type="SpriteFrames" uid="uid://irf2hvths7jt" path="res://Graphics/sections/Generator/generator1.tres" id="2_ubf0g"]
+[ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="3_xcwe1"]
+[ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="4_qcfhx"]
 
-[node name="Patshop" type="Node"]
-script = ExtResource("1_n7k8h")
-section_types = Array[PackedScene]([ExtResource("2_f3ayb"), ExtResource("3_mqdxa"), ExtResource("4_0uxo2")])
-shop_size_min_max = Vector2(3, 6)
-tier_rarity3 = Array[float]([0.5, 0.3, 0.2])
-tier_rarity2 = Array[float]([0.8, 0.2])
+[node name="Pat_shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Control" type="Control" parent="."]
 texture_filter = 1
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,7 +23,7 @@ offset_right = -1.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_g6hyl")
+theme = ExtResource("1_nunvn")
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 1
@@ -118,7 +115,7 @@ unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(247, 306)
 scale = Vector2(10, 10)
-sprite_frames = ExtResource("6_l3rot")
+sprite_frames = ExtResource("2_ubf0g")
 
 [node name="Buy_button" type="Button" parent="Control/Panel/Panel"]
 unique_name_in_owner = true
@@ -165,7 +162,7 @@ offset_right = 0.0630035
 offset_bottom = 0.0109978
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_gun2r")
+texture = ExtResource("3_xcwe1")
 
 [node name="Skip" type="Button" parent="Control/Panel/Panel"]
 unique_name_in_owner = true
@@ -270,4 +267,4 @@ text = "Pat' daily quote"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("6_aaf77")]
+[node name="ParallaxBackground" parent="." instance=ExtResource("4_qcfhx")]

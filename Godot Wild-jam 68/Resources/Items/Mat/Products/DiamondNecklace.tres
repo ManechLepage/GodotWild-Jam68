@@ -10,6 +10,7 @@ ID = 0
 name = "Diamond Necklace"
 icon = ExtResource("2_iicsj")
 description = ""
+use = ""
 type = 1
 price = 21
 forge_tier = 3

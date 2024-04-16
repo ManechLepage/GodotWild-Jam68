@@ -10,6 +10,7 @@ ID = 0
 name = "Gold Ring"
 icon = ExtResource("2_0oqgh")
 description = ""
+use = ""
 type = 1
 price = 15
 forge_tier = 2
