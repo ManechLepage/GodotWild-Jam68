@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=19 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="1_1hp5l"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://d1x3fincm36cu" path="res://Resources/Items/Mat/Products/IronSword.tres" id="2_t5q4a"]
 [ext_resource type="Resource" uid="uid://cuejfcb5d25lm" path="res://Resources/Items/Mat/Products/TinHammer.tres" id="3_14e8w"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="3_l103r"]
+[ext_resource type="Script" path="res://Scripts/Spaceship/AddButtonManager.gd" id="3_smgaa"]
 [ext_resource type="Resource" uid="uid://c0jscdnucolit" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
 [ext_resource type="Resource" uid="uid://v4uepdtaptxd" path="res://Resources/Items/Mat/Products/CeremonialSword.tres" id="7_7omu2"]
 [ext_resource type="Resource" uid="uid://bo13fiufhdgil" path="res://Resources/Items/Mat/Products/Crown.tres" id="8_d5u56"]
@@ -19,17 +20,151 @@
 [ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="17_xwekb"]
 
 [node name="Node2D" type="Node2D"]
+process_mode = 3
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("1_1hp5l")]
+[node name="MoneyCtrl" type="Control" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchor_top = 0.145
+anchor_right = 0.117
+anchor_bottom = 0.219
+offset_top = 160.0
+offset_right = 259.0
+offset_bottom = 260.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MoneyPanel" type="Panel" parent="MoneyCtrl"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("15_tpdjp")
+
+[node name="Label" type="Label" parent="MoneyCtrl/MoneyPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.077
+anchor_top = 0.135
+anchor_right = 0.629
+anchor_bottom = 1.135
+offset_left = -10.062
+offset_top = -1.99
+offset_right = -10.026
+offset_bottom = -1.99001
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "230
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MoneyCtrl/MoneyPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.644
+anchor_top = 0.068
+anchor_right = 0.974
+anchor_bottom = 0.932
+offset_left = 0.0639954
+offset_top = -0.0320024
+offset_right = -23.956
+offset_bottom = -23.968
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("17_xwekb")
+
+[node name="Main2D" type="Node2D" parent="."]
+unique_name_in_owner = true
+process_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="Main2D"]
+position = Vector2(981, 551)
+zoom = Vector2(0.59, 0.59)
+
+[node name="SeperatorManager" type="Node2D" parent="Main2D"]
+unique_name_in_owner = true
+position = Vector2(386, 198)
+
+[node name="AddButtonManager" type="Node2D" parent="Main2D"]
+unique_name_in_owner = true
+position = Vector2(386, 198)
+script = ExtResource("3_smgaa")
+
+[node name="SpaceshipManager" type="Node2D" parent="Main2D"]
+unique_name_in_owner = true
+position = Vector2(386, 198)
+script = ExtResource("1_kbkme")
+item_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("7_7omu2"), ExtResource("8_d5u56"), ExtResource("9_4ee0j"), ExtResource("10_6xdoc"), ExtResource("11_73ndc"), ExtResource("2_t5q4a"), ExtResource("13_nehk4"), ExtResource("4_u62bt"), ExtResource("3_14e8w"), ExtResource("16_wraly")])
+
+[node name="CustomerManager" type="Node" parent="Main2D"]
+unique_name_in_owner = true
+script = ExtResource("3_l103r")
+
+[node name="Timer" type="Timer" parent="Main2D/CustomerManager"]
+autostart = true
+
+[node name="Button" type="Button" parent="Main2D"]
+texture_filter = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 257.0
+offset_bottom = 77.0
+theme = ExtResource("15_tpdjp")
+text = "Recipes"
+
+[node name="ParallaxBackground" parent="Main2D" instance=ExtResource("1_1hp5l")]
 scroll_ignore_camera_zoom = true
 
-[node name="CustomerCtrl" type="Control" parent="."]
+[node name="InventoryCtrl" type="Control" parent="."]
+unique_name_in_owner = true
 layout_mode = 3
-anchors_preset = 0
+anchor_left = 0.766
+anchor_top = 0.005
+anchor_right = 0.766
+anchor_bottom = 0.005
+offset_left = 1502.0
+offset_top = 5.0
+offset_right = 1954.0
+offset_bottom = 1098.0
+
+[node name="InventoryPanel" type="Panel" parent="InventoryCtrl" groups=["Inventory"]]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("15_tpdjp")
+script = ExtResource("2_5fnoo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryCtrl/InventoryPanel"]
+custom_minimum_size = Vector2(303, 43)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CustomerCtrl" type="Control" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchor_top = 0.671
+anchor_right = 0.211
+anchor_bottom = 0.996
 offset_left = 3.0
 offset_top = 739.0
-offset_right = 414.0
-offset_bottom = 1097.0
+offset_right = 455.0
+offset_bottom = 1098.0
 
 [node name="CustomerPanel" type="Panel" parent="CustomerCtrl"]
 layout_mode = 1
@@ -74,120 +209,4 @@ text = "Current customers"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="InventoryCtrl" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 1502.0
-offset_top = 5.0
-offset_right = 1962.0
-offset_bottom = 1100.0
-
-[node name="InventoryPanel" type="Panel" parent="InventoryCtrl" groups=["Inventory"]]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("15_tpdjp")
-script = ExtResource("2_5fnoo")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="InventoryCtrl/InventoryPanel"]
-custom_minimum_size = Vector2(303, 43)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MoneyCtrl" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_top = 160.0
-offset_right = 229.0
-offset_bottom = 241.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="MoneyPanel" type="Panel" parent="MoneyCtrl"]
-unique_name_in_owner = true
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("15_tpdjp")
-
-[node name="Label" type="Label" parent="MoneyCtrl/MoneyPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.077
-anchor_top = 0.135
-anchor_right = 0.629
-anchor_bottom = 1.135
-offset_left = -0.0619984
-offset_top = 0.00999928
-offset_right = -0.026001
-offset_bottom = 0.00999451
-grow_vertical = 2
-theme_override_font_sizes/font_size = 70
-text = "230
-"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="MoneyCtrl/MoneyPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.644
-anchor_top = 0.068
-anchor_right = 0.974
-anchor_bottom = 0.932
-offset_left = 0.0639877
-offset_top = -0.0320001
-offset_right = -23.956
-offset_bottom = -23.968
-grow_horizontal = 0
-grow_vertical = 2
-scale = Vector2(1.6, 1.6)
-texture = ExtResource("17_xwekb")
-
-[node name="SeperatorManager" type="Node2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(386, 198)
-
-[node name="AddButtonManager" type="Node2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(386, 198)
-
-[node name="SpaceshipManager" type="Node2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(386, 198)
-script = ExtResource("1_kbkme")
-item_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("7_7omu2"), ExtResource("8_d5u56"), ExtResource("9_4ee0j"), ExtResource("10_6xdoc"), ExtResource("11_73ndc"), ExtResource("2_t5q4a"), ExtResource("13_nehk4"), ExtResource("4_u62bt"), ExtResource("3_14e8w"), ExtResource("16_wraly")])
-
-[node name="CustomerManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("3_l103r")
-
-[node name="Timer" type="Timer" parent="CustomerManager"]
-autostart = true
-
-[node name="Button" type="Button" parent="."]
-texture_filter = 1
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 257.0
-offset_bottom = 77.0
-theme = ExtResource("15_tpdjp")
-text = "Recipes"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(981, 551)
-zoom = Vector2(0.59, 0.59)
-
-[connection signal="timeout" from="CustomerManager/Timer" to="CustomerManager" method="_on_timer_timeout"]
+[connection signal="timeout" from="Main2D/CustomerManager/Timer" to="Main2D/CustomerManager" method="_on_timer_timeout"]

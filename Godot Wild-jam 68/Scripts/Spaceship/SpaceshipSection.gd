@@ -8,6 +8,8 @@ extends AnimatedSprite2D
 
 @export var tier = 1
 
+@export var preloadType: PackedScene
+
 enum SectionType 
 {
 	Front = 0,

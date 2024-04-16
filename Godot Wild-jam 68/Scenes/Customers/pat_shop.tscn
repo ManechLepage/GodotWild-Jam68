@@ -1,17 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1vokbwfr0bu3"]
+[gd_scene load_steps=6 format=3 uid="uid://b1vokbwfr0bu3"]
 
 [ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="1_nunvn"]
+[ext_resource type="Script" path="res://Scenes/Customers/PatShop.gd" id="1_tncms"]
 [ext_resource type="SpriteFrames" uid="uid://irf2hvths7jt" path="res://Graphics/sections/Generator/generator1.tres" id="2_ubf0g"]
 [ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="3_xcwe1"]
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="4_qcfhx"]
 
 [node name="Pat_shop" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 1.695
+anchor_bottom = 1.693
+offset_right = 0.359985
+offset_bottom = -0.0640869
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tncms")
 
 [node name="Control" type="Control" parent="."]
 texture_filter = 1
@@ -113,8 +116,8 @@ vertical_alignment = 1
 [node name="Item_image" type="AnimatedSprite2D" parent="Control/Panel/Panel"]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(247, 306)
-scale = Vector2(10, 10)
+position = Vector2(427.113, 526.428)
+scale = Vector2(18, 18)
 sprite_frames = ExtResource("2_ubf0g")
 
 [node name="Buy_button" type="Button" parent="Control/Panel/Panel"]
@@ -268,3 +271,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("4_qcfhx")]
+
+[connection signal="pressed" from="Control/Panel/Panel/Buy_button" to="." method="_on_buy_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Panel/Skip" to="." method="_on_skip_pressed"]

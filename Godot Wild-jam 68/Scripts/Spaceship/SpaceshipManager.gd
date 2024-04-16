@@ -34,18 +34,11 @@ func _ready():
 			row.append(null)
 		section_list.append(row)
 	
-	create_section(FRONT, Vector2(4, 0), 1)
+	create_section(FRONT, Vector2(3, 0), 1)
 	
 	create_section(FORGE, Vector2(4, 1), 1)
-	create_section(FORGE, Vector2(5, 1), 2)
-	create_section(FORGE, Vector2(5, 2), 3)
-	
 	create_section(GENERATOR, Vector2(3, 1), 1)
-	create_section(GENERATOR, Vector2(3, 2), 2)
-	create_section(GENERATOR, Vector2(3, 3), 3)
-	
 	create_section(SMELTER, Vector2(2, 1), 1)
-	create_section(SMELTER, Vector2(2, 2), 2)
 
 func create_section(type:PackedScene, pos:Vector2, tier:int):
 	var section = type.instantiate()
@@ -140,6 +133,7 @@ func add_plus_button(pos1, pos2):
 	var button = ADD_SECTION_BUTTON.instantiate()
 	button.position = Vector2((pos2.x * margin) - 32, (pos2.y * margin) - 32)
 	button.visible = false
+	button.pos = pos2
 	
 	add_button_manager.add_child(button)
 

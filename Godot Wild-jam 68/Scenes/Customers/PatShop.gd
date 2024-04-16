@@ -17,6 +17,10 @@ const SHOP_ITEM_BUTTON = preload("res://Scenes/Customers/Shop_item_button.tscn")
 
 @onready var pat_quote = %PatQuote
 
+@onready var v_box_container2 = %VBoxContainer
+
+var _section: AnimatedSprite2D
+
 func _ready():
 	var rng = RandomNumberGenerator.new()
 	var shop_size = rng.randi_range(shop_size_min_max.x, shop_size_min_max.y)
@@ -64,3 +68,12 @@ func load_item(section:AnimatedSprite2D, tier, price):
 	item_price.text = str(price)
 	item_image.set_sprite_frames(section.get_sprite_frames())
 	item_image.play()
+	_section = section
+
+func _on_buy_button_pressed():
+	var node = get_parent().get_node("CustomerCtrl/CustomerPanel/VBoxContainer")
+	node.unload_pat_shop(_section)
+
+func _on_skip_pressed():
+	var node = get_parent().get_node("CustomerCtrl/CustomerPanel/VBoxContainer")
+	node.unload_pat_shop(null)

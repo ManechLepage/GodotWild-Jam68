@@ -13,6 +13,7 @@ size = Vector2(32.3333, 32)
 
 [node name="Smelter" instance=ExtResource("1_kafey")]
 type = 2
+preloadType = null
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 

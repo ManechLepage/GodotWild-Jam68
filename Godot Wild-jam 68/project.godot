@@ -20,6 +20,7 @@ config/icon="res://Graphics/icon.svg"
 Inventory="*res://Scripts/Inventory/Inventory.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Quotes="*res://Scripts/Quotes/Quotes.gd"
+GetSectionFromType="*res://Scripts/Spaceship/GetSectionFromType.gd"
 
 [editor_plugins]
 

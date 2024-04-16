@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b4vxe0frkqcwt"]
 
 [ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="1_ierao"]
-[ext_resource type="Script" path="res://Scenes/UI/PatShopButton.gd" id="2_i0ugx"]
+[ext_resource type="Script" path="res://Scripts/UI/PatShopButton.gd" id="2_i0ugx"]
 [ext_resource type="StyleBox" uid="uid://ca8084mm2pc7k" path="res://Graphics/UI/patshop_theme.tres" id="2_r5kiu"]
 [ext_resource type="LabelSettings" uid="uid://es0p2ltn4e5o" path="res://Graphics/UI/Fonts/default.tres" id="3_1aal7"]
 

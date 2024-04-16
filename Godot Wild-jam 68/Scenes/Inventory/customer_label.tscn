@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="1_au5ki"]
 [ext_resource type="LabelSettings" uid="uid://es0p2ltn4e5o" path="res://Graphics/UI/Fonts/default.tres" id="2_fv2or"]
-[ext_resource type="Script" path="res://Scenes/Inventory/customer_label.gd" id="2_ikvtp"]
+[ext_resource type="Script" path="res://Scripts/UI/customer_label.gd" id="2_ikvtp"]
 [ext_resource type="Texture2D" uid="uid://mv0lp0uay648" path="res://Graphics/Items/Minerals/cobalt.png" id="3_mcq8m"]
 [ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="4_0xqld"]
 

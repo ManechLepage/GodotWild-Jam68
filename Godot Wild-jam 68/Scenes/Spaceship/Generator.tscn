@@ -17,6 +17,7 @@ size = Vector2(32, 32)
 [node name="Generator" instance=ExtResource("1_lgxny")]
 sprite_frames = ExtResource("2_3oxqq")
 type = 1
+preloadType = null
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 

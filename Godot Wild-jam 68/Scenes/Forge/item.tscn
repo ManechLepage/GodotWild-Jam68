@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://coeiv8b28o7bf"]
 
 [ext_resource type="Texture2D" uid="uid://bto364ul11v33" path="res://Graphics/sections/Forge/Tier1/forge6.png" id="1_jotje"]
-[ext_resource type="Script" path="res://Scenes/Forge/button_forge.gd" id="2_l23j6"]
+[ext_resource type="Script" path="res://Scripts/UI/button_forge.gd" id="2_l23j6"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_oa6ot"]
 
