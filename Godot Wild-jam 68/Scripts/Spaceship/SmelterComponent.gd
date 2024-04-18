@@ -74,9 +74,10 @@ func _on_timer_timeout():
 	var parent = get_parent()
 	var item = smeltor_list[smelting]
 	# timer.stop()
-	# A REGLER PLUS TARD (IL FAUT CHECK SI IL Y A LITEM A SMELT)
-	parent.add_item(item.smelted_item)
-	parent.remove_item(item)
+	
+	if (Inventory.items.has(item)):
+		parent.add_item(item.smelted_item)
+		parent.remove_item(item)
 	
 	var f_string = "Smelting %s into %s..."
 	print(f_string % [item.name, item.smelted_item.name])

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=22 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="1_1hp5l"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
@@ -18,13 +18,20 @@
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerContainer.gd" id="16_p2edk"]
 [ext_resource type="Resource" uid="uid://byk00iyofuh40" path="res://Resources/Items/Mat/Products/WarHammer.tres" id="16_wraly"]
 [ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="17_xwekb"]
+[ext_resource type="Script" path="res://Scenes/Menu.gd" id="19_ppky8"]
+[ext_resource type="Texture2D" uid="uid://bk56nifk0xilf" path="res://Graphics/UI/Title/title_space.png" id="20_qm0sp"]
+[ext_resource type="Texture2D" uid="uid://p6oywwmsjtp3" path="res://Graphics/UI/Title/title_merchant.png" id="21_3k5dv"]
 
 [node name="Node2D" type="Node2D"]
 process_mode = 3
 
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_1hp5l")]
+scroll_ignore_camera_zoom = true
+
 [node name="Main2D" type="Node2D" parent="."]
 unique_name_in_owner = true
 process_mode = 1
+visible = false
 
 [node name="Camera2D" type="Camera2D" parent="Main2D"]
 position = Vector2(981, 551)
@@ -64,11 +71,9 @@ offset_bottom = 77.0
 theme = ExtResource("15_tpdjp")
 text = "Recipes"
 
-[node name="ParallaxBackground" parent="Main2D" instance=ExtResource("1_1hp5l")]
-scroll_ignore_camera_zoom = true
-
 [node name="InventoryCtrl" type="Control" parent="."]
 unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchor_left = 0.766
 anchor_top = 0.005
@@ -101,6 +106,7 @@ grow_vertical = 2
 
 [node name="CustomerCtrl" type="Control" parent="."]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
 anchor_top = 0.671
@@ -155,6 +161,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MoneyCtrl2" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
 anchor_top = 0.145
@@ -211,4 +219,65 @@ grow_vertical = 2
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("17_xwekb")
 
+[node name="Menu" type="Control" parent="."]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1958.0
+offset_bottom = 1101.0
+theme = ExtResource("15_tpdjp")
+script = ExtResource("19_ppky8")
+
+[node name="Control" type="Control" parent="Menu"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.001
+offset_right = 1.0
+offset_bottom = -0.101074
+
+[node name="Button" type="Button" parent="Menu/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.387
+anchor_top = 0.666
+anchor_right = 0.674
+anchor_bottom = 0.807
+offset_left = -0.133057
+offset_top = 0.0679932
+offset_right = 0.633911
+offset_bottom = -0.314026
+
+[node name="Label" type="Label" parent="Menu/Control/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 11.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Space" type="TextureRect" parent="Menu/Control"]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 174.0
+offset_right = 595.0
+offset_bottom = 238.0
+scale = Vector2(7, 7)
+texture = ExtResource("20_qm0sp")
+
+[node name="Merchant" type="TextureRect" parent="Menu/Control"]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 174.0
+offset_right = 595.0
+offset_bottom = 238.0
+scale = Vector2(7, 7)
+texture = ExtResource("21_3k5dv")
+
 [connection signal="timeout" from="Main2D/CustomerManager/Timer" to="Main2D/CustomerManager" method="_on_timer_timeout"]
+[connection signal="pressed" from="Menu/Control/Button" to="Menu" method="_on_button_pressed"]

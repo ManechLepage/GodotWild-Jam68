@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjm1y38rrgjwu"]
+
+[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="1_m5teb"]
+
+[node name="MainMenu" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_m5teb")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.453
+anchor_top = 0.614
+anchor_right = 0.556
+anchor_bottom = 0.698
+offset_left = 0.143982
+offset_top = 0.127991
+offset_right = -0.512085
+offset_bottom = -0.304016
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
