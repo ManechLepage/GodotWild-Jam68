@@ -9,6 +9,7 @@ ID = 6
 name = "Platinum"
 icon = ExtResource("1_udelg")
 description = "Platinum is found in stars. However, it is not like iron. This sort of extraction requires an exploding star resulting in a need for a super-advanced generator (tier 3)."
+use = "Use: Platinum crown (Crown + 1x Platinum)"
 type = 0
 price = 0
 forge_tier = 1
