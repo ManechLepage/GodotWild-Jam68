@@ -9,6 +9,7 @@ ID = 5
 name = "Diamond"
 icon = ExtResource("1_bw1gq")
 description = "Diamonds are found on a strange planet called Earth where precious minerals are protected by small aliens called dwarves. We therefore need third tier generators to extract them."
+use = "Use: Diamond necklace (1x diamond) Ceremonial sword (Great sword + 1x Diamond)"
 type = 0
 price = 10
 forge_tier = 1

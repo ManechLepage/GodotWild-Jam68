@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=24 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="1_1hp5l"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
@@ -16,17 +16,16 @@
 [ext_resource type="Resource" uid="uid://bdoisje2sdqxo" path="res://Resources/Items/Mat/Products/PlatinumCrown.tres" id="13_nehk4"]
 [ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="15_tpdjp"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerContainer.gd" id="16_p2edk"]
+[ext_resource type="Script" path="res://Scenes/RecipeButton.gd" id="16_vn4q3"]
 [ext_resource type="Resource" uid="uid://byk00iyofuh40" path="res://Resources/Items/Mat/Products/WarHammer.tres" id="16_wraly"]
 [ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="17_xwekb"]
 [ext_resource type="Script" path="res://Scenes/Menu.gd" id="19_ppky8"]
 [ext_resource type="Texture2D" uid="uid://bk56nifk0xilf" path="res://Graphics/UI/Title/title_space.png" id="20_qm0sp"]
 [ext_resource type="Texture2D" uid="uid://p6oywwmsjtp3" path="res://Graphics/UI/Title/title_merchant.png" id="21_3k5dv"]
+[ext_resource type="PackedScene" uid="uid://c1672ho0lyewd" path="res://Scenes/UI/Wiki.tscn" id="22_vfpmy"]
 
 [node name="Node2D" type="Node2D"]
 process_mode = 3
-
-[node name="ParallaxBackground" parent="." instance=ExtResource("1_1hp5l")]
-scroll_ignore_camera_zoom = true
 
 [node name="Main2D" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -36,6 +35,8 @@ visible = false
 [node name="Camera2D" type="Camera2D" parent="Main2D"]
 position = Vector2(981, 551)
 zoom = Vector2(0.59, 0.59)
+
+[node name="ParallaxBackground" parent="Main2D/Camera2D" instance=ExtResource("1_1hp5l")]
 
 [node name="SeperatorManager" type="Node2D" parent="Main2D"]
 unique_name_in_owner = true
@@ -70,6 +71,7 @@ offset_right = 257.0
 offset_bottom = 77.0
 theme = ExtResource("15_tpdjp")
 text = "Recipes"
+script = ExtResource("16_vn4q3")
 
 [node name="InventoryCtrl" type="Control" parent="."]
 unique_name_in_owner = true
@@ -279,5 +281,19 @@ offset_bottom = 238.0
 scale = Vector2(7, 7)
 texture = ExtResource("21_3k5dv")
 
+[node name="WikiCtrl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Wiki" parent="WikiCtrl" instance=ExtResource("22_vfpmy")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_right = 1909.0
+offset_bottom = 1054.0
+
 [connection signal="timeout" from="Main2D/CustomerManager/Timer" to="Main2D/CustomerManager" method="_on_timer_timeout"]
+[connection signal="pressed" from="Main2D/Button" to="Main2D/Button" method="_on_pressed"]
 [connection signal="pressed" from="Menu/Control/Button" to="Menu" method="_on_button_pressed"]

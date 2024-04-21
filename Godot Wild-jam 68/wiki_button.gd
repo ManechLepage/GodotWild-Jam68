@@ -7,10 +7,9 @@ extends Button
 @onready var use = $"../../../Panel2/Panel3/use"
 @onready var item_icon = $"../../../Panel2/Icon"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	button.text = item.name
+	if item != null:
+		button.text = item.name
 
 
 func _on_pressed():

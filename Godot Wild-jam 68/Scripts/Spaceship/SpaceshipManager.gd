@@ -25,7 +25,7 @@ var margin = 192.0
 var money = 0
 
 func _ready():
-	add_money(100)
+	add_money(0)
 	
 	Inventory.load_all_items(Inventory.sort_items_by_price(item_list))
 	for i in range(max_grid_size_x):

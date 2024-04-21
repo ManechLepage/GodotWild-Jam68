@@ -10,6 +10,7 @@ ID = 4
 name = "Raw Gold"
 icon = ExtResource("1_eefn0")
 description = "Tier 2 generators are needed for the extraction of gold as they must catch the quickly passing stardust and compact it. Don’t forget to smelt it!"
+use = "Use: Gold ring (1x Gold) Crown (1x gold + 1x Cobalt) War hammer (1x gold + Tin hammer)"
 type = 0
 smelted_item = ExtResource("2_slw5s")
 price = 0

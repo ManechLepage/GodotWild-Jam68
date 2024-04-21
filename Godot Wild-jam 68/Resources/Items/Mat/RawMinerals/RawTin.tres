@@ -10,6 +10,7 @@ ID = 2
 name = "Raw Tin"
 icon = ExtResource("1_duujh")
 description = "Tin molecules can be found in space. Generators are however crucial for tin production. Don’t forget to smelt it!"
+use = "Use: Shield (1x Iron + 2x Tin) Tin hammer (2x Tin)"
 type = 0
 smelted_item = ExtResource("2_n1yyx")
 price = 0

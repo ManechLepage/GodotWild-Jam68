@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://hkecx5u5gpr8" path="res://Resources/Items/Mat/RawMinerals/RawCobalt.tres" id="6_xqun4"]
 [ext_resource type="Resource" uid="uid://b4f4bxtrjitpf" path="res://Resources/Items/Mat/RawMinerals/Platinum.tres" id="7_1kb61"]
 [ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/RawMinerals/Diamond.tres" id="8_bqbwq"]
-[ext_resource type="Script" path="res://Scenes/UI/Back_button.gd" id="9_en6dn"]
+[ext_resource type="Script" path="res://Scenes/UI/Back_button.gd" id="9_vui31"]
 
 [node name="Wiki" type="Control"]
 texture_filter = 1
@@ -75,10 +75,10 @@ anchor_right = 0.214
 anchor_bottom = 0.988
 offset_left = 0.0499992
 offset_top = -0.184021
-offset_right = -0.100021
+offset_right = 9.89999
 offset_bottom = -0.223999
-text = "Back"
-script = ExtResource("9_en6dn")
+text = "Done"
+script = ExtResource("9_vui31")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_wkb4o")]
 

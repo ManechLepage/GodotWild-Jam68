@@ -10,6 +10,7 @@ ID = 1
 name = "Raw Iron"
 icon = ExtResource("1_qkeyj")
 description = "Iron (unlike tin) is found in nearby stars. The generators take it from the stars and make it usable. No one understands how it works… except Pat. Don’t forget to smelt it!"
+use = "Use: Iron sword (2x Iron) Shield (1x Iron + 2x Tin)"
 type = 0
 smelted_item = ExtResource("2_qahi4")
 price = 0
