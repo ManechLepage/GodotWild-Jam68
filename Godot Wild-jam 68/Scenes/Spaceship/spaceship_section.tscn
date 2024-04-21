@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b18x7uwk4vpmy"]
+[gd_scene load_steps=4 format=3 uid="uid://b18x7uwk4vpmy"]
 
 [ext_resource type="SpriteFrames" uid="uid://c812nj5rx0yg6" path="res://Graphics/sections/Generator/generator2.tres" id="1_01aw0"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipSection.gd" id="2_va4xf"]
+[ext_resource type="Script" path="res://Scenes/Spaceship/ItemAnimation.gd" id="3_1fhm7"]
 
 [node name="SpaceshipSection" type="AnimatedSprite2D"]
 texture_filter = 1
@@ -9,3 +10,6 @@ position = Vector2(48, 48)
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("1_01aw0")
 script = ExtResource("2_va4xf")
+
+[node name="ItemAnimation" type="Sprite2D" parent="."]
+script = ExtResource("3_1fhm7")

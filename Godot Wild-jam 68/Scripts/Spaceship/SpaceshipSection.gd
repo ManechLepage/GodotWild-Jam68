@@ -5,6 +5,7 @@ extends AnimatedSprite2D
 @onready var button1 = $Panel/Button
 @onready var button2 = $Panel/Button2
 @onready var inventory_panel: Panel
+@onready var item_animation = $ItemAnimation
 
 @export var tier = 1
 
@@ -40,6 +41,7 @@ func add_item(item:Item):
 	else:
 		Inventory.items[item] = 1
 	inventory_panel.update_inventory_panel()
+	animate_item_transfer(item, position, inventory_panel.position)
 
 func remove_item(item:Item):
 	if Inventory.items.has(item):
@@ -50,3 +52,8 @@ func remove_item(item:Item):
 		else:
 			Inventory.items[item] = value
 	inventory_panel.update_inventory_panel()
+	animate_item_transfer(item, inventory_panel.position, position)
+
+func animate_item_transfer(item:Item, pos1, pos2):
+	item_animation.set_texture(item.icon)
+	item_animation.set_new_position(pos1, pos2)
