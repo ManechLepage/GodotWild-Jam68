@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=22 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="1_1hp5l"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://cuejfcb5d25lm" path="res://Resources/Items/Mat/Products/TinHammer.tres" id="3_14e8w"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="3_l103r"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/AddButtonManager.gd" id="3_smgaa"]
-[ext_resource type="Resource" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
+[ext_resource type="Resource" uid="uid://c0jscdnucolit" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
 [ext_resource type="Resource" uid="uid://v4uepdtaptxd" path="res://Resources/Items/Mat/Products/CeremonialSword.tres" id="7_7omu2"]
 [ext_resource type="Resource" uid="uid://bo13fiufhdgil" path="res://Resources/Items/Mat/Products/Crown.tres" id="8_d5u56"]
 [ext_resource type="Resource" uid="uid://bl7pjqw7vxktu" path="res://Resources/Items/Mat/Products/DiamondNecklace.tres" id="9_4ee0j"]
@@ -21,8 +21,6 @@
 [ext_resource type="Script" path="res://Scenes/Menu.gd" id="19_ppky8"]
 [ext_resource type="Texture2D" uid="uid://bk56nifk0xilf" path="res://Graphics/UI/Title/title_space.png" id="20_qm0sp"]
 [ext_resource type="Texture2D" uid="uid://p6oywwmsjtp3" path="res://Graphics/UI/Title/title_merchant.png" id="21_3k5dv"]
-[ext_resource type="Script" path="res://Scenes/WikiMenu.gd" id="22_twvmn"]
-[ext_resource type="PackedScene" uid="uid://c1672ho0lyewd" path="res://Scenes/UI/Wiki.tscn" id="23_4ijbr"]
 
 [node name="Node2D" type="Node2D"]
 process_mode = 3
@@ -64,6 +62,15 @@ customer_variety = 0.4
 [node name="Timer" type="Timer" parent="Main2D/CustomerManager"]
 autostart = true
 
+[node name="Button" type="Button" parent="Main2D"]
+texture_filter = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 257.0
+offset_bottom = 77.0
+theme = ExtResource("15_tpdjp")
+text = "Recipes"
+
 [node name="InventoryCtrl" type="Control" parent="."]
 unique_name_in_owner = true
 visible = false
@@ -102,17 +109,19 @@ unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
-anchors_preset = 9
-anchor_bottom = 1.0
-grow_vertical = 2
+anchor_top = 0.671
+anchor_right = 0.211
+anchor_bottom = 0.996
+offset_left = 3.0
+offset_top = 739.0
+offset_right = 455.0
+offset_bottom = 1098.0
 
 [node name="CustomerPanel" type="Panel" parent="CustomerCtrl"]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 7.11
-anchor_right = 4.17
-anchor_bottom = 11.53
-offset_bottom = -0.00012207
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("15_tpdjp")
@@ -210,16 +219,6 @@ grow_vertical = 2
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("17_xwekb")
 
-[node name="wiki_button" type="Button" parent="MoneyCtrl2"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = -147.0
-offset_right = 362.0
-offset_bottom = -51.0
-theme = ExtResource("15_tpdjp")
-theme_override_font_sizes/font_size = 60
-text = "Recipes"
-
 [node name="Menu" type="Control" parent="."]
 texture_filter = 1
 layout_mode = 3
@@ -280,28 +279,5 @@ offset_bottom = 238.0
 scale = Vector2(7, 7)
 texture = ExtResource("21_3k5dv")
 
-[node name="WikiMenu" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1958.0
-offset_bottom = 1103.0
-script = ExtResource("22_twvmn")
-
-[node name="Wiki" parent="WikiMenu" instance=ExtResource("23_4ijbr")]
-layout_mode = 1
-
-[node name="Back_button" type="Button" parent="."]
-visible = false
-offset_left = 47.0
-offset_top = 945.0
-offset_right = 340.0
-offset_bottom = 1047.0
-theme = ExtResource("15_tpdjp")
-theme_override_font_sizes/font_size = 60
-text = "Back"
-
 [connection signal="timeout" from="Main2D/CustomerManager/Timer" to="Main2D/CustomerManager" method="_on_timer_timeout"]
-[connection signal="pressed" from="MoneyCtrl2/wiki_button" to="WikiMenu" method="_on_wiki_button_pressed"]
 [connection signal="pressed" from="Menu/Control/Button" to="Menu" method="_on_button_pressed"]
-[connection signal="pressed" from="Back_button" to="WikiMenu/Wiki" method="_on_back_button_pressed"]

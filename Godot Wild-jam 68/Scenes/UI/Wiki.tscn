@@ -1,7 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://c1672ho0lyewd"]
 
 [ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="1_a3xho"]
-[ext_resource type="Script" path="res://Scenes/UI/Wiki.gd" id="2_jwl8k"]
 [ext_resource type="PackedScene" uid="uid://bb36o10yj2hd4" path="res://wiki_button.tscn" id="2_ob5fn"]
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="2_wkb4o"]
 [ext_resource type="Resource" uid="uid://c2dkqdu3pm6pu" path="res://Resources/Items/Mat/RawMinerals/RawTin.tres" id="3_g8i00"]
@@ -10,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://hkecx5u5gpr8" path="res://Resources/Items/Mat/RawMinerals/RawCobalt.tres" id="6_xqun4"]
 [ext_resource type="Resource" uid="uid://b4f4bxtrjitpf" path="res://Resources/Items/Mat/RawMinerals/Platinum.tres" id="7_1kb61"]
 [ext_resource type="Resource" uid="uid://ddj2noi2gwgq8" path="res://Resources/Items/Mat/RawMinerals/Diamond.tres" id="8_bqbwq"]
+[ext_resource type="Script" path="res://Scenes/UI/Back_button.gd" id="9_en6dn"]
 
 [node name="Wiki" type="Control"]
 texture_filter = 1
@@ -20,7 +20,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_a3xho")
-script = ExtResource("2_jwl8k")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -67,6 +66,20 @@ item = ExtResource("7_1kb61")
 layout_mode = 2
 item = ExtResource("8_bqbwq")
 
+[node name="Back_button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.013
+anchor_top = 0.883
+anchor_right = 0.214
+anchor_bottom = 0.988
+offset_left = 0.0499992
+offset_top = -0.184021
+offset_right = -0.100021
+offset_bottom = -0.223999
+text = "Back"
+script = ExtResource("9_en6dn")
+
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_wkb4o")]
 
 [node name="Panel2" type="Panel" parent="."]
@@ -85,24 +98,24 @@ offset_bottom = 0.255981
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.041
-anchor_top = 0.026
-anchor_right = 0.465
+anchor_top = 0.027
+anchor_right = 0.38
 anchor_bottom = 0.114
-offset_left = -0.313
-offset_top = -0.0160007
-offset_right = 0.254974
-offset_bottom = -0.223999
+offset_left = -0.0569992
+offset_top = -0.405001
+offset_right = -0.26001
+offset_bottom = 0.289993
 
 [node name="Name" type="Label" parent="Panel2/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.042
 anchor_top = 0.191
-anchor_right = 0.969
+anchor_right = 0.922
 anchor_bottom = 0.831
 offset_left = 0.0979986
-offset_top = 0.000998497
-offset_right = -0.0260162
+offset_top = 0.000999451
+offset_right = 11.818
 offset_bottom = 0.0410004
 text = "Name"
 horizontal_alignment = 1
@@ -111,14 +124,14 @@ vertical_alignment = 1
 [node name="Panel2" type="Panel" parent="Panel2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.513
-anchor_top = 0.026
-anchor_right = 0.976
-anchor_bottom = 0.903
-offset_left = -0.209015
-offset_top = -0.0160007
-offset_right = 0.231934
-offset_bottom = -0.248047
+anchor_left = 0.47
+anchor_top = 0.027
+anchor_right = 0.896
+anchor_bottom = 0.487
+offset_left = -0.190033
+offset_top = -0.405001
+offset_right = -0.392029
+offset_bottom = -0.305023
 
 [node name="Description" type="Label" parent="Panel2/Panel2"]
 layout_mode = 1
@@ -139,12 +152,13 @@ autowrap_mode = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.025
-anchor_top = 0.125
-anchor_right = 0.479
-anchor_bottom = 0.5
+anchor_top = 0.565
+anchor_right = 0.568
+anchor_bottom = 0.945
 offset_left = 0.175
-offset_right = -0.0470276
-offset_bottom = 6.0
+offset_top = -0.0400085
+offset_right = 0.175995
+offset_bottom = -0.120056
 
 [node name="use" type="Label" parent="Panel2/Panel3"]
 layout_mode = 1
@@ -164,11 +178,13 @@ autowrap_mode = 2
 [node name="Icon" type="TextureRect" parent="Panel2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.037
-anchor_top = 0.545
-anchor_right = 0.45
-anchor_bottom = 0.961
-offset_left = 0.059
-offset_top = 0.279999
-offset_right = 0.149994
-offset_bottom = 0.0239868
+anchor_left = 0.035
+anchor_top = 0.14
+anchor_right = 0.38
+anchor_bottom = 0.532
+offset_left = -0.195
+offset_top = -0.100006
+offset_right = -0.26001
+offset_bottom = 0.0200195
+
+[connection signal="pressed" from="Panel/Back_button" to="Panel/Back_button" method="_on_pressed"]
