@@ -1,6 +1,6 @@
 extends Button
 
-@onready var wiki = %Wiki
+@onready var main_2d = %Main2D
 
 func _on_pressed():
-	wiki.visible = true
+	main_2d.enable_wiki(true)

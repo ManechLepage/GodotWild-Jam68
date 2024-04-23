@@ -1,13 +1,14 @@
-[gd_scene load_steps=24 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=25 format=3 uid="uid://dwoj6jb5h2y5j"]
 
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="1_1hp5l"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
+[ext_resource type="Script" path="res://Scenes/Main2D.gd" id="1_t6i6k"]
 [ext_resource type="Script" path="res://Scripts/Inventory/InventoryPanel.gd" id="2_5fnoo"]
 [ext_resource type="Resource" uid="uid://d1x3fincm36cu" path="res://Resources/Items/Mat/Products/IronSword.tres" id="2_t5q4a"]
 [ext_resource type="Resource" uid="uid://cuejfcb5d25lm" path="res://Resources/Items/Mat/Products/TinHammer.tres" id="3_14e8w"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerManager.gd" id="3_l103r"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/AddButtonManager.gd" id="3_smgaa"]
-[ext_resource type="Resource" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
+[ext_resource type="Resource" uid="uid://c0jscdnucolit" path="res://Resources/Items/Mat/Products/Shield.tres" id="4_u62bt"]
 [ext_resource type="Resource" uid="uid://v4uepdtaptxd" path="res://Resources/Items/Mat/Products/CeremonialSword.tres" id="7_7omu2"]
 [ext_resource type="Resource" uid="uid://bo13fiufhdgil" path="res://Resources/Items/Mat/Products/Crown.tres" id="8_d5u56"]
 [ext_resource type="Resource" uid="uid://bl7pjqw7vxktu" path="res://Resources/Items/Mat/Products/DiamondNecklace.tres" id="9_4ee0j"]
@@ -31,6 +32,7 @@ process_mode = 3
 unique_name_in_owner = true
 process_mode = 1
 visible = false
+script = ExtResource("1_t6i6k")
 
 [node name="Camera2D" type="Camera2D" parent="Main2D"]
 position = Vector2(981, 551)
