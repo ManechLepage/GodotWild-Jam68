@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dwoj6jb5h2y5j"]
+[gd_scene load_steps=26 format=3 uid="uid://55jbv4wvmwg2"]
 
 [ext_resource type="PackedScene" uid="uid://cm8cqww061liy" path="res://Scenes/Background/MainBackground.tscn" id="1_1hp5l"]
 [ext_resource type="Script" path="res://Scripts/Spaceship/SpaceshipManager.gd" id="1_kbkme"]
@@ -15,15 +15,16 @@
 [ext_resource type="Resource" uid="uid://dpbpy8miaqgry" path="res://Resources/Items/Mat/Products/GoldRing.tres" id="10_6xdoc"]
 [ext_resource type="Resource" uid="uid://c4bndeme8mfiy" path="res://Resources/Items/Mat/Products/GreatSword.tres" id="11_73ndc"]
 [ext_resource type="Resource" uid="uid://bdoisje2sdqxo" path="res://Resources/Items/Mat/Products/PlatinumCrown.tres" id="13_nehk4"]
-[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="15_tpdjp"]
+[ext_resource type="Theme" uid="uid://b3fenlmxk7d58" path="res://Graphics/UI/main_theme.tres" id="15_tpdjp"]
 [ext_resource type="Script" path="res://Scripts/Customer/CustomerContainer.gd" id="16_p2edk"]
 [ext_resource type="Script" path="res://Scenes/RecipeButton.gd" id="16_vn4q3"]
 [ext_resource type="Resource" uid="uid://byk00iyofuh40" path="res://Resources/Items/Mat/Products/WarHammer.tres" id="16_wraly"]
 [ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="17_xwekb"]
 [ext_resource type="Script" path="res://Scenes/Menu.gd" id="19_ppky8"]
+[ext_resource type="PackedScene" uid="uid://b4vxe0frkqcwt" path="res://Scenes/UI/merchant_shop_button.tscn" id="20_3u4mf"]
 [ext_resource type="Texture2D" uid="uid://bk56nifk0xilf" path="res://Graphics/UI/Title/title_space.png" id="20_qm0sp"]
 [ext_resource type="Texture2D" uid="uid://p6oywwmsjtp3" path="res://Graphics/UI/Title/title_merchant.png" id="21_3k5dv"]
-[ext_resource type="PackedScene" uid="uid://c1672ho0lyewd" path="res://Scenes/UI/Wiki.tscn" id="22_vfpmy"]
+[ext_resource type="PackedScene" uid="uid://by0277pnb6io0" path="res://Scenes/UI/Wiki.tscn" id="22_vfpmy"]
 
 [node name="Node2D" type="Node2D"]
 process_mode = 3
@@ -59,8 +60,6 @@ item_list = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("7_7omu2
 unique_name_in_owner = true
 script = ExtResource("3_l103r")
 cooldown = 15.0
-merchant_index = 10
-customer_variety = 0.4
 
 [node name="Timer" type="Timer" parent="Main2D/CustomerManager"]
 autostart = true
@@ -110,7 +109,6 @@ grow_vertical = 2
 
 [node name="CustomerCtrl" type="Control" parent="."]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
 anchor_top = 0.671
@@ -164,9 +162,23 @@ text = "Current customers"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="MerchantShop" parent="CustomerCtrl" node_paths=PackedStringArray("control") instance=ExtResource("20_3u4mf")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.175
+anchor_right = 1.0
+anchor_bottom = -0.017
+offset_left = 1.0
+offset_top = -0.174995
+offset_right = -1.0
+offset_bottom = 0.103
+control = NodePath("../CustomerPanel/VBoxContainer")
+
+[node name="Label" parent="CustomerCtrl/MerchantShop/Button" index="0"]
+text = "Pat's Shop"
+
 [node name="MoneyCtrl2" type="Control" parent="."]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
 anchor_top = 0.145
@@ -224,6 +236,7 @@ scale = Vector2(1.4, 1.4)
 texture = ExtResource("17_xwekb")
 
 [node name="Menu" type="Control" parent="."]
+visible = false
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
@@ -299,3 +312,5 @@ offset_bottom = 1054.0
 [connection signal="timeout" from="Main2D/CustomerManager/Timer" to="Main2D/CustomerManager" method="_on_timer_timeout"]
 [connection signal="pressed" from="Main2D/Button" to="Main2D/Button" method="_on_pressed"]
 [connection signal="pressed" from="Menu/Control/Button" to="Menu" method="_on_button_pressed"]
+
+[editable path="CustomerCtrl/MerchantShop"]

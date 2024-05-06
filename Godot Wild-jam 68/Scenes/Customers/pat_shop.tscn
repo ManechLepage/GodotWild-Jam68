@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1vokbwfr0bu3"]
+[gd_scene load_steps=6 format=3 uid="uid://covbhod1naeh5"]
 
-[ext_resource type="Theme" uid="uid://ctb0ar3july17" path="res://Graphics/UI/main_theme.tres" id="1_nunvn"]
+[ext_resource type="Theme" uid="uid://b3fenlmxk7d58" path="res://Graphics/UI/main_theme.tres" id="1_nunvn"]
 [ext_resource type="Script" path="res://Scenes/Customers/PatShop.gd" id="1_tncms"]
 [ext_resource type="SpriteFrames" uid="uid://irf2hvths7jt" path="res://Graphics/sections/Generator/generator1.tres" id="2_ubf0g"]
 [ext_resource type="Texture2D" uid="uid://wph8gc4rodik" path="res://Graphics/Items/coin.png" id="3_xcwe1"]
@@ -191,7 +191,7 @@ offset_bottom = -6.10352e-05
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 61
-text = "Done"
+text = "Skip"
 horizontal_alignment = 1
 vertical_alignment = 1
 
