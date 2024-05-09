@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://b4vxe0frkqcwt" path="res://Scenes/UI/merchant_shop_button.tscn" id="20_3u4mf"]
 [ext_resource type="Texture2D" uid="uid://bk56nifk0xilf" path="res://Graphics/UI/Title/title_space.png" id="20_qm0sp"]
 [ext_resource type="Texture2D" uid="uid://p6oywwmsjtp3" path="res://Graphics/UI/Title/title_merchant.png" id="21_3k5dv"]
-[ext_resource type="PackedScene" uid="uid://by0277pnb6io0" path="res://Scenes/UI/Wiki.tscn" id="22_vfpmy"]
+[ext_resource type="PackedScene" uid="uid://c1672ho0lyewd" path="res://Scenes/UI/Wiki.tscn" id="22_vfpmy"]
 
 [node name="Node2D" type="Node2D"]
 process_mode = 3
