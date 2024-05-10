@@ -109,6 +109,7 @@ grow_vertical = 2
 
 [node name="CustomerCtrl" type="Control" parent="."]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
 anchor_top = 0.671
@@ -179,6 +180,7 @@ text = "Pat's Shop"
 
 [node name="MoneyCtrl2" type="Control" parent="."]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
 anchor_top = 0.145
@@ -236,7 +238,6 @@ scale = Vector2(1.4, 1.4)
 texture = ExtResource("17_xwekb")
 
 [node name="Menu" type="Control" parent="."]
-visible = false
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
